@@ -169,7 +169,7 @@ export default function WorkPage() {
                     {cs.tech.map((t) => (
                       <span
                         key={t}
-                        className="bg-orange-primary/20 text-orange-primary border border-orange-primary/30 px-3 py-1 rounded-full text-sm font-medium"
+                        className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-sm font-medium"
                       >
                         {t}
                       </span>
