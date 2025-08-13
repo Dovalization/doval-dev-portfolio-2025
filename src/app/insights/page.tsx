@@ -1,8 +1,14 @@
 import MetaSection from "@/components/meta-section";
 import Link from "next/link";
 
-export default function InsightsPage() {
-  const posts = [
+// Content data (to be replaced by CMS)
+const insightsData = {
+  meta: {
+    title: "Insights",
+    subtitle:
+      "Thoughts on engineering, design, and building software that works the way people actually think.",
+  },
+  posts: [
     {
       title: "Building Systems That Think Like Users",
       excerpt:
@@ -43,23 +49,31 @@ export default function InsightsPage() {
       slug: "typescript-patterns-maintainable-react",
       featured: false,
     },
-  ];
-
-  const categories = [
+  ],
+  categories: [
     "All",
     "Design Systems",
     "UX Engineering",
     "Engineering",
     "Technical",
-  ];
-  const featuredPosts = posts.filter((post) => post.featured);
+  ],
+  cta: {
+    title: "Stay in the Loop",
+    text: "Get notified when I publish new insights about engineering, design, and building better software.",
+    subscribeLabel: "Subscribe",
+    placeholder: "Enter your email",
+  },
+} as const;
+
+export default function InsightsPage() {
+  const featuredPosts = insightsData.posts.filter((post) => post.featured);
 
   return (
     <div className="min-h-screen bg-dark-primary text-light-primary py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <MetaSection
-          title="Insights"
-          subtitle="Thoughts on engineering, design, and building software that works the way people actually think."
+          title={insightsData.meta.title}
+          subtitle={insightsData.meta.subtitle}
         />
 
         <section className="mb-20">
@@ -115,7 +129,7 @@ export default function InsightsPage() {
 
         <div className="mb-12">
           <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
+            {insightsData.categories.map((category) => (
               <button
                 key={category}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -135,7 +149,7 @@ export default function InsightsPage() {
             All Articles
           </h2>
           <div className="space-y-6">
-            {posts.map((post, index) => (
+            {insightsData.posts.map((post, index) => (
               <Link key={post.slug} href={`/insights/${post.slug}`}>
                 <article className="group cursor-pointer bg-dark-secondary/50 border border-gray-medium/30 rounded-xl p-6 hover:bg-dark-secondary hover:border-orange-primary/30 transition-all duration-300">
                   <div className="flex items-start gap-6">
@@ -193,20 +207,19 @@ export default function InsightsPage() {
         <section className="bg-gradient-to-br from-dark-secondary via-dark-secondary to-dark-primary border border-orange-primary/20 rounded-2xl p-10 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-light-primary mb-4">
-              Stay in the Loop
+              {insightsData.cta.title}
             </h3>
             <p className="text-gray-light mb-8 text-lg">
-              Get notified when I publish new insights about engineering,
-              design, and building better software.
+              {insightsData.cta.text}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={insightsData.cta.placeholder}
                 className="flex-1 px-6 py-4 border border-gray-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-primary focus:border-orange-primary bg-dark-primary text-light-primary placeholder-gray-light"
               />
               <button className="px-8 py-4 bg-gradient-to-r from-orange-primary to-orange-secondary text-dark-primary font-bold rounded-xl hover:shadow-lg hover:shadow-orange-primary/30 transition-all duration-300 transform hover:scale-105">
-                Subscribe
+                {insightsData.cta.subscribeLabel}
               </button>
             </div>
           </div>
