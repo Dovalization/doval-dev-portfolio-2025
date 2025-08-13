@@ -119,63 +119,57 @@ export default function WorkPage() {
         />
 
         {workData.caseStudies.map((cs, idx) => (
-          <section key={idx} className="mb-20">
-            <div className="bg-dark-secondary border border-gray-medium/30 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-orange-primary/10 transition-all duration-300">
-              <div className="px-8 py-12 border-b border-gray-medium/20">
-                <div className="flex items-start gap-4 mb-4">
-                  <div
-                    className={`w-2 h-16 bg-${cs.accent} rounded-full flex-shrink-0`}
-                  ></div>
-                  <div>
-                    <h2 className="text-3xl font-bold mb-4 text-light-primary">
-                      {cs.title}
-                    </h2>
-                    {/* First paragraph summarizing problem/intro */}
-                    <p className="text-lg text-gray-light max-w-3xl">
-                      {cs.problem.split(".")[0]}.
-                    </p>
-                  </div>
-                </div>
+          <section
+            key={idx}
+            className="px-8 py-12 bg-dark-secondary border border-gray-medium/30 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-orange-primary/10 transition-all duration-300 mb-20 flex flex-col gap-8"
+          >
+            <div className="flex items-center justify-start gap-4">
+              <div
+                className={`w-2 h-16 bg-orange-secondary rounded-full flex-shrink-0`}
+              ></div>
+              <div>
+                <h2 className="text-3xl font-bold mb-2 text-light-primary">
+                  {cs.title}
+                </h2>
+                {/* First paragraph summarizing problem/intro */}
+                <p className="text-md text-light-primary max-w-3xl">
+                  {cs.problem.split(".")[0]}.
+                </p>
               </div>
-              <div className="px-8 py-8">
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
-                  <div className="bg-gradient-to-br from-dark-secondary to-gray-medium rounded-xl p-6 border border-gray-medium/30">
-                    <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                      <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
-                      Problem
-                    </h3>
-                    <p className="text-gray-light">{cs.problem}</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-dark-secondary to-gray-medium rounded-xl p-6 border border-gray-medium/30">
-                    <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                      <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
-                      Approach
-                    </h3>
-                    <p className="text-gray-light">{cs.approach}</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-dark-secondary to-gray-medium rounded-xl p-6 border border-gray-medium/30">
-                    <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                      <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
-                      Result
-                    </h3>
-                    <p className="text-gray-light">{cs.result}</p>
-                  </div>
-                </div>
-                <div className="border-t border-gray-medium/30 pt-6">
-                  <h4 className="font-medium mb-3 text-orange-primary">
-                    Technologies Used
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {cs.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-sm font-medium"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="font-semibold text-lg mb-3 text-orange-primary flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                  Problem
+                </h3>
+                <p className="text-gray-light">{cs.problem}</p>
+              </div>
+              <div className=" ">
+                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                  Approach
+                </h3>
+                <p className="text-gray-light">{cs.approach}</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                  Result
+                </h3>
+                <p className="text-gray-light">{cs.result}</p>
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-wrap gap-2">
+                {cs.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           </section>
@@ -205,7 +199,7 @@ export default function WorkPage() {
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-gray-medium/30 text-gray-light px-2 py-1 rounded text-xs"
+                      className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-xs font-medium"
                     >
                       {tag}
                     </span>

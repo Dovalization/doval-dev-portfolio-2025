@@ -288,7 +288,7 @@ export default function HomePage() {
                 key={i}
                 className="bg-gradient-to-br from-dark-secondary to-gray-medium rounded-2xl p-8 shadow-2xl border border-gray-medium/20"
               >
-                <div className="w-8 h-1 bg-orange-primary rounded mb-6" />
+                <div className="w-8 h-1 bg-orange-secondary rounded mb-6" />
                 <blockquote className="text-light-primary text-lg leading-relaxed mb-6">
                   {`“${t.quote}”`}
                 </blockquote>
