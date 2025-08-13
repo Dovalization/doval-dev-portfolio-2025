@@ -208,7 +208,7 @@ export default function WorkPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center bg-gradient-to-br from-orange-primary/10 via-orange-secondary/5 to-cream/5 border border-orange-primary/20 rounded-2xl p-12">
+        <section className="text-center p-12">
           <h2 className="text-2xl font-bold mb-4 text-light-primary">
             {workData.cta.title}
           </h2>
