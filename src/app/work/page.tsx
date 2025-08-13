@@ -9,7 +9,6 @@ const workData = {
   },
   caseStudies: [
     {
-      accent: "orange-primary",
       title: "Horizon Chase 2 Marketing Site & CMS",
       problem:
         "Needed a high-performance, multilingual marketing site with fast iteration for non-dev content editors. The previous site was slow to load and difficult for the marketing team to update without developer intervention.",
@@ -27,7 +26,6 @@ const workData = {
       ],
     },
     {
-      accent: "orange-primary",
       title: "Aquiris Web Platform Revamp",
       problem:
         "Fragmented, slow-to-update marketing pages for multiple games. Each game had its own site with inconsistent branding, poor performance, and manual deployment processes that caused delays.",
@@ -45,7 +43,6 @@ const workData = {
       ],
     },
     {
-      accent: "orange-primary",
       title: "Internal Tools Workflow Automation",
       problem:
         "Manual workflows caused significant delays and errors in project handoffs. Teams were blocked waiting for approvals, and there was no clear visibility into process status or bottlenecks.",
@@ -121,7 +118,7 @@ export default function WorkPage() {
         {workData.caseStudies.map((cs, idx) => (
           <section
             key={idx}
-            className="px-8 py-12 bg-dark-secondary border border-gray-medium/30 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-orange-primary/10 transition-all duration-300 mb-20 flex flex-col gap-8"
+            className="px-8 py-12 bg-dark-secondary border border-gray-medium/30 rounded-2xl overflow-hidden mb-20 flex flex-col gap-8"
           >
             <div className="flex items-center justify-start gap-4">
               <div
@@ -139,22 +136,22 @@ export default function WorkPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-orange-primary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
                   Problem
                 </h3>
                 <p className="text-gray-light">{cs.problem}</p>
               </div>
               <div className=" ">
                 <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
                   Approach
                 </h3>
                 <p className="text-gray-light">{cs.approach}</p>
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
                   Result
                 </h3>
                 <p className="text-gray-light">{cs.result}</p>
@@ -184,10 +181,10 @@ export default function WorkPage() {
             {workData.otherProjects.map((p) => (
               <div
                 key={p.title}
-                className="bg-dark-secondary border border-gray-medium/30 rounded-xl p-6 hover:shadow-lg hover:shadow-orange-primary/10 hover:border-orange-primary/30 transition-all duration-300 group"
+                className="bg-dark-secondary border border-gray-medium/30 rounded-xl p-6 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="w-1 h-8 bg-orange-primary rounded-full flex-shrink-0 group-hover:bg-orange-secondary transition-colors"></div>
+                  <div className="w-1 h-8 bg-orange-secondary rounded-full flex-shrink-0 transition-colors"></div>
                   <h3 className="text-lg font-semibold text-light-primary">
                     {p.title}
                   </h3>
