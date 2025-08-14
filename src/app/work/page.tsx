@@ -142,7 +142,7 @@ export default function WorkPage() {
                 </h3>
                 <p className="text-gray-light">{cs.problem}</p>
               </div>
-              <div className=" ">
+              <div>
                 <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
                   <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
                   Approach

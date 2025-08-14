@@ -132,9 +132,9 @@ export default function HomePage() {
           </h2>
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {homeData.selectedWork.map((item, idx) => (
-              <div
+              <article
                 key={idx}
-                className="group bg-gradient-to-br from-dark-secondary to-gray-medium border border-gray-medium/30 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-orange-primary/10"
+                className="group bg-gradient-to-br from-dark-secondary to-gray-medium shadow-2xl border border-gray-medium/20 rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-orange-primary/10"
               >
                 <div className="h-48 bg-gradient-to-br from-dark-secondary via-dark-secondary to-dark-primary relative overflow-hidden">
                   <span className="absolute left-6 top-6 inline-block px-3 py-1 bg-orange-primary/20 text-orange-secondary border border-orange-primary/30 rounded-full text-xs font-semibold">
@@ -167,7 +167,7 @@ export default function HomePage() {
                     </svg>
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -212,14 +212,11 @@ export default function HomePage() {
               ))}
               <div className="grid grid-cols-2 gap-6 mb-8">
                 {homeData.aboutPreview.stats.map((s, i) => (
-                  <div
-                    key={i}
-                    className="bg-gradient-to-br from-dark-secondary to-gray-medium rounded-xl p-6 border border-gray-medium/20"
-                  >
-                    <div className="w-2 h-2 bg-orange-primary rounded-full mb-4" />
-                    <p className="text-light-primary font-semibold mb-1">
+                  <div key={i} className="">
+                    <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
+                      <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
                       {s.title}
-                    </p>
+                    </h3>
                     <p className="text-gray-light text-sm">{s.subtitle}</p>
                   </div>
                 ))}
