@@ -48,35 +48,58 @@ const aboutData = {
     },
   ],
   toolbox: {
-    languages: [
+    sections: [
+      {
+        key: "languages",
+        title: "Languages",
+
+        items: [
       {
         name: "JavaScript/TypeScript",
         desc: "Type safety & developer experience",
       },
       { name: "SQL", desc: "Direct data control & performance" },
     ],
-    frontend: [
+      },
+      {
+        key: "frontend",
+        title: "Frontend",
+        items: [
       { name: "React", desc: "Component reusability" },
       { name: "Next.js", desc: "Full-stack performance" },
       { name: "Tailwind CSS", desc: "Rapid, consistent styling" },
       { name: "Zod", desc: "Runtime type validation" },
       { name: "TanStack Query", desc: "Smart data fetching" },
     ],
-    backend: [
+      },
+      {
+        key: "backend",
+        title: "Backend",
+        items: [
       { name: "Node.js", desc: "JavaScript everywhere" },
       { name: "Express/Fastify", desc: "Flexible API architecture" },
       { name: "PostgreSQL", desc: "Reliable, powerful data" },
     ],
-    devops: [
+      },
+      {
+        key: "devops",
+        title: "DevOps & Testing",
+        items: [
       { name: "Docker", desc: "Consistent environments" },
       { name: "CI/CD", desc: "Automated reliability" },
       { name: "Vitest", desc: "Fast, modern testing" },
       { name: "Playwright", desc: "Real user testing" },
     ],
-    observability: [
+      },
+      {
+        key: "observability",
+        title: "Observability",
+        items: [
       { name: "Sentry", desc: "Error tracking" },
       { name: "Grafana", desc: "Visual monitoring" },
       { name: "Prometheus", desc: "Metrics collection" },
+    ],
+  },
     ],
   },
   testimonials: [
@@ -165,52 +188,27 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Toolbox - masonry grid but compact */}
+        {/* Toolbox */}
         <section className="mb-16">
           <h2 className="text-light-primary mb-8 text-2xl font-semibold">
             Toolbox
           </h2>
-          <div className="columns-1 gap-8 space-y-8 md:columns-2 lg:columns-3">
-            {(
-              [
-                {
-                  key: "languages",
-                  title: "Languages",
-                  dot: "bg-orange-primary",
-                },
-                {
-                  key: "frontend",
-                  title: "Frontend",
-                  dot: "bg-orange-secondary",
-                },
-                { key: "backend", title: "Backend", dot: "bg-orange-primary" },
-                {
-                  key: "devops",
-                  title: "DevOps & Testing",
-                  dot: "bg-orange-secondary",
-                },
-                {
-                  key: "observability",
-                  title: "Observability",
-                  dot: "bg-orange-primary",
-                },
-              ] as const
-            ).map(({ key, title, dot }) => (
+          <div className="columns-1 gap-6 space-y-8 md:columns-2 lg:columns-3">
+            {aboutData.toolbox.sections.map(({ key, title, items }) => (
               <div
                 key={key}
                 className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-4 shadow-lg"
               >
                 {/* Header */}
                 <div className="mb-4 flex items-center gap-2">
-                  <div className={`${dot} h-2 w-2 rounded-full`} />
+                  <div className="bg-orange-secondary h-2 w-2 rounded-full" />
                   <h3 className="text-orange-secondary text-lg font-semibold">
                     {title}
                   </h3>
                 </div>
                 {/* Items */}
                 <div className="grid gap-2">
-                  {aboutData.toolbox[key as keyof typeof aboutData.toolbox].map(
-                    (tech: { name: string; desc: string }, index: number) => (
+                  {items.map((tech, index) => (
                       <div
                         key={index}
                         className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border px-3 py-2"
@@ -222,8 +220,7 @@ export default function AboutPage() {
                           {tech.desc}
                         </p>
                       </div>
-                    ),
-                  )}
+                  ))}
                 </div>
               </div>
             ))}
@@ -236,22 +233,24 @@ export default function AboutPage() {
             Testimonials
           </h2>
           <div className="grid gap-6">
-            {aboutData.testimonials.map((t, i) => (
+            {aboutData.testimonials.map((testimonial, index) => (
               <div
-                key={i}
-                className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl"
+                key={index}
+                className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-6 shadow-lg"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-orange-primary h-16 w-1 flex-shrink-0 rounded-full" />
                   <div>
                     <p className="text-light-primary mb-4 text-lg leading-relaxed italic">
-                      {`"${t.quote}"`}
+                      {`"${testimonial.quote}"`}
                     </p>
                     <div className="text-sm">
                       <div className="text-light-primary font-medium">
-                        {t.author}
+                        {testimonial.author}
                       </div>
-                      <div className="text-gray-light">{t.company}</div>
+                      <div className="text-gray-light">
+                        {testimonial.company}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -265,7 +264,7 @@ export default function AboutPage() {
           <h2 className="text-light-primary mb-6 text-2xl font-semibold">
             My Approach
           </h2>
-          <div className="bg-dark-secondary border-gray-medium/30 hover:shadow-orange-primary/10 rounded-xl border p-8 transition-all duration-300 hover:shadow-xl">
+          <div className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-6 shadow-lg">
             <p className="text-gray-light mb-6 leading-relaxed">
               {aboutData.approach.intro}
             </p>
