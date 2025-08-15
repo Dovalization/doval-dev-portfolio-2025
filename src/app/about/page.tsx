@@ -108,6 +108,7 @@ export default function AboutPage() {
       <div className="container mx-auto">
         <MetaSection title={aboutData.meta.title} />
 
+        {/* Story */}
         <section className="mb-16">
           <h2 className="text-light-primary mb-6 text-2xl font-semibold">
             {aboutData.story.heading}
@@ -128,8 +129,11 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Five Non-Negotiables */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Five Non-Negotiables`}</h2>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+            Five Non-Negotiables
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {aboutData.nonNegotiables.map((n, i) => {
               const iconMap = {
@@ -139,7 +143,7 @@ export default function AboutPage() {
                 Minimize2,
                 Unlock,
               };
-              const Icon = iconMap[n.icon];
+              const Icon = iconMap[n.icon as keyof typeof iconMap];
               return (
                 <div
                   key={i}
@@ -149,7 +153,6 @@ export default function AboutPage() {
                     <Icon
                       className="text-dark-primary h-8 w-8"
                       strokeWidth={2.5}
-                      aria-hidden="true"
                     />
                   </div>
                   <h3 className="text-light-primary text-xl font-bold">
@@ -162,134 +165,88 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Toolbox - masonry grid but compact */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Toolbox`}</h2>
-          <div className="grid gap-8">
-            {/* Languages */}
-            <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
-                <h3 className="text-orange-secondary text-xl font-bold">{`Languages`}</h3>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {aboutData.toolbox.languages.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-4"
-                  >
-                    <div className="mb-2 flex items-start justify-between">
-                      <span className="text-light-primary font-semibold">
-                        {tech.name}
-                      </span>
-                    </div>
-                    <p className="text-gray-light text-sm">{tech.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Frontend & Backend */}
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="from-dark-secondary to-dark-primary border-orange-secondary/20 hover:shadow-orange-secondary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="bg-orange-secondary h-3 w-3 rounded-full"></div>
-                  <h3 className="text-orange-secondary text-xl font-bold">{`Frontend`}</h3>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+            Toolbox
+          </h2>
+          <div className="columns-1 gap-8 space-y-8 md:columns-2 lg:columns-3">
+            {(
+              [
+                {
+                  key: "languages",
+                  title: "Languages",
+                  dot: "bg-orange-primary",
+                },
+                {
+                  key: "frontend",
+                  title: "Frontend",
+                  dot: "bg-orange-secondary",
+                },
+                { key: "backend", title: "Backend", dot: "bg-orange-primary" },
+                {
+                  key: "devops",
+                  title: "DevOps & Testing",
+                  dot: "bg-orange-secondary",
+                },
+                {
+                  key: "observability",
+                  title: "Observability",
+                  dot: "bg-orange-primary",
+                },
+              ] as const
+            ).map(({ key, title, dot }) => (
+              <div
+                key={key}
+                className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-4 shadow-lg"
+              >
+                {/* Header */}
+                <div className="mb-4 flex items-center gap-2">
+                  <div className={`${dot} h-2 w-2 rounded-full`} />
+                  <h3 className="text-orange-secondary text-lg font-semibold">
+                    {title}
+                  </h3>
                 </div>
-                <div className="space-y-4">
-                  {aboutData.toolbox.frontend.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
-                    >
-                      <div className="text-light-primary mb-1 font-medium">
-                        {tech.name}
+                {/* Items */}
+                <div className="grid gap-2">
+                  {aboutData.toolbox[key as keyof typeof aboutData.toolbox].map(
+                    (tech: { name: string; desc: string }, index: number) => (
+                      <div
+                        key={index}
+                        className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border px-3 py-2"
+                      >
+                        <div className="text-light-primary text-sm leading-tight font-medium">
+                          {tech.name}
+                        </div>
+                        <p className="text-gray-light mt-0.5 text-xs leading-snug">
+                          {tech.desc}
+                        </p>
                       </div>
-                      <div className="text-gray-light text-sm">{tech.desc}</div>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
               </div>
-
-              <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
-                  <h3 className="text-orange-secondary text-xl font-bold">{`Backend`}</h3>
-                </div>
-                <div className="space-y-4">
-                  {aboutData.toolbox.backend.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
-                    >
-                      <div className="text-light-primary mb-1 font-medium">
-                        {tech.name}
-                      </div>
-                      <div className="text-gray-light text-sm">{tech.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* DevOps & Observability */}
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="from-dark-secondary to-dark-primary border-orange-secondary/20 hover:shadow-orange-secondary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="bg-orange-secondary h-3 w-3 rounded-full"></div>
-                  <h3 className="text-orange-secondary text-xl font-bold">{`DevOps & Testing`}</h3>
-                </div>
-                <div className="space-y-4">
-                  {aboutData.toolbox.devops.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
-                    >
-                      <div className="text-light-primary mb-1 font-medium">
-                        {tech.name}
-                      </div>
-                      <div className="text-gray-light text-sm">{tech.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
-                  <h3 className="text-orange-secondary text-xl font-bold">{`Observability`}</h3>
-                </div>
-                <div className="space-y-4">
-                  {aboutData.toolbox.observability.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
-                    >
-                      <div className="text-light-primary mb-1 font-medium">
-                        {tech.name}
-                      </div>
-                      <div className="text-gray-light text-sm">{tech.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
+        {/* Testimonials */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Testimonials`}</h2>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+            Testimonials
+          </h2>
           <div className="grid gap-6">
             {aboutData.testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl`}
+                className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl"
               >
                 <div className="flex items-start gap-4">
-                  <div
-                    className={`bg-orange-primary h-16 w-1 flex-shrink-0 rounded-full`}
-                  ></div>
+                  <div className="bg-orange-primary h-16 w-1 flex-shrink-0 rounded-full" />
                   <div>
-                    <p className="text-light-primary mb-4 text-lg leading-relaxed italic">{`"${t.quote}"`}</p>
+                    <p className="text-light-primary mb-4 text-lg leading-relaxed italic">
+                      {`"${t.quote}"`}
+                    </p>
                     <div className="text-sm">
                       <div className="text-light-primary font-medium">
                         {t.author}
@@ -303,13 +260,18 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Approach */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-6 text-2xl font-semibold">{`My Approach`}</h2>
+          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
+            My Approach
+          </h2>
           <div className="bg-dark-secondary border-gray-medium/30 hover:shadow-orange-primary/10 rounded-xl border p-8 transition-all duration-300 hover:shadow-xl">
             <p className="text-gray-light mb-6 leading-relaxed">
               {aboutData.approach.intro}
             </p>
-            <p className="text-light-primary mb-6 text-center text-2xl font-semibold">{`"${aboutData.approach.question}"`}</p>
+            <p className="text-light-primary mb-6 text-center text-2xl font-semibold">
+              {`"${aboutData.approach.question}"`}
+            </p>
             <p className="text-gray-light leading-relaxed">
               {aboutData.approach.outro}
             </p>
