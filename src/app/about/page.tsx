@@ -10,14 +10,15 @@ import {
 // Content data (to be replaced by CMS)
 const aboutData = {
   meta: { title: "About" },
+  summary:
+    "Full-stack engineer focused on frontend. I design and ship tools that make work clearer, faster, and easier to maintain.",
   story: {
     heading: "My Story",
     paragraphs: [
-      "I don't build products that trap people — I build tools that give them clarity, control, and the freedom to act.",
-      "That conviction isn't just a design choice; it's personal. As a neurodivergent developer, I've felt the drag of systems that interrupt momentum, scatter focus, or bury the important under the urgent. I know the frustration of having a clear goal but no clear path forward.",
-      "Over time, I turned that frustration into focus: creating systems and interfaces that work the way people actually think and decide. Fast to use. Simple to maintain. Designed to keep the important visible and help teams act on what matters.",
-      "Each step in my career built on the last. Game development taught me speed, iteration, and the value of cross-disciplinary teamwork. Design and UI/UX sharpened my instinct for clarity and usability. Full-stack engineering gave me the technical depth to make those qualities scalable and sustainable.",
-      "When technology supports clarity, momentum, and trust, people don't just use it — they depend on it. And that's the kind of work worth building.",
+      "I don’t build products that trap people—I build tools that give them clarity, control, and the freedom to act.",
+      "As a neurodivergent developer, I’ve felt what slows people down: interfaces that scatter focus and bury the important under the urgent.",
+      "So I design systems that match how people actually think and decide—fast to use, simple to maintain, and built for momentum.",
+      "When technology supports clarity, efficiency, and reliability, people don't just use it — they depend on it. And that's the kind of work I believe is worth building.",
     ],
   },
   nonNegotiables: [
@@ -38,7 +39,7 @@ const aboutData = {
     },
     {
       title: "Reduce cognitive friction",
-      text: "Clarity and predictability keep people moving forward. We minimize distractions and decision fatigue at every step.",
+      text: "Predictable flows and clear state keep people moving. We remove distractions and decision fatigue at every step.",
       icon: "Minimize2",
     },
     {
@@ -129,7 +130,10 @@ export default function AboutPage() {
   return (
     <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <MetaSection title={aboutData.meta.title} />
+        <MetaSection
+          title={aboutData.meta.title}
+          subtitle={aboutData.summary}
+        />
 
         {/* Story */}
         <section className="mb-16">
@@ -186,6 +190,22 @@ export default function AboutPage() {
               );
             })}
           </div>
+        </section>
+
+        {/* Approach */}
+        <section className="mb-16">
+          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
+            My Approach
+          </h2>
+          <p className="text-gray-light mb-6 leading-relaxed">
+            {aboutData.approach.intro}
+          </p>
+          <p className="text-light-primary mb-6 text-2xl font-semibold">
+            {`"${aboutData.approach.question}"`}
+          </p>
+          <p className="text-gray-light leading-relaxed">
+            {aboutData.approach.outro}
+          </p>
         </section>
 
         {/* Toolbox */}
@@ -256,24 +276,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Approach */}
-        <section className="mb-16">
-          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
-            My Approach
-          </h2>
-          <div className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-6 shadow-lg">
-            <p className="text-gray-light mb-6 leading-relaxed">
-              {aboutData.approach.intro}
-            </p>
-            <p className="text-light-primary mb-6 text-center text-2xl font-semibold">
-              {`"${aboutData.approach.question}"`}
-            </p>
-            <p className="text-gray-light leading-relaxed">
-              {aboutData.approach.outro}
-            </p>
           </div>
         </section>
       </div>
