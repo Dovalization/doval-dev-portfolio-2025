@@ -54,52 +54,52 @@ const aboutData = {
         title: "Languages",
 
         items: [
-      {
-        name: "JavaScript/TypeScript",
-        desc: "Type safety & developer experience",
-      },
-      { name: "SQL", desc: "Direct data control & performance" },
-    ],
+          {
+            name: "JavaScript/TypeScript",
+            desc: "Type safety & developer experience",
+          },
+          { name: "SQL", desc: "Direct data control & performance" },
+        ],
       },
       {
         key: "frontend",
         title: "Frontend",
         items: [
-      { name: "React", desc: "Component reusability" },
-      { name: "Next.js", desc: "Full-stack performance" },
-      { name: "Tailwind CSS", desc: "Rapid, consistent styling" },
-      { name: "Zod", desc: "Runtime type validation" },
-      { name: "TanStack Query", desc: "Smart data fetching" },
-    ],
+          { name: "React", desc: "Component reusability" },
+          { name: "Next.js", desc: "Full-stack performance" },
+          { name: "Tailwind CSS", desc: "Rapid, consistent styling" },
+          { name: "Zod", desc: "Runtime type validation" },
+          { name: "TanStack Query", desc: "Smart data fetching" },
+        ],
       },
       {
         key: "backend",
         title: "Backend",
         items: [
-      { name: "Node.js", desc: "JavaScript everywhere" },
-      { name: "Express/Fastify", desc: "Flexible API architecture" },
-      { name: "PostgreSQL", desc: "Reliable, powerful data" },
-    ],
+          { name: "Node.js", desc: "JavaScript everywhere" },
+          { name: "Express/Fastify", desc: "Flexible API architecture" },
+          { name: "PostgreSQL", desc: "Reliable, powerful data" },
+        ],
       },
       {
         key: "devops",
         title: "DevOps & Testing",
         items: [
-      { name: "Docker", desc: "Consistent environments" },
-      { name: "CI/CD", desc: "Automated reliability" },
-      { name: "Vitest", desc: "Fast, modern testing" },
-      { name: "Playwright", desc: "Real user testing" },
-    ],
+          { name: "Docker", desc: "Consistent environments" },
+          { name: "CI/CD", desc: "Automated reliability" },
+          { name: "Vitest", desc: "Fast, modern testing" },
+          { name: "Playwright", desc: "Real user testing" },
+        ],
       },
       {
         key: "observability",
         title: "Observability",
         items: [
-      { name: "Sentry", desc: "Error tracking" },
-      { name: "Grafana", desc: "Visual monitoring" },
-      { name: "Prometheus", desc: "Metrics collection" },
-    ],
-  },
+          { name: "Sentry", desc: "Error tracking" },
+          { name: "Grafana", desc: "Visual monitoring" },
+          { name: "Prometheus", desc: "Metrics collection" },
+        ],
+      },
     ],
   },
   testimonials: [
@@ -153,8 +153,8 @@ export default function AboutPage() {
         </section>
 
         {/* Five Non-Negotiables */}
-        <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+        <section className="mb-16 flex flex-col gap-16">
+          <h2 className="text-light-primary text-2xl font-semibold">
             Five Non-Negotiables
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -170,9 +170,9 @@ export default function AboutPage() {
               return (
                 <div
                   key={i}
-                  className="from-dark-secondary to-gray-medium border-gray-medium/20 flex flex-col items-center gap-4 rounded-2xl border bg-gradient-to-br px-4 py-6 text-center shadow-2xl"
+                  className="from-dark-secondary to-gray-medium border-gray-medium/20 relative flex flex-col items-center gap-2 rounded-2xl border bg-gradient-to-br px-4 py-6 pt-12 text-center shadow-2xl"
                 >
-                  <div className="bg-orange-secondary flex h-16 w-16 items-center justify-center rounded-full">
+                  <div className="bg-orange-secondary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full">
                     <Icon
                       className="text-dark-primary h-8 w-8"
                       strokeWidth={2.5}
@@ -209,17 +209,17 @@ export default function AboutPage() {
                 {/* Items */}
                 <div className="grid gap-2">
                   {items.map((tech, index) => (
-                      <div
-                        key={index}
-                        className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border px-3 py-2"
-                      >
-                        <div className="text-light-primary text-sm leading-tight font-medium">
-                          {tech.name}
-                        </div>
-                        <p className="text-gray-light mt-0.5 text-xs leading-snug">
-                          {tech.desc}
-                        </p>
+                    <div
+                      key={index}
+                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border px-3 py-2"
+                    >
+                      <div className="text-light-primary text-sm leading-tight font-medium">
+                        {tech.name}
                       </div>
+                      <p className="text-gray-light mt-0.5 text-xs leading-snug">
+                        {tech.desc}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
