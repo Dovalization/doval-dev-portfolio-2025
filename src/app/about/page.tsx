@@ -1,4 +1,11 @@
 import MetaSection from "@/components/meta-section";
+import {
+  Lightbulb,
+  User,
+  LayoutDashboard,
+  Minimize2,
+  Unlock,
+} from "lucide-react";
 
 // Content data (to be replaced by CMS)
 const aboutData = {
@@ -16,23 +23,28 @@ const aboutData = {
   nonNegotiables: [
     {
       title: "Build to solve real problems",
-      text: "Solutions grounded in actual user needs. We do not seek to create complexity, but to reduce it.",
+      text: "Solutions are grounded in real user needs, not assumptions. We reduce complexity so people can focus on what matters most.",
+      icon: "Lightbulb",
     },
     {
       title: "Champion the user",
-      text: "Every design choice serves the person using it, not the system itself.",
+      text: "Every design choice serves the person using it, not the system itself. Empathy and clarity guide every decision we make.",
+      icon: "User",
     },
     {
       title: "Experience is the product",
-      text: "How it feels to use matters as much as what it does, and that experience shapes how people interact with technology.",
+      text: "How it feels to use matters as much as what it does. The experience shapes how people interact, trust, and succeed with technology.",
+      icon: "LayoutDashboard",
     },
     {
       title: "Reduce cognitive friction",
-      text: "Clarity and predictability keep people moving forward, reducing distractions and decision fatigue.",
+      text: "Clarity and predictability keep people moving forward. We minimize distractions and decision fatigue at every step.",
+      icon: "Minimize2",
     },
     {
       title: "Support autonomy",
-      text: "Tools should empower, not control. Technology should adapt to the user, not the other way around.",
+      text: "Tools should empower, not control. Technology adapts to the user, giving them freedom and confidence to act independently.",
+      icon: "Unlock",
     },
   ],
   toolbox: {
@@ -92,21 +104,21 @@ const aboutData = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-dark-primary text-light-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <MetaSection title={aboutData.meta.title} />
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-light-primary">
+          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
             {aboutData.story.heading}
           </h2>
-          <div className="prose prose-lg max-w-none leading-relaxed space-y-6">
+          <div className="prose prose-lg max-w-none space-y-6 leading-relaxed">
             {aboutData.story.paragraphs.map((p, i) => (
               <p
                 key={i}
                 className={
                   i === aboutData.story.paragraphs.length - 1
-                    ? "font-medium text-light-primary"
+                    ? "text-light-primary font-medium"
                     : "text-gray-light"
                 }
               >
@@ -117,92 +129,102 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8 text-light-primary">{`Five Non-Negotiables`}</h2>
-          <div className="grid gap-6">
-            {aboutData.nonNegotiables.map((n, i) => (
-              <div
-                key={i}
-                className={`bg-dark-secondary border border-gray-medium/30 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:shadow-orange-primary/10 hover:border-orange-primary/50`}
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className={`w-1 h-12 bg-orange-primary rounded-full flex-shrink-0`}
-                  ></div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2 text-light-primary">
-                      {n.title}
-                    </h3>
-                    <p className="text-gray-light">{n.text}</p>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Five Non-Negotiables`}</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {aboutData.nonNegotiables.map((n, i) => {
+              const iconMap = {
+                Lightbulb,
+                User,
+                LayoutDashboard,
+                Minimize2,
+                Unlock,
+              };
+              const Icon = iconMap[n.icon];
+              return (
+                <div
+                  key={i}
+                  className="from-dark-secondary to-gray-medium border-gray-medium/20 flex flex-col items-center gap-4 rounded-2xl border bg-gradient-to-br px-4 py-6 text-center shadow-2xl"
+                >
+                  <div className="bg-orange-secondary flex h-16 w-16 items-center justify-center rounded-full">
+                    <Icon
+                      className="text-dark-primary h-8 w-8"
+                      strokeWidth={2.5}
+                      aria-hidden="true"
+                    />
                   </div>
+                  <h3 className="text-light-primary text-xl font-bold">
+                    {n.title}
+                  </h3>
+                  <p className="text-gray-light">{n.text}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8 text-light-primary">{`Toolbox`}</h2>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Toolbox`}</h2>
           <div className="grid gap-8">
             {/* Languages */}
-            <div className="bg-gradient-to-br from-dark-secondary to-dark-primary border border-orange-primary/20 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-primary/10 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 bg-orange-primary rounded-full"></div>
-                <h3 className="font-bold text-xl text-orange-secondary">{`Languages`}</h3>
+            <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
+                <h3 className="text-orange-secondary text-xl font-bold">{`Languages`}</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid gap-6 md:grid-cols-2">
                 {aboutData.toolbox.languages.map((tech, index) => (
                   <div
                     key={index}
-                    className="bg-dark-primary/50 rounded-lg p-4 border border-gray-medium/20"
+                    className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-4"
                   >
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="font-semibold text-light-primary">
+                    <div className="mb-2 flex items-start justify-between">
+                      <span className="text-light-primary font-semibold">
                         {tech.name}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-light">{tech.desc}</p>
+                    <p className="text-gray-light text-sm">{tech.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Frontend & Backend */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-dark-secondary to-dark-primary border border-orange-secondary/20 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-secondary/10 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-orange-secondary rounded-full"></div>
-                  <h3 className="font-bold text-xl text-orange-secondary">{`Frontend`}</h3>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="from-dark-secondary to-dark-primary border-orange-secondary/20 hover:shadow-orange-secondary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="bg-orange-secondary h-3 w-3 rounded-full"></div>
+                  <h3 className="text-orange-secondary text-xl font-bold">{`Frontend`}</h3>
                 </div>
                 <div className="space-y-4">
                   {aboutData.toolbox.frontend.map((tech, index) => (
                     <div
                       key={index}
-                      className="bg-dark-primary/50 rounded-lg p-3 border border-gray-medium/20"
+                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
                     >
-                      <div className="font-medium text-light-primary mb-1">
+                      <div className="text-light-primary mb-1 font-medium">
                         {tech.name}
                       </div>
-                      <div className="text-sm text-gray-light">{tech.desc}</div>
+                      <div className="text-gray-light text-sm">{tech.desc}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-dark-secondary to-dark-primary border border-orange-primary/20 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-primary/10 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-orange-primary rounded-full"></div>
-                  <h3 className="font-bold text-xl text-orange-secondary">{`Backend`}</h3>
+              <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
+                  <h3 className="text-orange-secondary text-xl font-bold">{`Backend`}</h3>
                 </div>
                 <div className="space-y-4">
                   {aboutData.toolbox.backend.map((tech, index) => (
                     <div
                       key={index}
-                      className="bg-dark-primary/50 rounded-lg p-3 border border-gray-medium/20"
+                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
                     >
-                      <div className="font-medium text-light-primary mb-1">
+                      <div className="text-light-primary mb-1 font-medium">
                         {tech.name}
                       </div>
-                      <div className="text-sm text-gray-light">{tech.desc}</div>
+                      <div className="text-gray-light text-sm">{tech.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -210,42 +232,42 @@ export default function AboutPage() {
             </div>
 
             {/* DevOps & Observability */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-dark-secondary to-dark-primary border border-orange-secondary/20 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-secondary/10 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-orange-secondary rounded-full"></div>
-                  <h3 className="font-bold text-xl text-orange-secondary">{`DevOps & Testing`}</h3>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="from-dark-secondary to-dark-primary border-orange-secondary/20 hover:shadow-orange-secondary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="bg-orange-secondary h-3 w-3 rounded-full"></div>
+                  <h3 className="text-orange-secondary text-xl font-bold">{`DevOps & Testing`}</h3>
                 </div>
                 <div className="space-y-4">
                   {aboutData.toolbox.devops.map((tech, index) => (
                     <div
                       key={index}
-                      className="bg-dark-primary/50 rounded-lg p-3 border border-gray-medium/20"
+                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
                     >
-                      <div className="font-medium text-light-primary mb-1">
+                      <div className="text-light-primary mb-1 font-medium">
                         {tech.name}
                       </div>
-                      <div className="text-sm text-gray-light">{tech.desc}</div>
+                      <div className="text-gray-light text-sm">{tech.desc}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-dark-secondary to-dark-primary border border-orange-primary/20 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-primary/10 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 bg-orange-primary rounded-full"></div>
-                  <h3 className="font-bold text-xl text-orange-secondary">{`Observability`}</h3>
+              <div className="from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="bg-orange-primary h-3 w-3 rounded-full"></div>
+                  <h3 className="text-orange-secondary text-xl font-bold">{`Observability`}</h3>
                 </div>
                 <div className="space-y-4">
                   {aboutData.toolbox.observability.map((tech, index) => (
                     <div
                       key={index}
-                      className="bg-dark-primary/50 rounded-lg p-3 border border-gray-medium/20"
+                      className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border p-3"
                     >
-                      <div className="font-medium text-light-primary mb-1">
+                      <div className="text-light-primary mb-1 font-medium">
                         {tech.name}
                       </div>
-                      <div className="text-sm text-gray-light">{tech.desc}</div>
+                      <div className="text-gray-light text-sm">{tech.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -255,21 +277,21 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8 text-light-primary">{`Testimonials`}</h2>
+          <h2 className="text-light-primary mb-8 text-2xl font-semibold">{`Testimonials`}</h2>
           <div className="grid gap-6">
             {aboutData.testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`bg-gradient-to-br from-dark-secondary to-dark-primary border rounded-xl p-8 hover:shadow-xl transition-all duration-300 border-orange-primary/20 hover:shadow-orange-primary/10`}
+                className={`from-dark-secondary to-dark-primary border-orange-primary/20 hover:shadow-orange-primary/10 rounded-xl border bg-gradient-to-br p-8 transition-all duration-300 hover:shadow-xl`}
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`w-1 h-16 bg-orange-primary rounded-full flex-shrink-0`}
+                    className={`bg-orange-primary h-16 w-1 flex-shrink-0 rounded-full`}
                   ></div>
                   <div>
-                    <p className="text-light-primary mb-4 italic text-lg leading-relaxed">{`"${t.quote}"`}</p>
+                    <p className="text-light-primary mb-4 text-lg leading-relaxed italic">{`"${t.quote}"`}</p>
                     <div className="text-sm">
-                      <div className="font-medium text-light-primary">
+                      <div className="text-light-primary font-medium">
                         {t.author}
                       </div>
                       <div className="text-gray-light">{t.company}</div>
@@ -282,12 +304,12 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-light-primary">{`My Approach`}</h2>
-          <div className="bg-dark-secondary border border-gray-medium/30 rounded-xl p-8 hover:shadow-xl hover:shadow-orange-primary/10 transition-all duration-300">
-            <p className="text-gray-light leading-relaxed mb-6">
+          <h2 className="text-light-primary mb-6 text-2xl font-semibold">{`My Approach`}</h2>
+          <div className="bg-dark-secondary border-gray-medium/30 hover:shadow-orange-primary/10 rounded-xl border p-8 transition-all duration-300 hover:shadow-xl">
+            <p className="text-gray-light mb-6 leading-relaxed">
               {aboutData.approach.intro}
             </p>
-            <p className="text-2xl font-semibold text-center text-light-primary mb-6">{`"${aboutData.approach.question}"`}</p>
+            <p className="text-light-primary mb-6 text-center text-2xl font-semibold">{`"${aboutData.approach.question}"`}</p>
             <p className="text-gray-light leading-relaxed">
               {aboutData.approach.outro}
             </p>

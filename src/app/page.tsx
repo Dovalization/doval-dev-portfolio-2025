@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { HeartHandshake, Zap, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 // Content data (to be replaced by CMS)
@@ -48,24 +47,6 @@ const homeData = {
     ctaHref: "/about",
     image: { src: "/images/about.png", alt: "About Me" },
   },
-  coreValues: [
-    {
-      icon: "HeartHandshake",
-      title: "Human-Centered",
-      description: "Build tools that empower people and reduce friction.",
-    },
-    {
-      icon: "Zap",
-      title: "Performance-Driven",
-      description: "Fast by default. Optimize for real-world usage and scale.",
-    },
-    {
-      icon: "ShieldCheck",
-      title: "Craft & Reliability",
-      description:
-        "Thoughtful engineering, clear communication, steady delivery.",
-    },
-  ],
   testimonials: [
     {
       quote:
@@ -236,39 +217,6 @@ export default function HomePage() {
                 objectFit="cover"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values Preview */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <h2 className="text-light-primary mb-16 text-center text-4xl font-bold">
-            Core Values
-          </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {homeData.coreValues.map((value, i) => {
-              const iconMap = { HeartHandshake, Zap, ShieldCheck } as const;
-              const Icon = iconMap[value.icon as keyof typeof iconMap];
-              return (
-                <div
-                  key={i}
-                  className="from-dark-secondary to-gray-medium border-gray-medium/20 rounded-2xl border bg-gradient-to-br p-8 text-center shadow-2xl"
-                >
-                  <div className="bg-orange-secondary mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full">
-                    <Icon
-                      className="text-dark-primary h-8 w-8"
-                      strokeWidth={2.5}
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-light-primary mb-3 text-xl font-bold">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-light">{value.description}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
