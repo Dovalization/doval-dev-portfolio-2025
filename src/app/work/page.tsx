@@ -108,7 +108,7 @@ const workData = {
 // Removed unused ESLint directive
 export default function WorkPage() {
   return (
-    <div className="min-h-screen bg-dark-primary text-light-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <MetaSection
           title={workData.meta.title}
@@ -118,14 +118,14 @@ export default function WorkPage() {
         {workData.caseStudies.map((cs, idx) => (
           <section
             key={idx}
-            className="px-8 py-12 bg-dark-secondary border border-gray-medium/30 rounded-2xl overflow-hidden mb-20 flex flex-col gap-8"
+            className="to-gray-medium border-gray-medium/20 from-dark-secondary mb-20 flex flex-col gap-8 overflow-hidden rounded-2xl border bg-gradient-to-br p-8 shadow-2xl"
           >
             <div className="flex items-center justify-start gap-4">
               <div
-                className={`w-2 h-16 bg-orange-secondary rounded-full flex-shrink-0`}
+                className={`bg-orange-secondary h-16 w-2 flex-shrink-0 rounded-full`}
               ></div>
               <div>
-                <h2 className="text-3xl font-bold mb-2 text-light-primary">
+                <h2 className="text-light-primary mb-2 text-3xl font-bold">
                   {cs.title}
                 </h2>
                 {/* First paragraph summarizing problem/intro */}
@@ -134,24 +134,24 @@ export default function WorkPage() {
                 </p>
               </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid gap-8 md:grid-cols-3">
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
+                <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
+                  <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
                   Problem
                 </h3>
                 <p className="text-gray-light">{cs.problem}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
+                <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
+                  <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
                   Approach
                 </h3>
                 <p className="text-gray-light">{cs.approach}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-3 text-orange-secondary flex items-center gap-2">
-                  <div className="w-2 h-2 bg-orange-secondary rounded-full"></div>
+                <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
+                  <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
                   Result
                 </h3>
                 <p className="text-gray-light">{cs.result}</p>
@@ -162,7 +162,7 @@ export default function WorkPage() {
                 {cs.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-sm font-medium"
+                    className="text-gray-light border-gray-light/30 rounded-full border px-3 py-1 text-sm font-medium"
                   >
                     {t}
                   </span>
@@ -174,29 +174,29 @@ export default function WorkPage() {
 
         {/* Smaller Projects Grid */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-light-primary">
+          <h2 className="text-light-primary mb-8 text-3xl font-bold">
             Other Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {workData.otherProjects.map((p) => (
               <div
                 key={p.title}
-                className="bg-dark-secondary border border-gray-medium/30 rounded-xl p-6 transition-all duration-300"
+                className="bg-dark-secondary border-gray-medium/30 rounded-xl border p-6 transition-all duration-300"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-1 h-8 bg-orange-secondary rounded-full flex-shrink-0 transition-colors"></div>
-                  <h3 className="text-lg font-semibold text-light-primary">
+                <div className="mb-3 flex items-start gap-3">
+                  <div className="bg-orange-secondary h-8 w-1 flex-shrink-0 rounded-full transition-colors"></div>
+                  <h3 className="text-light-primary text-lg font-semibold">
                     {p.title}
                   </h3>
                 </div>
-                <p className="text-gray-light text-sm mb-4 leading-relaxed">
+                <p className="text-gray-light mb-4 text-sm leading-relaxed">
                   {p.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-gray-light border border-gray-light/30 px-3 py-1 rounded-full text-xs font-medium"
+                      className="text-gray-light border-gray-light/30 rounded-full border px-3 py-1 text-xs font-medium"
                     >
                       {tag}
                     </span>
@@ -208,16 +208,16 @@ export default function WorkPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center p-12">
-          <h2 className="text-2xl font-bold mb-4 text-light-primary">
+        <section className="p-12 text-center">
+          <h2 className="text-light-primary mb-4 text-2xl font-bold">
             {workData.cta.title}
           </h2>
-          <p className="text-gray-light mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-light mx-auto mb-6 max-w-2xl">
             {workData.cta.text}
           </p>
           <a
             href={workData.cta.button.href}
-            className="bg-orange-primary text-dark-primary px-8 py-3 rounded-lg font-medium hover:bg-orange-secondary transition-colors inline-block shadow-lg hover:shadow-orange-primary/30"
+            className="bg-orange-primary text-dark-primary hover:bg-orange-secondary hover:shadow-orange-primary/30 inline-block rounded-lg px-8 py-3 font-medium shadow-lg transition-colors"
           >
             {workData.cta.button.label}
           </a>
