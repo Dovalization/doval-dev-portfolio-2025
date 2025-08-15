@@ -105,7 +105,6 @@ const workData = {
   },
 } as const;
 
-// Removed unused ESLint directive
 export default function WorkPage() {
   return (
     <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
@@ -181,7 +180,7 @@ export default function WorkPage() {
             {workData.otherProjects.map((p) => (
               <div
                 key={p.title}
-                className="bg-dark-secondary border-gray-medium/30 rounded-xl border p-6 transition-all duration-300"
+                className="to-gray-medium border-gray-medium/20 from-dark-secondary border-gray-/30 flex flex-col gap-2 overflow-hidden rounded-2xl border bg-gradient-to-br p-6 shadow-2xl transition-all duration-300"
               >
                 <div className="mb-3 flex items-start gap-3">
                   <div className="bg-orange-secondary h-8 w-1 flex-shrink-0 rounded-full transition-colors"></div>
