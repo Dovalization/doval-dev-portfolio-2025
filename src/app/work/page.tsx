@@ -208,20 +208,7 @@ export default function WorkPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="p-12 text-center">
-          <h2 className="text-light-primary mb-4 text-2xl font-bold">
-            {workData.cta.title}
-          </h2>
-          <p className="text-gray-light mx-auto mb-6 max-w-2xl">
-            {workData.cta.text}
-          </p>
-          <a
-            href={workData.cta.button.href}
-            className="bg-orange-primary text-dark-primary hover:bg-orange-secondary hover:shadow-orange-primary/30 inline-block rounded-lg px-8 py-3 font-medium shadow-lg transition-colors"
-          >
-            {workData.cta.button.label}
-          </a>
-        </section>
+        <ContactCTASection />
       </div>
     </div>
   );
