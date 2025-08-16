@@ -9,11 +9,11 @@ export default function MetaSection({
 }) {
   return (
     <section className="mb-12">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-light-primary">
+      <h1 className="text-light-primary mb-8 text-4xl font-bold sm:text-5xl">
         {title}
       </h1>
       {subtitle && (
-        <p className="text-xl text-gray-light mb-16 max-w-3xl">{subtitle}</p>
+        <p className="text-gray-light mb-16 max-w-prose text-xl">{subtitle}</p>
       )}
     </section>
   );
