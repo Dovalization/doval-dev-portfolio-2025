@@ -12,15 +12,6 @@ const aboutData = {
   meta: { title: "About" },
   summary:
     "Full-stack engineer focused on frontend. I design and ship tools that make work clearer, faster, and easier to maintain.",
-  story: {
-    heading: "My Story",
-    paragraphs: [
-      "I don’t build products that trap people—I build tools that give them clarity, control, and the freedom to act.",
-      "As a neurodivergent developer, I’ve felt what slows people down: interfaces that scatter focus and bury the important under the urgent.",
-      "So I design systems that match how people actually think and decide—fast to use, simple to maintain, and built for momentum.",
-      "When technology supports clarity, efficiency, and reliability, people don't just use it — they depend on it. And that's the kind of work I believe is worth building.",
-    ],
-  },
   nonNegotiables: [
     {
       title: "Build to solve real problems",
@@ -117,13 +108,6 @@ const aboutData = {
       company: "Foton Tech",
     },
   ],
-  approach: {
-    intro:
-      "I believe the best technology feels invisible — it gets out of the way and lets people focus on what matters to them. Whether I'm building a marketing site, designing an internal tool, or architecting a complex system, I start with the same question:",
-    question: "How can this make someone's day better?",
-    outro:
-      "From there, every technical decision — from database schema to component architecture to deployment strategy — serves that human goal. The result is software that people actually want to use, teams can maintain confidently, and businesses can depend on to grow.",
-  },
 } as const;
 
 export default function AboutPage() {
@@ -137,30 +121,34 @@ export default function AboutPage() {
 
         {/* Story */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
-            {aboutData.story.heading}
-          </h2>
-          <div className="prose prose-lg max-w-none space-y-6 leading-relaxed">
-            {aboutData.story.paragraphs.map((p, i) => (
-              <p
-                key={i}
-                className={
-                  i === aboutData.story.paragraphs.length - 1
-                    ? "text-light-primary font-medium"
-                    : "text-gray-light"
-                }
-              >
-                {p}
+          <div>
+            <h2 className="text-light-primary mb-6 text-2xl font-semibold">
+              Why I build & how I work
+            </h2>
+            <div className="max-w-[72ch] space-y-6 text-lg">
+              <p className="text-light-primary leading-8">
+                I don’t build products that trap people — I build tools that
+                give them clarity, control, and the freedom to act. As a
+                developer and designer, I’ve personally felt the drag of systems
+                that scatter focus and bury the important under the urgent.
               </p>
-            ))}
+              <p className="text-light-primary leading-8">
+                I design software that matches how people actually think and
+                behave — fast to use, simple to maintain, built for momentum and
+                easy to change. When technology supports clarity, efficiency,
+                and reliability, people don’t just use it — they depend on it.
+                And that’s the kind of work I believe is worth building.
+              </p>
+              <blockquote className="border-orange-secondary border-l-2 pl-4 text-lg font-bold text-slate-200 italic">
+                “Make the important visible, reduce friction, and keep teams
+                moving.”
+              </blockquote>
+            </div>
           </div>
         </section>
 
         {/* Five Non-Negotiables */}
-        <section className="mb-16 flex flex-col gap-16">
-          <h2 className="text-light-primary text-2xl font-semibold">
-            Five Non-Negotiables
-          </h2>
+        <section className="mb-16 flex flex-col gap-16 pt-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {aboutData.nonNegotiables.map((n, i) => {
               const iconMap = {
@@ -193,20 +181,7 @@ export default function AboutPage() {
         </section>
 
         {/* Approach */}
-        <section className="mb-16">
-          <h2 className="text-light-primary mb-6 text-2xl font-semibold">
-            My Approach
-          </h2>
-          <p className="text-gray-light mb-6 leading-relaxed">
-            {aboutData.approach.intro}
-          </p>
-          <p className="text-light-primary mb-6 text-2xl font-semibold">
-            {`"${aboutData.approach.question}"`}
-          </p>
-          <p className="text-gray-light leading-relaxed">
-            {aboutData.approach.outro}
-          </p>
-        </section>
+        <section className="mb-16 max-w-prose"></section>
 
         {/* Toolbox */}
         <section className="mb-16">

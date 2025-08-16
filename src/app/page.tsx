@@ -1,14 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import ContactCTASection from "@/components/contact-cta-section";
 
 // Content data (to be replaced by CMS)
 const homeData = {
   hero: {
-    headingTop: "Building Systems That",
-    headingAccent: "Empower People",
+    headingTop: "Full-stack Developer",
+    headingAccent: "Human-centered design",
     subheading:
-      "Full-Stack Engineer focused on Frontend, creating tools that help teams work better together.",
-    cta: { label: "Let's Work Together", href: "/contact" },
+      "I build solutions that empower people – tools that help teams work better together. My work is driven by a desire to understand user needs and a passion for creating meaningful experiences.",
+    ctas: [
+      { label: "About me", href: "/about" },
+      { label: "See my work", href: "/work" },
+      { label: "Get in touch", href: "/contact" },
+    ],
   },
   selectedWork: [
     {
@@ -80,29 +85,39 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 py-32 sm:px-6 lg:px-8">
+      <section className="relative flex items-center justify-center overflow-hidden px-4 py-32 sm:px-6 lg:px-8">
         <div className="from-dark-primary via-dark-secondary to-dark-primary absolute inset-0 bg-gradient-to-br" />
-        <div className="relative mx-auto max-w-5xl text-center">
-          <h1 className="text-light-primary mb-8 text-5xl leading-tight font-bold sm:text-6xl lg:text-7xl">
+        <div className="relative z-10 flex flex-col items-center gap-8 text-center">
+          <div className="from-dark-secondary to-gray-medium relative mx-auto aspect-square w-full max-w-64 overflow-hidden rounded-full bg-gradient-to-br p-8 shadow-2xl">
+            <Image
+              src={homeData.aboutPreview.image.src}
+              alt={homeData.aboutPreview.image.alt}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <h1 className="text-light-primary text-5xl leading-tight font-bold sm:text-6xl lg:text-7xl">
             {homeData.hero.headingTop}
             <br />
-            <span className="text-orange-secondary">
+            <span className="from-orange-secondary to-orange-primary bg-gradient-to-tr bg-clip-text text-transparent">
               {homeData.hero.headingAccent}
             </span>
           </h1>
-          <p className="text-gray-light mx-auto mb-12 max-w-4xl text-xl leading-relaxed sm:text-2xl">
+          <p className="text-gray-light mx-auto max-w-prose text-xl leading-relaxed sm:text-2xl">
             {homeData.hero.subheading}
           </p>
-          <Link
-            href={homeData.hero.cta.href}
-            className="bg-orange-secondary text-dark-primary hover:bg-orange-primary inline-block transform rounded-full px-12 py-4 text-lg font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            {homeData.hero.cta.label}
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            {homeData.hero.ctas.map((cta, idx) => (
+              <Link
+                key={idx}
+                href={cta.href}
+                className="bg-orange-secondary text-dark-primary hover:bg-orange-primary inline-block transform rounded-full px-8 py-3 text-lg font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                {cta.label}
+              </Link>
+            ))}
+          </div>
         </div>
-        {/* Decorative elements */}
-        <div className="bg-orange-secondary absolute top-1/2 right-10 h-20 w-20 rounded-full opacity-20 blur-xl" />
-        <div className="bg-orange-primary absolute bottom-20 left-10 h-32 w-32 rounded-full opacity-10 blur-2xl" />
       </section>
 
       {/* Selected Work Preview */}
@@ -175,8 +190,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
@@ -209,14 +223,6 @@ export default function HomePage() {
                 {homeData.aboutPreview.ctaLabel}
               </Link>
             </div>
-            <div className="from-dark-secondary to-gray-medium relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-full bg-gradient-to-br p-8 shadow-2xl">
-              <Image
-                src={homeData.aboutPreview.image.src}
-                alt={homeData.aboutPreview.image.alt}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -247,22 +253,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-light-primary mb-6 text-4xl font-bold">
-            {homeData.cta.title}
-          </h2>
-          <p className="text-gray-light mx-auto mb-8 max-w-3xl text-xl leading-relaxed">
-            {homeData.cta.description}
-          </p>
-          <Link
-            href={homeData.cta.ctaHref}
-            className="bg-orange-secondary text-dark-primary hover:bg-orange-primary inline-block transform rounded-full px-12 py-4 text-lg font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            {homeData.cta.ctaLabel}
-          </Link>
-        </div>
-      </section>
+      <ContactCTASection />
     </div>
   );
 }
