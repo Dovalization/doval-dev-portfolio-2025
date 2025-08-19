@@ -11,31 +11,31 @@ import {
 const aboutData = {
   meta: { title: "About" },
   summary:
-    "Full-stack engineer focused on frontend. I design and ship tools that make work clearer, faster, and easier to maintain.",
+    "Hey! I'm Guilherme Doval, a full-stack engineer with a frontend focus. I build tools that make work clearer, faster and easier.",
   nonNegotiables: [
     {
-      title: "Build to solve real problems",
-      text: "Solutions are grounded in real user needs, not assumptions. We reduce complexity so people can focus on what matters most.",
+      title: "Solve real problems",
+      text: "Decisions are grounded in observed user needs. We reduce complexity so people can focus on what matters.",
       icon: "Lightbulb",
     },
     {
       title: "Champion the user",
-      text: "Every design choice serves the person using it, not the system itself. Empathy and clarity guide every decision we make.",
+      text: "Every choice serves the person using the product, not the system. Empathy and clarity guide the work.",
       icon: "User",
     },
     {
-      title: "Experience is the product",
-      text: "How it feels to use matters as much as what it does. The experience shapes how people interact, trust, and succeed with technology.",
+      title: "Build for experience",
+      text: "Usability and experience drive trust, adoption, and outcomes. How it feels matters as much as what it does.",
       icon: "LayoutDashboard",
     },
     {
-      title: "Reduce cognitive friction",
-      text: "Predictable flows and clear state keep people moving. We remove distractions and decision fatigue at every step.",
+      title: "Lower cognitive load",
+      text: "Predictable flows and clear state support momentum. We remove distractions and decision fatigue.",
       icon: "Minimize2",
     },
     {
-      title: "Support autonomy",
-      text: "Tools should empower, not control. Technology adapts to the user, giving them freedom and confidence to act independently.",
+      title: "Enable autonomy",
+      text: "Technology should empower, not control. It gives people the freedom and confidence to act independently.",
       icon: "Unlock",
     },
   ],
@@ -121,29 +121,27 @@ export default function AboutPage() {
 
         {/* Story */}
         <section className="mb-16">
-          <div>
-            <h2 className="text-light-primary mb-6 text-2xl font-semibold">
-              Why I build & how I work
-            </h2>
-            <div className="max-w-[72ch] space-y-6 text-lg">
-              <p className="text-light-primary leading-8">
-                I don’t build products that trap people — I build tools that
-                give them clarity, control, and the freedom to act. As a
-                developer and designer, I’ve personally felt the drag of systems
-                that scatter focus and bury the important under the urgent.
-              </p>
-              <p className="text-light-primary leading-8">
-                I design software that matches how people actually think and
-                behave — fast to use, simple to maintain, built for momentum and
-                easy to change. When technology supports clarity, efficiency,
-                and reliability, people don’t just use it — they depend on it.
-                And that’s the kind of work I believe is worth building.
-              </p>
-              <blockquote className="border-orange-secondary border-l-2 pl-4 text-lg font-bold text-slate-200 italic">
-                “Make the important visible, reduce friction, and keep teams
-                moving.”
-              </blockquote>
-            </div>
+          <h2 className="text-light-primary mb-6 text-3xl font-bold">
+            Why I build & how I work
+          </h2>
+          <div className="max-w-[72ch] space-y-6 text-lg">
+            <p className="text-light-primary leading-8">
+              I don’t build products that box people in. I build tools that give
+              them clarity, control, and the freedom to act. I’ve felt firsthand
+              how systems can scatter focus and push the urgent over the
+              important.
+            </p>
+            <p className="text-light-primary leading-8">
+              So I design software that fits how people actually think: fast to
+              use, simple to maintain, easy to change, and built for momentum.
+              When technology supports clarity and efficiency, people don’t just
+              use it — they rely on it. And that’s the kind of work I believe is
+              worth building.
+            </p>
+            <blockquote className="border-orange-secondary border-l-2 pl-4 text-lg font-semibold text-slate-200 italic">
+              “Make the important visible, reduce friction, and keep teams
+              moving.”
+            </blockquote>
           </div>
         </section>
 
@@ -158,11 +156,11 @@ export default function AboutPage() {
                 Minimize2,
                 Unlock,
               };
-              const Icon = iconMap[n.icon as keyof typeof iconMap];
+              const Icon = iconMap[n.icon];
               return (
                 <div
                   key={i}
-                  className="from-dark-secondary to-gray-medium border-gray-medium/20 relative flex flex-col items-center gap-2 rounded-2xl border bg-gradient-to-br px-4 py-6 pt-12 text-center shadow-2xl"
+                  className="from-dark-secondary to-gray-medium border-gray-medium/20 relative flex flex-col items-center gap-2 rounded-2xl border bg-gradient-to-br px-4 py-6 pt-12 text-center shadow-2xl text-shadow-sm"
                 >
                   <div className="bg-orange-secondary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full">
                     <Icon
@@ -170,22 +168,19 @@ export default function AboutPage() {
                       strokeWidth={2.5}
                     />
                   </div>
-                  <h3 className="text-light-primary text-xl font-bold">
+                  <h3 className="text-light-primary text-lg font-semibold">
                     {n.title}
                   </h3>
-                  <p className="text-gray-light">{n.text}</p>
+                  <p className="text-light-primary text-sm">{n.text}</p>
                 </div>
               );
             })}
           </div>
         </section>
 
-        {/* Approach */}
-        <section className="mb-16 max-w-prose"></section>
-
         {/* Toolbox */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+          <h2 className="text-light-primary mb-8 text-3xl font-bold">
             Toolbox
           </h2>
           <div className="columns-1 gap-6 space-y-8 md:columns-2 lg:columns-3">
@@ -224,19 +219,19 @@ export default function AboutPage() {
 
         {/* Testimonials */}
         <section className="mb-16">
-          <h2 className="text-light-primary mb-8 text-2xl font-semibold">
+          <h2 className="text-light-primary mb-8 text-3xl font-bold">
             Testimonials
           </h2>
           <div className="grid gap-6">
             {aboutData.testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="from-dark-secondary to-gray-medium border-gray-medium/20 mb-8 break-inside-avoid rounded-xl border bg-gradient-to-br p-6 shadow-lg"
+                className="from-dark-secondary to-gray-medium border-gray-medium/20 break-inside-avoid rounded-xl border bg-gradient-to-br p-6 shadow-lg"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-orange-primary h-16 w-1 flex-shrink-0 rounded-full" />
                   <div>
-                    <p className="text-light-primary mb-4 text-lg leading-relaxed italic">
+                    <p className="text-light-primarytext-lg leading-relaxed italic">
                       {`"${testimonial.quote}"`}
                     </p>
                     <div className="text-sm">
