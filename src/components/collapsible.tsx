@@ -78,38 +78,29 @@ export default function Collapsible({ project }: CollapsibleProps) {
           },
         )}
       >
-        <div className="flex items-center justify-start gap-4">
-          <div
-            className={`bg-orange-secondary h-16 w-2 flex-shrink-0 rounded-full`}
-          ></div>
-          <div>
-            <h2 className="text-light-primary mb-2 text-3xl font-bold">
-              {project.title}
-            </h2>
-            {/* First paragraph summarizing problem/intro */}
-            <p className="text-md text-light-primary max-w-3xl">
-              {project.problem.split(".")[0]}.
-            </p>
-          </div>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-3xl font-bold">{project.title}</h2>
+          {/* First paragraph summarizing problem/intro */}
+          <hr className="border-orange-secondary max-w-8 border-2" />
+          <p className="text-md text-light-primary max-w-3xl">
+            {project.problem.split(".")[0]}.
+          </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
-              <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
+            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
               Problem
             </h3>
             <p className="text-gray-light">{project.problem}</p>
           </div>
           <div>
-            <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
-              <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
+            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
               Approach
             </h3>
             <p className="text-gray-light">{project.approach}</p>
           </div>
           <div>
-            <h3 className="text-orange-secondary mb-3 flex items-center gap-2 text-lg font-semibold">
-              <div className="bg-orange-secondary h-2 w-2 rounded-full"></div>
+            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
               Result
             </h3>
             <p className="text-gray-light">{project.result}</p>
@@ -120,7 +111,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
             {project.stack.map((t) => (
               <span
                 key={t}
-                className="text-gray-light border-gray-light/30 rounded-full border px-3 py-1 text-sm font-medium"
+                className="text-orange-secondary border-orange-secondary/30 rounded-full border px-3 py-1 text-sm font-medium"
               >
                 {t}
               </span>
