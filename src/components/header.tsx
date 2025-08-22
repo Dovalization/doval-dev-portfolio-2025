@@ -6,10 +6,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { GitHub, Linkedin } from "react-feather";
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
