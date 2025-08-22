@@ -9,7 +9,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
-  { href: "/insights", label: "Insights" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,11 +17,11 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark-primary/95 backdrop-blur-md border-b border-dark-secondary/50">
+    <nav className="bg-dark-primary/95 border-dark-secondary/50 sticky top-0 z-50 border-b backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex h-20 items-center justify-between">
           <Link href="/">
-            <span className="flex aspect-video relative min-w-40">
+            <span className="relative flex aspect-video min-w-40">
               <Image
                 src="/doval-dev-logo.svg"
                 alt="Logo"
@@ -32,16 +32,16 @@ export function Header() {
           </Link>
 
           <div className="flex items-center gap-8">
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden space-x-8 md:flex">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-orange-secondary py-2",
+                    "hover:text-orange-secondary py-2 text-sm font-medium transition-colors",
                     pathname === item.href
-                      ? "text-orange-secondary border-b-2 border-orange-secondary"
-                      : "text-gray-light"
+                      ? "text-orange-secondary border-orange-secondary border-b-2"
+                      : "text-gray-light",
                   )}
                 >
                   {item.label}
@@ -58,7 +58,7 @@ export function Header() {
               >
                 <GitHub
                   size={26}
-                  className="text-gray-light hover:text-orange-secondary transition-colors duration-500 "
+                  className="text-gray-light hover:text-orange-secondary transition-colors duration-500"
                 />
               </a>
               <a

@@ -265,7 +265,7 @@ const workData = {
 export default function WorkPage() {
   return (
     <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
-      <div className="container mx-auto flex flex-col gap-12">
+      <div className="container mx-auto flex flex-col gap-16">
         <MetaSection
           title={workData.meta.title}
           subtitle={workData.meta.subtitle}

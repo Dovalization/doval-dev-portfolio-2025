@@ -31,9 +31,9 @@ The Work page showcases my professional projects and contributions. It highlight
 - **Project Showcase**: Displays a grid of featured projects with images, titles, and short descriptions.
 - **Case Studies**: Provides in-depth analysis of selected projects, including challenges faced and solutions implemented.
 
-### Insights
+### Blog
 
-The Insights page shares valuable knowledge and experiences related to web development and design. It serves as my personal blog where I share insights, lessons learned, best practices, as well as thoughts on industry trends.
+The Blog page shares valuable knowledge and experiences related to web development and design. It serves as my personal blog where I share insights, lessons learned, best practices, as well as thoughts on industry trends.
 
 - **Blog Posts**: Shares knowledge and experiences related to web development and design.
 - **Technical Articles**: Explores specific technologies, tools, and methodologies used in projects.

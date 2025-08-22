@@ -2,9 +2,9 @@ import MetaSection from "@/components/meta-section";
 import Link from "next/link";
 
 // Content data (to be replaced by CMS)
-const insightsData = {
+const blogData = {
   meta: {
-    title: "Insights",
+    title: "Blog",
     subtitle:
       "Thoughts on engineering, design, and building software that works the way people actually think.",
   },
@@ -59,21 +59,21 @@ const insightsData = {
   ],
   cta: {
     title: "Stay in the Loop",
-    text: "Get notified when I publish new insights about engineering, design, and building better software.",
+    text: "Get notified when I publish new blog about engineering, design, and building better software.",
     subscribeLabel: "Subscribe",
     placeholder: "Enter your email",
   },
 } as const;
 
-export default function InsightsPage() {
-  const featuredPosts = insightsData.posts.filter((post) => post.featured);
+export default function BlogPage() {
+  const featuredPosts = blogData.posts.filter((post) => post.featured);
 
   return (
     <div className="min-h-screen bg-dark-primary text-light-primary py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <MetaSection
-          title={insightsData.meta.title}
-          subtitle={insightsData.meta.subtitle}
+          title={blogData.meta.title}
+          subtitle={blogData.meta.subtitle}
         />
 
         <section className="mb-20">
@@ -82,7 +82,7 @@ export default function InsightsPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredPosts.map((post) => (
-              <Link key={post.slug} href={`/insights/${post.slug}`}>
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="group cursor-pointer bg-gradient-to-br from-dark-secondary to-dark-primary border border-gray-medium/30 rounded-2xl p-8 hover:border-orange-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-primary/10 h-full">
                   <div className="flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-6">
@@ -129,7 +129,7 @@ export default function InsightsPage() {
 
         <div className="mb-12">
           <div className="flex flex-wrap gap-3 justify-center">
-            {insightsData.categories.map((category) => (
+            {blogData.categories.map((category) => (
               <button
                 key={category}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -149,8 +149,8 @@ export default function InsightsPage() {
             All Articles
           </h2>
           <div className="space-y-6">
-            {insightsData.posts.map((post, index) => (
-              <Link key={post.slug} href={`/insights/${post.slug}`}>
+            {blogData.posts.map((post, index) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="group cursor-pointer bg-dark-secondary/50 border border-gray-medium/30 rounded-xl p-6 hover:bg-dark-secondary hover:border-orange-primary/30 transition-all duration-300">
                   <div className="flex items-start gap-6">
                     <div
@@ -207,19 +207,19 @@ export default function InsightsPage() {
         <section className="bg-gradient-to-br from-dark-secondary via-dark-secondary to-dark-primary border border-orange-primary/20 rounded-2xl p-10 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-3xl font-bold text-light-primary mb-4">
-              {insightsData.cta.title}
+              {blogData.cta.title}
             </h3>
             <p className="text-gray-light mb-8 text-lg">
-              {insightsData.cta.text}
+              {blogData.cta.text}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder={insightsData.cta.placeholder}
+                placeholder={blogData.cta.placeholder}
                 className="flex-1 px-6 py-4 border border-gray-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-primary focus:border-orange-primary bg-dark-primary text-light-primary placeholder-gray-light"
               />
               <button className="px-8 py-4 bg-gradient-to-r from-orange-primary to-orange-secondary text-dark-primary font-bold rounded-xl hover:shadow-lg hover:shadow-orange-primary/30 transition-all duration-300 transform hover:scale-105">
-                {insightsData.cta.subscribeLabel}
+                {blogData.cta.subscribeLabel}
               </button>
             </div>
           </div>

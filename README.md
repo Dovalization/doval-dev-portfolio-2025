@@ -10,7 +10,7 @@ My personal portfolio showcasing my work as a Full-Stack Engineer focused on Fro
 - Tailwind CSS v4 design system (dark theme by default)
 - Accessible, responsive sections and elements
 - Iconography with lucide-react, utility helpers (clsx, tailwind-merge)
-- Structured pages: `/about`, `/work`, `/insights`, `/contact`
+- Structured pages: `/about`, `/work`, `/blog`, `/contact`
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ src/
 		page.tsx          # Home
 		about/page.tsx
 		work/page.tsx
-		insights/page.tsx
+		blog/page.tsx
 		contact/page.tsx
 	components/
 		header.tsx        # Site header/nav

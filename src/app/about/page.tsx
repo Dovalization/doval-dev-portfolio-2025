@@ -113,14 +113,14 @@ const aboutData = {
 export default function AboutPage() {
   return (
     <div className="bg-dark-primary text-light-primary min-h-screen px-4 py-20 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto flex flex-col gap-16">
         <MetaSection
           title={aboutData.meta.title}
           subtitle={aboutData.summary}
         />
 
         {/* Story */}
-        <section className="mb-16">
+        <section>
           <h2 className="text-light-primary mb-6 text-3xl font-bold">
             Why I build & how I work
           </h2>
@@ -146,7 +146,7 @@ export default function AboutPage() {
         </section>
 
         {/* Five Non-Negotiables */}
-        <section className="mb-16 flex flex-col gap-16 pt-16">
+        <section className="flex flex-col gap-16 pt-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {aboutData.nonNegotiables.map((n, i) => {
               const iconMap = {
@@ -179,7 +179,7 @@ export default function AboutPage() {
         </section>
 
         {/* Toolbox */}
-        <section className="mb-16">
+        <section>
           <h2 className="text-light-primary mb-8 text-3xl font-bold">
             Toolbox
           </h2>
@@ -218,7 +218,7 @@ export default function AboutPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="mb-16">
+        <section>
           <h2 className="text-light-primary mb-8 text-3xl font-bold">
             Testimonials
           </h2>
