@@ -21,7 +21,7 @@ const starTypes = {
  * Galaxy structure parameters - controls the shape and density of the spiral galaxy
  */
 const GALAXY_CONFIG = {
-  NUM_STARS: 5000, // Total number of stars to generate
+  NUM_STARS: 7000, // Total number of stars to generate
   ARMS: 3, // Number of spiral arms
   GALAXY_THICKNESS: 1, // Z-axis thickness of the galaxy disk
 
@@ -39,8 +39,8 @@ const GALAXY_CONFIG = {
   ARM_X_MEAN: 200, // Average distance from center for spiral arms
   ARM_Y_MEAN: 100, // Average arm offset
 
-  SPIRAL: 3.0, // How tightly wound the spiral arms are
-  HAZE_RATIO: 0.3, // Ratio of haze particles to stars (creates nebula effect)
+  SPIRAL: 2.5, // How tightly wound the spiral arms are
+  HAZE_RATIO: 0.5, // Ratio of haze particles to stars (creates nebula effect)
 };
 
 /**
@@ -73,7 +73,7 @@ function clamp(value: number, minimum: number, maximum: number): number {
  * Transforms linear coordinates into spiral arm patterns
  * Creates the characteristic spiral shape of galaxies using polar coordinates
  * @param x - X coordinate
- * @param y - Y coordinate  
+ * @param y - Y coordinate
  * @param z - Z coordinate (unchanged)
  * @param offset - Rotational offset for this spiral arm
  * @returns New 3D position following spiral curve
@@ -102,7 +102,7 @@ function spiral(
 function generateStarType(): number {
   let num = Math.random() * 100.0; // Random percentage
   const pct = starTypes.percentage; // Cumulative probability array
-  
+
   // Subtract each star type's probability until we find the selected type
   for (let i = 0; i < pct.length; i++) {
     num -= pct[i];
@@ -137,7 +137,7 @@ class Star {
    */
   updateScale(camera: THREE.Camera) {
     if (!this.sprite) return;
-    
+
     // Calculate distance from camera, normalized to reasonable scale
     const dist = this.position.distanceTo(camera.position) / 250;
     // Scale star size based on distance and star type, with min/max bounds
@@ -180,12 +180,12 @@ class Haze {
    */
   updateScale(camera: THREE.Camera) {
     if (!this.sprite) return;
-    
+
     // Calculate distance from camera
     const dist = this.position.distanceTo(camera.position) / 250;
     // Opacity increases with distance (squared for realistic falloff)
     const opacity = clamp(0.15 * Math.pow(dist / 2.5, 2), 0, 0.15);
-    
+
     if (this.sprite.material instanceof THREE.SpriteMaterial) {
       this.sprite.material.opacity = opacity;
       this.sprite.material.needsUpdate = true; // Tell Three.js to update the material
@@ -194,7 +194,7 @@ class Haze {
 
   /**
    * Creates the visual Three.js sprite object for this haze cloud
-   * @param scene - Three.js scene to add the sprite to  
+   * @param scene - Three.js scene to add the sprite to
    * @param material - Shared material for all haze objects
    */
   createSprite(scene: THREE.Group, material: THREE.SpriteMaterial) {
@@ -230,17 +230,24 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
     canvas.width = 128;
     canvas.height = 128;
     const context = canvas.getContext("2d")!;
-    
+
     // Create radial gradient from center to edges (star glow effect)
     const centerX = 64;
     const centerY = 64;
-    
-    const gradient = context.createRadialGradient(centerX, centerY, 0, centerX, centerY, 64);
+
+    const gradient = context.createRadialGradient(
+      centerX,
+      centerY,
+      0,
+      centerX,
+      centerY,
+      64,
+    );
     gradient.addColorStop(0, "rgba(255,255,255,1)"); // Bright center
     gradient.addColorStop(0.2, "rgba(255,255,255,0.8)"); // Mid glow
     gradient.addColorStop(0.5, "rgba(255,255,255,0.4)"); // Outer glow
     gradient.addColorStop(1, "rgba(255,255,255,0)"); // Transparent edge
-    
+
     // Fill canvas with gradient
     context.fillStyle = gradient;
     context.fillRect(0, 0, 128, 128);
@@ -254,9 +261,16 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
     hazeCanvas.width = 128;
     hazeCanvas.height = 128;
     const hazeContext = hazeCanvas.getContext("2d")!;
-    
+
     // Blue-tinted radial gradient for nebula effect
-    const hazeGradient = hazeContext.createRadialGradient(64, 64, 0, 64, 64, 64);
+    const hazeGradient = hazeContext.createRadialGradient(
+      64,
+      64,
+      0,
+      64,
+      64,
+      64,
+    );
     hazeGradient.addColorStop(0, "rgba(0,130,255,0.6)"); // Blue center
     hazeGradient.addColorStop(0.3, "rgba(0,130,255,0.3)"); // Fade to transparent
     hazeGradient.addColorStop(1, "rgba(0,130,255,0)"); // Transparent edge
@@ -295,7 +309,7 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
     for (let i = 0; i < GALAXY_CONFIG.NUM_STARS / 4; i++) {
       const pos = new THREE.Vector3(
         gaussianRandom(0, GALAXY_CONFIG.CORE_X_DIST), // X position around center
-        gaussianRandom(0, GALAXY_CONFIG.CORE_Y_DIST), // Y position around center  
+        gaussianRandom(0, GALAXY_CONFIG.CORE_Y_DIST), // Y position around center
         gaussianRandom(0, GALAXY_CONFIG.GALAXY_THICKNESS), // Z position (galaxy disk thickness)
       );
       stars.push(new Star(pos));
@@ -330,10 +344,10 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
     // === HAZE/NEBULA GENERATION ===
     // Create atmospheric dust clouds for visual depth
     const totalHaze = GALAXY_CONFIG.NUM_STARS * GALAXY_CONFIG.HAZE_RATIO;
-    
+
     for (let i = 0; i < totalHaze; i++) {
       let pos: THREE.Vector3;
-      
+
       // Split haze between core and spiral arms (50/50)
       if (i < totalHaze / 2) {
         // Core haze - larger, more diffuse clouds around galactic center
@@ -370,7 +384,7 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
     // Create and add all star sprites to the scene
     stars.forEach((star) => star.createSprite(scene, starMaterials));
 
-    // Create and add all haze sprites to the scene  
+    // Create and add all haze sprites to the scene
     hazeObjects.forEach((haze) => haze.createSprite(scene, hazeMaterial));
   }, [stars, hazeObjects, starMaterials, hazeMaterial]);
 
@@ -422,15 +436,19 @@ interface ParticleBackgroundProps {
  * Main particle background component - creates a full-screen 3D galaxy simulation
  * Features realistic stellar populations, spiral arm structure, and nebula effects
  * Optimized for performance with visibility-based animation pausing
- * 
+ *
  * @param isVisible - Whether the component is currently visible (controls animation performance)
  */
-export default function ParticleBackground({ isVisible = true }: ParticleBackgroundProps) {
+export default function ParticleBackground({
+  isVisible = true,
+}: ParticleBackgroundProps) {
   return (
-    <div className="absolute inset-0 -z-10">
+    <div className="animate-fade-in absolute inset-0 -z-10">
       <Canvas
         camera={{
           position: [0, 300, 450], // Camera positioned above and behind galaxy center
+
+          isPerspectiveCamera: true,
           fov: 60, // 60-degree field of view for good perspective
           rotation: [-Math.PI / 4, 0, 0], // Look down at galaxy from 45-degree angle
         }}
@@ -442,7 +460,12 @@ export default function ParticleBackground({ isVisible = true }: ParticleBackgro
           stencil: false, // Not needed for sprites
           depth: true, // Enable depth testing for realistic layering
         }}
-        dpr={[1, typeof window !== "undefined" ? Math.min(window.devicePixelRatio, 2) : 1]}
+        dpr={[
+          1,
+          typeof window !== "undefined"
+            ? Math.min(window.devicePixelRatio, 2)
+            : 1,
+        ]}
         // Cap device pixel ratio at 2 for performance on high-DPI displays
         frameloop={isVisible ? "always" : "never"} // Performance optimization
         // Pause rendering completely when not visible
