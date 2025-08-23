@@ -89,7 +89,7 @@ export default function SkillsSection() {
                 {items.map((tech, index) => (
                   <div
                     key={index}
-                    className="bg-dark-primary/50 border-gray-medium/20 font-mon rounded-lg border px-3 py-2"
+                    className="bg-dark-primary/50 border-gray-medium/20 rounded-lg border px-3 py-2"
                   >
                     <div className="text-light-primary text-sm leading-tight font-medium">
                       {tech.name}
