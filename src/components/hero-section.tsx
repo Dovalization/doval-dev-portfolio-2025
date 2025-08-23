@@ -32,21 +32,12 @@ export default function HeroSection() {
     >
       <section className="container mx-auto flex h-[calc(100vh-5rem)] flex-col items-center justify-center gap-8 overflow-hidden px-4 text-center sm:px-6">
         <ParticleBackground isVisible={isHeroVisible} />
-        <Image
-          src={hero.image.src}
-          alt={hero.image.alt}
-          width={256}
-          height={256}
-          className="rounded-full shadow-2xl"
-        />
-        <h1 className="text-light-primary text-5xl leading-tight font-bold sm:text-6xl lg:text-7xl">
+        <h1 className="text-light-primary text-5xl leading-tight font-bold text-shadow-black text-shadow-sm sm:text-6xl lg:text-7xl">
           {hero.headingTop}
           <br />
-          <span className="from-orange-secondary to-orange-primary bg-gradient-to-tr bg-clip-text text-transparent">
-            {hero.headingAccent}
-          </span>
+          <span className="text-orange-secondary">{hero.headingAccent}</span>
         </h1>
-        <p className="text-gray-light mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
+        <p className="text-light-primary mx-auto max-w-prose text-lg leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-xl">
           {hero.subheading}
         </p>
 
