@@ -8,27 +8,27 @@ import { cn } from "@/lib/utils";
 const coreValues = [
   {
     title: "Solve real problems",
-    text: "Decisions are grounded in observed user needs. We reduce complexity so people can focus on what matters.",
+    text: "Ground decisions in observed user needs. Reduce complexity so people focus on what matters.",
     icon: Target,
   },
   {
     title: "Champion the user",
-    text: "Every choice serves the person using the product, not the system. Empathy and clarity guide the work.",
+    text: "Every choice serves the person using the product, not the system. Empathy guides the work.",
     icon: User,
   },
   {
     title: "Build for experience",
-    text: "Usability and experience drive trust, adoption, and outcomes. How it feels matters as much as what it does.",
+    text: "How it feels matters as much as what it does. Experience drives trust and adoption.",
     icon: Layout,
   },
   {
     title: "Lower cognitive load",
-    text: "Predictable flows and clear state support momentum. We remove distractions and decision fatigue.",
+    text: "Predictable flows support momentum. Remove distractions and decision fatigue.",
     icon: Minimize2,
   },
   {
     title: "Enable autonomy",
-    text: "Technology should empower, not control. It gives people the freedom and confidence to act independently.",
+    text: "Technology should empower, not control. Give people freedom to act independently.",
     icon: Unlock,
   },
 ];
