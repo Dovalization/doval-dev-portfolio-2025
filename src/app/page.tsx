@@ -10,9 +10,8 @@ export default function HomePage() {
     <div>
       <HeroSection />
       <AboutSection />
-      <section className="container mx-auto flex flex-col gap-8 px-4 py-16 sm:px-6">
-        <CoreValuesSection />
-      </section>
+
+      <CoreValuesSection />
       <WorkSection />
       <SkillsSection />
       <ContactSection />

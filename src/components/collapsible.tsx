@@ -111,7 +111,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
             {project.stack.map((t) => (
               <span
                 key={t}
-                className="text-orange-secondary border-orange-secondary/30 rounded-full border px-3 py-1 text-sm font-medium"
+                className="text-orange-secondary border-orange-secondary/30 rounded-full border px-3 py-1 font-mono text-sm font-medium"
               >
                 {t}
               </span>
