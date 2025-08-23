@@ -2,23 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
+import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 
-interface HeroSectionProps {
-  hero: {
-    image: { src: string; alt: string };
-    headingTop: string;
-    headingAccent: string;
-    subheading: string;
-    ctas: { label: string; href: string }[];
-  };
-}
+const hero = {
+  image: { src: "/images/about.png", alt: "About Me" },
+  headingTop: "Full-stack Developer",
+  headingAccent: "Human-centered design",
+  subheading:
+    "I build solutions that empower people – tools that help teams work better together. My work is driven by a desire to understand user needs and a passion for creating meaningful experiences.",
+  ctas: [
+    { label: "About me", href: "#about" },
+    { label: "See my work", href: "#work" },
+    { label: "Get in touch", href: "#contact" },
+  ],
+};
 
-export default function HeroSection({ hero }: HeroSectionProps) {
-  const { ref: heroRef, inView: isHeroVisible } = useInView({
+export default function HeroSection() {
+  const { ref: heroRef, isInView: isHeroVisible } = useInViewAnimation({
     threshold: 0.1, // Trigger when 10% of hero section is visible
     rootMargin: "-50px 0px", // Add small buffer to avoid flickering
+    triggerOnce: false, // Keep original behavior of re-triggering
   });
 
   return (
