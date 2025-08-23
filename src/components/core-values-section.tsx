@@ -61,9 +61,9 @@ export default function CoreValuesSection() {
               animationFillMode: "both",
             }}
           >
-            <div className="bg-orange-secondary group-hover:bg-orange-primary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110">
+            <div className="bg-orange-secondary group-hover:bg-orange-primary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full transition-all duration-250 ease-in-out group-hover:scale-110">
               <Icon
-                className="text-dark-primary h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+                className="text-dark-primary h-8 w-8 transition-transform duration-250 ease-in-out group-hover:scale-110"
                 strokeWidth={2.5}
               />
             </div>
