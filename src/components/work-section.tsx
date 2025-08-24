@@ -13,12 +13,20 @@ const projects = [
       url: "/images/projects/hc2-logo.webp",
       alt: "Horizon Chase 2 logo",
     },
-    problem:
-      "Needed a high-performance, multilingual marketing site with fast iteration for non-dev content editors. The previous site was slow to load and difficult for the marketing team to update without developer intervention.",
-    approach:
-      "Built with Next.js + Prismic headless CMS, created a custom component library for consistent branding, implemented comprehensive image optimization pipeline, and set up preview builds for content validation.",
-    result:
-      "Achieved LCP < 2.0s across all pages, saw +38% organic traffic growth in 90 days, and enabled the marketing team to update content independently without developer help.",
+    sections: [
+      {
+        title: "Challenge",
+        body: "The marketing team was bottlenecked by developer dependencies—they couldn't launch campaigns quickly or test different messaging approaches. Meanwhile, the existing site's poor performance was hurting SEO and user engagement.",
+      },
+      {
+        title: "My approach",
+        body: "I spent time shadowing the marketing workflow to understand their actual content creation process. This revealed they needed visual preview capabilities and wanted to experiment with component arrangements, not just text changes. I designed a component system with NextJS and PrismicCMS that matched their mental model, then built the technical architecture around those content patterns",
+      },
+      {
+        title: "Impact",
+        body: "Marketing team now ships campaigns 3x faster without developer involvement. The performance improvements (LCP < 2.0s) contributed to 38% organic traffic growth, but more importantly, the team can now iterate on messaging and test ideas in real-time.",
+      },
+    ],
     stack: [
       "Next.js",
       "Prismic CMS",
@@ -40,12 +48,24 @@ const projects = [
       url: "/images/projects/box-logo.webp",
       alt: "Wonderbox logo",
     },
-    problem:
-      "Needed a site to capture the creative, shareable spirit of the game while remaining performant and accessible across devices.",
-    approach:
-      "Built with semantic HTML, CSS, and JavaScript to highlight media assets, ensure responsive layouts, and provide a flexible structure for showcasing community-driven content.",
-    result:
-      "Delivered a fast-loading, visually engaging site that increased game visibility, supported community engagement, and complemented ongoing marketing campaigns.",
+    sections: [
+      {
+        title: "Challenge",
+        body: "Needed a site to capture the creative, shareable spirit of the game while remaining performant and accessible across devices.",
+      },
+      {
+        title: "Solution",
+        body: "Built with semantic HTML, CSS, and JavaScript to highlight media assets, ensure responsive layouts, and provide a flexible structure for showcasing community-driven content.",
+      },
+      {
+        title: "Impact",
+        body: "Delivered a fast-loading, visually engaging site that increased game visibility, supported community engagement, and complemented ongoing marketing campaigns.",
+      },
+      {
+        title: "Performance",
+        body: "Site achieved 95+ Lighthouse scores across all metrics and became template for future game marketing sites at the studio.",
+      },
+    ],
     stack: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -57,12 +77,20 @@ const projects = [
       alt: "Aquiris Game Studio banner",
     },
     logo: { url: "/images/projects/aquiris-logo.svg", alt: "Aquiris logo" },
-    problem:
-      "Needed a professional, modern site that reflected international reputation and showcased a wide portfolio. Previous site didn't represent the brand's scale.",
-    approach:
-      "Developed with Next.js, React, and Prismic CMS. Created a modular component system, integrated multilingual support, and optimized performance.",
-    result:
-      "Launched a scalable, polished site that improved brand perception, centralized portfolio management, and enabled self-service updates by the team.",
+    sections: [
+      {
+        title: "Challenge",
+        body: "A growing games studio with an impressive portfolio, but their web presence looked visually dated and content was difficult to update. The disconnect was hurting business development conversations and talent acquisition.",
+      },
+      {
+        title: "My approach",
+        body: "Worked closely with leadership to understand how they wanted to position the studio globally. Designed an information architecture that showcased both technical expertise and creative range. Integrated with a CMS that enabled different team members to contribute content to the site without needing extensive technical knowledge.",
+      },
+      {
+        title: "Impact",
+        body: "The revamped web presence opened doors to larger publishing partnerships and helped attract senior talent from major studios. More importantly, non-technical team members can now maintain the studio's portfolio without depending on a single developer.",
+      },
+    ],
     stack: [
       "Next.js",
       "React",
@@ -72,142 +100,53 @@ const projects = [
     ],
   },
   {
-    title: "Horizon Chase",
+    title: "Independent Tech Consulting (2017 - 2023)",
     description:
-      "A dedicated site for Horizon Chase, celebrating its retro arcade spirit and engaging its community.",
+      "I've worked with various clients to enhance their online presence and streamline their operations.",
     banner: {
-      url: "/images/projects/hc-bg.webp",
-      alt: "Horizon Chase banner",
+      url: "/images/projects/consulting-bg.png",
+      alt: "Independent Tech Consulting site banner",
     },
-    logo: { url: "/images/projects/hc-logo.webp", alt: "Horizon Chase logo" },
-    problem:
-      "Required a dedicated hub to represent Horizon Chase's unique retro-arcade identity and deliver updates to fans.",
-    approach:
-      "Built with Next.js, TypeScript, and Prismic CMS, emphasizing visual storytelling aligned with the game's low-poly aesthetic.",
-    result:
-      "Boosted fan engagement, streamlined content updates, and provided a reliable platform for announcements and expansions.",
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "React",
-      "Prismic CMS",
-      "Styled Components",
+    logo: {
+      url: "/images/doval-dev-logo.svg",
+      alt: "Independent Tech Consultant logo",
+    },
+    sections: [
+      {
+        title: "Building trust through online presence",
+        body: "Working with clients across healthcare, legal, hospitality, and sports industries taught me how different domains require different approaches to the same underlying challenge: establishing credibility and connecting with their audience online.",
+      },
+      {
+        title: "What I learned",
+        body: "A law firm's website needs to project authority and expertise. A martial arts academy needs to convey philosophy and community. A luxury transport service needs to communicate exclusivity and reliability. Same technical tools, completely different content strategies and user experiences.",
+      },
+      {
+        title: "My process evolved",
+        body: "I developed a framework for stakeholder interviews that uncovers not just what people want their project to do, but how they want their audience to feel. Then I translate those emotional and business goals into technical and design decisions.",
+      },
     ],
-  },
-  {
-    title: "Del Paraíso",
-    description:
-      "An institutional site for a residential development in Rio de Janeiro, designed to highlight its natural surroundings.",
-    banner: {
-      url: "/images/projects/delparaiso-bg.webp",
-      alt: "Del Paraíso site banner",
-    },
-    logo: {
-      url: "/images/projects/delparaiso-logo.webp",
-      alt: "Del Paraíso logo",
-    },
-    problem:
-      "Needed a digital presence to showcase the beauty and exclusivity of a residential retreat surrounded by nature.",
-    approach:
-      "Created a WordPress-based site with SEO-friendly structure, responsive design, and immersive imagery.",
-    result:
-      "Delivered a professional site that increased visibility, supported real estate marketing, and attracted interest from potential buyers.",
     stack: ["WordPress", "HTML", "CSS", "JavaScript"],
   },
-  {
-    title: "Dr. João Diogo Martins",
-    description:
-      "An institutional website for an ENT specialist in Lisbon to reach and inform patients.",
-    banner: {
-      url: "/images/projects/dr-bg.webp",
-      alt: "Dr João Diogo Martins site banner",
-    },
-    logo: {
-      url: "/images/projects/dr-logo.webp",
-      alt: "Dr João Diogo Martins logo",
-    },
-    problem:
-      "Required a professional, easy-to-use website to communicate services and build trust with patients.",
-    approach:
-      "Designed and developed a WordPress site with clear service information, responsive design, and user-friendly navigation.",
-    result:
-      "Established a trusted online presence, improved patient communication, and streamlined service discovery.",
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Travel Lider",
-    description:
-      "A premium transportation service site in Portugal, tailored to attract tourists and business travelers.",
-    banner: {
-      url: "/images/projects/travellider-bg.webp",
-      alt: "Travel Lider site banner",
-    },
-    logo: {
-      url: "/images/projects/travellider-logo.webp",
-      alt: "Travel Lider logo",
-    },
-    problem:
-      "Needed an online channel to promote luxury private transportation services to international clients.",
-    approach:
-      "Developed a WordPress site with multilingual support, SEO enhancements, and a design communicating exclusivity and trust.",
-    result:
-      "Boosted brand awareness, increased bookings, and supported business growth in a competitive market.",
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Five Elements Jiu-Jitsu",
-    description:
-      "A site to promote the academy's classes, philosophy, and community around Gracie Jiu-Jitsu.",
-    banner: {
-      url: "/images/projects/5ej-bg.webp",
-      alt: "Five Elements Jiu-Jitsu banner",
-    },
-    logo: {
-      url: "/images/projects/5ej-logo.svg",
-      alt: "Five Elements Jiu-Jitsu logo",
-    },
-    problem:
-      "Required an institutional site to attract new students and convey the academy's philosophy and mission.",
-    approach:
-      "Built a WordPress site with storytelling elements, responsive design, and structured class information.",
-    result:
-      "Increased student enrollment, strengthened community identity, and provided a digital hub for communication.",
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "União Portuguesa de Karate-Do",
-    description:
-      "An institutional site for a Karate association in Portugal, preserving history and enabling event communication.",
-    banner: { url: "/images/projects/upkd-bg.webp", alt: "UPKD site banner" },
-    logo: { url: "/images/projects/upkd-logo.png", alt: "UPKD logo" },
-    problem:
-      "Needed a reliable site to represent the association's history and communicate events to members.",
-    approach:
-      "Developed a WordPress site with clear navigation, event publishing, and institutional branding.",
-    result:
-      "Improved credibility, enhanced communication with members, and preserved association history online.",
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Pereira & Maron – Law Firm",
-    description:
-      "A professional website for a law firm, designed to highlight expertise and connect with clients internationally.",
-    banner: {
-      url: "/images/projects/pmadv-bg.webp",
-      alt: "Pereira & Maron site banner",
-    },
-    logo: {
-      url: "/images/projects/pmadv-logo.webp",
-      alt: "Pereira & Maron logo",
-    },
-    problem:
-      "Needed an institutional site to showcase legal expertise in multiple practice areas and attract clients globally.",
-    approach:
-      "Created a WordPress site with structured service pages, bilingual support, and brand-aligned professional design.",
-    result:
-      "Enhanced firm credibility, attracted local and international clients, and reinforced global positioning.",
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  },
+  // {
+  //   title: "Pereira & Maron – Law Firm",
+  //   description:
+  //     "A professional website for a law firm, designed to highlight expertise and connect with clients internationally.",
+  //   banner: {
+  //     url: "/images/projects/pmadv-bg.webp",
+  //     alt: "Pereira & Maron site banner",
+  //   },
+  //   logo: {
+  //     url: "/images/projects/pmadv-logo.webp",
+  //     alt: "Pereira & Maron logo",
+  //   },
+  //   problem:
+  //     "Needed an institutional site to showcase legal expertise in multiple practice areas and attract clients globally.",
+  //   approach:
+  //     "Created a WordPress site with structured service pages, bilingual support, and brand-aligned professional design.",
+  //   result:
+  //     "Enhanced firm credibility, attracted local and international clients, and reinforced global positioning.",
+  //   stack: ["WordPress", "HTML", "CSS", "JavaScript"],
+  // },
 ];
 
 export default function WorkSection() {
@@ -218,9 +157,10 @@ export default function WorkSection() {
     >
       <h2 className="text-center font-bold">My work</h2>
       <p className="mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
-        Projects that showcase my approach to building fast, human-centered
-        systems. Each one taught me something new about balancing user needs
-        with technical constraints.
+        Each project taught me something different about translating stakeholder
+        vision into working systems. Some required deep technical optimization,
+        others needed careful UX research, and a few demanded both. Here&apos;s
+        how I approached the challenges:
       </p>
       <div className="flex flex-col gap-8">
         {projects.map((project, index) => (

@@ -2,13 +2,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+interface ProjectSection {
+  title: string;
+  body: string;
+}
+
 interface CollapsibleProps {
   project: {
     title: string;
     description: string;
-    problem: string;
-    approach: string;
-    result: string;
+    sections: ProjectSection[];
     banner: { url: string; alt: string };
     logo: { url: string; alt: string };
     stack: string[];
@@ -82,31 +85,26 @@ export default function Collapsible({ project }: CollapsibleProps) {
           <h3 className="text-light-primary text-3xl font-bold">
             {project.title}
           </h3>
-          {/* First paragraph summarizing problem/intro */}
+          {/* First paragraph from first section as intro */}
           <hr className="border-orange-secondary max-w-8 border-2" />
           <p className="text-light-primary text-md max-w-3xl font-semibold">
-            {project.problem.split(".")[0]}.
+            {project.sections[0]?.body.split(".")[0]}.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
-              Problem
-            </strong>
-            <p className="text-light-primary">{project.problem}</p>
-          </div>
-          <div>
-            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
-              Approach
-            </strong>
-            <p className="text-light-primary">{project.approach}</p>
-          </div>
-          <div>
-            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
-              Result
-            </strong>
-            <p className="text-light-primary">{project.result}</p>
-          </div>
+        <div className={cn("grid gap-8", {
+          "md:grid-cols-2": project.sections.length === 2,
+          "md:grid-cols-3": project.sections.length === 3,
+          "md:grid-cols-2 lg:grid-cols-4": project.sections.length === 4,
+          "md:grid-cols-2 lg:grid-cols-3": project.sections.length > 4,
+        })}>
+          {project.sections.map((section, index) => (
+            <div key={index}>
+              <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
+                {section.title}
+              </strong>
+              <p className="text-light-primary">{section.body}</p>
+            </div>
+          ))}
         </div>
         <div>
           <div className="flex flex-wrap gap-2">
