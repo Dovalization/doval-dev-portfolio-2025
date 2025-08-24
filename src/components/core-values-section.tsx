@@ -68,9 +68,9 @@ export default function CoreValuesSection() {
                   strokeWidth={2.5}
                 />
               </div>
-              <h3 className="text-light-primary text-lg font-semibold">
+              <strong className="text-light-primary text-lg font-bold">
                 {valueEntry.title}
-              </h3>
+              </strong>
               <p className="text-light-primary text-sm">{valueEntry.text}</p>
             </div>
           );
