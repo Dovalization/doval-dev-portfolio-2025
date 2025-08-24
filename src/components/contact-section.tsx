@@ -4,14 +4,14 @@ export default function ContactSection() {
   return (
     <section id="contact" className="px-4 py-16 sm:px-6">
       <div className="container mx-auto flex flex-col items-center gap-8 text-center">
-        <h2 className="text-4xl font-bold">Let’s Work Together</h2>
-        <p className="text-gray-light max-w-prose text-lg leading-relaxed">
-          I’m interested in product engineering roles where I can shape both
-          user experience and technical architecture. Always open to discussing
-          new projects and opportunities.
+        <h2>Let&rsquo;s Work Together</h2>
+        <p className="max-w-prose text-lg leading-relaxed">
+          Currently open to full-time product engineering roles where I can
+          shape both user experience and technical architecture. Available for
+          immediate start.
         </p>
 
-        <div className="flex justify-center gap-4 font-mono">
+        <div className="flex flex-wrap justify-center gap-4 font-mono">
           <Link
             href="mailto:doval.guilherme94@gmail.com"
             className="text-orange-secondary hover:text-orange-primary group flex items-center gap-2 underline transition-colors duration-200"
@@ -20,7 +20,7 @@ export default function ContactSection() {
               size={20}
               className="transition-transform duration-200 group-hover:scale-110"
             />
-            doval.guilherme94@gmail.com
+            Email me
           </Link>
           <Link
             href="https://linkedin.com/in/dovalization"
@@ -49,22 +49,33 @@ export default function ContactSection() {
         </div>
 
         <article className="from-dark-secondary to-gray-medium border-gray-medium/20 max-w-prose rounded-lg border bg-gradient-to-br p-8 text-left shadow-lg">
-          <h3 className="mb-4 text-lg font-semibold">What I’m Looking For</h3>
-          <ul className="space-y-4 text-slate-400">
+          <h3 className="text-light-primary mb-4 font-medium">
+            What I&rsquo;m looking for
+          </h3>
+          <ul className="list-disc space-y-3 pl-5">
             <li>
-              • Product Engineering roles where I can shape UX and technical
-              architecture
+              <strong className="text-light-primary mr-1 inline-block">
+                Product Engineering roles
+              </strong>
+              where I can shape both UX and technical architecture
             </li>
             <li>
-              • Teams that value systems thinking and user-centered design
+              <strong className="text-light-primary mr-1 inline-block">
+                Teams that value systems thinking
+              </strong>
+              and user-centered design principles
             </li>
             <li>
-              • Projects focused on reducing cognitive friction and improving
-              workflows
+              <strong className="text-light-primary mr-1 inline-block">
+                Complex technical challenges
+              </strong>
+              that require balancing performance, usability, and scale
             </li>
             <li>
-              • Opportunities to mentor and collaborate with cross-functional
-              teams
+              <strong className="text-light-primary mr-1 inline-block">
+                Collaborative environments
+              </strong>
+              with opportunities to mentor and learn from cross-functional teams
             </li>
           </ul>
         </article>
