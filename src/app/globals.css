@@ -168,7 +168,7 @@
   }
 
   h2 {
-    @apply text-2xl leading-tight font-semibold md:text-3xl;
+    @apply text-2xl leading-tight font-semibold md:text-4xl;
     color: var(--light-primary);
   }
 
