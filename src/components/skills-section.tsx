@@ -98,9 +98,7 @@ const skills = {
 export default function SkillsSection() {
   return (
     <section className="container mx-auto flex flex-col gap-8 px-4 py-16 sm:px-6">
-      <h2 className="mb-8 text-center">
-        Skills & Tools
-      </h2>
+      <h2 className="mb-8 text-center font-bold">Skills & Tools</h2>
       <div className="columns-1 gap-6 space-y-8 md:columns-2 lg:columns-3">
         {skills.sections.map(({ key, title, icon, items }) => {
           const Icon = icon;
@@ -116,9 +114,7 @@ export default function SkillsSection() {
                     strokeWidth={2.5}
                   />
                 </div>
-                <h3 className="text-orange-secondary font-medium">
-                  {title}
-                </h3>
+                <strong className="text-lg font-bold">{title}</strong>
               </div>
               <div className="grid gap-2 font-mono">
                 {items.map((tech, index) => (
