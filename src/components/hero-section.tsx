@@ -32,20 +32,22 @@ export default function HeroSection() {
     >
       <section className="container mx-auto flex h-[calc(100vh-5rem)] flex-col items-center justify-center gap-8 overflow-hidden px-4 text-center sm:px-6">
         <ParticleBackground isVisible={isHeroVisible} />
-        <h1 className="text-5xl leading-tight font-bold text-shadow-black text-shadow-sm sm:text-6xl lg:text-7xl">
+        <h1 className="text-5xl leading-tight font-black text-shadow-black text-shadow-sm sm:text-6xl lg:text-7xl">
           {hero.headingTop}
           <br />
-          <span className="text-orange-secondary">{hero.headingAccent}</span>
+          <span className="text-orange-secondary lg:text-6xl">
+            {hero.headingAccent}
+          </span>
         </h1>
-        <p className="mx-auto max-w-prose text-lg leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-xl">
+        <p className="text-light-primary mx-auto max-w-prose text-lg leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-xl">
           {hero.subheading}
         </p>
 
         {/* Call to Action Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
           {hero.ctas.map((cta, idx) => (
-            <ButtonLink 
-              key={idx} 
+            <ButtonLink
+              key={idx}
               href={cta.href}
               variant={cta.primary ? "primary" : "secondary"}
             >
