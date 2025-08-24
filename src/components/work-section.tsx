@@ -2,12 +2,12 @@ import Collapsible from "@/components/collapsible";
 
 const projects = [
   {
-    title: "Horizon Chase 2 Marketing Site & CMS",
+    title: "Horizon Chase 2",
     description:
       "A high-performance, multilingual marketing site built for fast iteration by non-dev content editors.",
     banner: {
       url: "/images/projects/hc2-bg.webp",
-      alt: "Horizon Chase 2 marketing site banner",
+      alt: "Horizon Chase 2 banner",
     },
     logo: {
       url: "/images/projects/hc2-logo.webp",
@@ -29,8 +29,9 @@ const projects = [
     ],
     stack: [
       "Next.js",
-      "Prismic CMS",
+      "React",
       "TypeScript",
+      "Prismic CMS",
       "Tailwind CSS",
       "Image Optimization",
       "i18n",
@@ -66,7 +67,7 @@ const projects = [
         body: "Site achieved 95+ Lighthouse scores across all metrics and became template for future game marketing sites at the studio.",
       },
     ],
-    stack: ["HTML", "CSS", "JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript", "Vite"],
   },
   {
     title: "Aquiris Game Studio",
@@ -96,7 +97,9 @@ const projects = [
       "React",
       "TypeScript",
       "Prismic CMS",
-      "Styled Components",
+      "Tailwind CSS",
+      "Image Optimization",
+      "i18n",
     ],
   },
   {
@@ -125,28 +128,19 @@ const projects = [
         body: "I developed a framework for stakeholder interviews that uncovers not just what people want their project to do, but how they want their audience to feel. Then I translate those emotional and business goals into technical and design decisions.",
       },
     ],
-    stack: ["WordPress", "HTML", "CSS", "JavaScript"],
+    stack: [
+      "WordPress",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SEO optimization",
+      "Google Analytics",
+      "Lighthouse",
+      "Figma",
+      "Adobe Creative Suite",
+      "i18n",
+    ],
   },
-  // {
-  //   title: "Pereira & Maron – Law Firm",
-  //   description:
-  //     "A professional website for a law firm, designed to highlight expertise and connect with clients internationally.",
-  //   banner: {
-  //     url: "/images/projects/pmadv-bg.webp",
-  //     alt: "Pereira & Maron site banner",
-  //   },
-  //   logo: {
-  //     url: "/images/projects/pmadv-logo.webp",
-  //     alt: "Pereira & Maron logo",
-  //   },
-  //   problem:
-  //     "Needed an institutional site to showcase legal expertise in multiple practice areas and attract clients globally.",
-  //   approach:
-  //     "Created a WordPress site with structured service pages, bilingual support, and brand-aligned professional design.",
-  //   result:
-  //     "Enhanced firm credibility, attracted local and international clients, and reinforced global positioning.",
-  //   stack: ["WordPress", "HTML", "CSS", "JavaScript"],
-  // },
 ];
 
 export default function WorkSection() {
