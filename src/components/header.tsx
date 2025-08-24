@@ -21,7 +21,7 @@ export function Header() {
           <Link href="/">
             <span className="relative flex aspect-video min-w-40">
               <Image
-                src="/doval-dev-logo.svg"
+                src="images/doval-dev-logo.svg"
                 alt="Logo"
                 fill
                 style={{ objectFit: "contain" }}
