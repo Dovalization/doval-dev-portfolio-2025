@@ -216,10 +216,8 @@ export default function WorkSection() {
       id="work"
       className="container mx-auto flex flex-col items-center gap-8 px-4 py-16 sm:px-6"
     >
-      <h2 className="text-light-primary text-center text-4xl font-bold">
-        My Work
-      </h2>
-      <p className="text-gray-light mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
+      <h2 className="text-center font-bold">My work</h2>
+      <p className="mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
         Projects that showcase my approach to building fast, human-centered
         systems. Each one taught me something new about balancing user needs
         with technical constraints.

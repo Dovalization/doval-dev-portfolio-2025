@@ -79,31 +79,33 @@ export default function Collapsible({ project }: CollapsibleProps) {
         )}
       >
         <div className="flex flex-col gap-2">
-          <h3 className="text-3xl font-bold">{project.title}</h3>
+          <h3 className="text-light-primary text-3xl font-bold">
+            {project.title}
+          </h3>
           {/* First paragraph summarizing problem/intro */}
           <hr className="border-orange-secondary max-w-8 border-2" />
-          <p className="text-md text-light-primary max-w-3xl">
+          <p className="text-light-primary text-md max-w-3xl font-semibold">
             {project.problem.split(".")[0]}.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
+            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
               Problem
-            </h3>
-            <p className="text-gray-light">{project.problem}</p>
+            </strong>
+            <p className="text-light-primary">{project.problem}</p>
           </div>
           <div>
-            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
+            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
               Approach
-            </h3>
-            <p className="text-gray-light">{project.approach}</p>
+            </strong>
+            <p className="text-light-primary">{project.approach}</p>
           </div>
           <div>
-            <h3 className="text-light-primary flex items-center gap-2 text-lg font-semibold">
+            <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
               Result
-            </h3>
-            <p className="text-gray-light">{project.result}</p>
+            </strong>
+            <p className="text-light-primary">{project.result}</p>
           </div>
         </div>
         <div>
@@ -111,7 +113,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
             {project.stack.map((t) => (
               <span
                 key={t}
-                className="text-orange-secondary border-orange-secondary/30 rounded-full border px-3 py-1 font-mono text-sm font-medium"
+                className="text-orange-secondary border-orange-secondary/30 rounded-full border-2 px-3 py-1 font-mono text-sm font-medium"
               >
                 {t}
               </span>
