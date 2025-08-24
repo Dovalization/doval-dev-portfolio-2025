@@ -16,22 +16,29 @@ export default function AboutSection() {
       />
       <div className="flex max-w-prose flex-col gap-6 text-left text-lg">
         <p className="text-light-primary leading-6 font-bold">
-          Hi! I&rsquo;m Guilherme Doval, a full-stack developer with 8+ years of
-          experience building scalable web applications and design systems.
-          Based in Brazil, I specialize in creating high-performance tools that
-          reduce cognitive load and improve team productivity.
+          Hi! I&#39;m Guilherme Doval—I turn messy stakeholder requests into
+          systems that actually work.
         </p>
         <p className="text-light-primary leading-6">
-          I don&rsquo;t build products that box people in. I create tools that
-          give teams clarity, control, and the freedom to act on what matters
-          most. My approach focuses on understanding real user workflows and
-          eliminating friction at every interaction.
+          Eight years ago, I was building game worlds. Today, I build web
+          applications. What connects them? Both require translating abstract
+          visions into concrete, interactive experiences that people can
+          navigate intuitively.
         </p>
         <p className="text-light-primary leading-6">
-          From leading frontend architecture at game studios to building CMS
-          platforms that handle millions of page views, I&rsquo;ve learned that
-          the best software feels invisible — it amplifies human capability
-          without getting in the way.
+          My Master&#39;s in Design and Visual Culture taught me to read between
+          the lines of what people say they want versus what they actually need.
+          My game development background taught me to balance creativity with
+          technical constraints. My web development experience taught me that
+          the best solutions are the ones teams can understand, maintain, and
+          evolve.
+        </p>
+        <p className="text-light-primary leading-6">
+          I handle the full spectrum: stakeholder interviews, UX flows, system
+          architecture, implementation, and deployment. But what makes me
+          different is how I connect these pieces—seeing how a database design
+          decision impacts user experience, or how a stakeholder&#39;s business
+          constraint actually points toward a cleaner technical solution.
         </p>
       </div>
       <blockquote className="text-orange-secondary text-xl font-semibold">
