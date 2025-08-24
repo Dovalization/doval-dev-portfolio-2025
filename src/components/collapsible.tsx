@@ -79,7 +79,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
         )}
       >
         <div className="flex flex-col gap-2">
-          <h2 className="text-3xl font-bold">{project.title}</h2>
+          <h3 className="text-3xl font-bold">{project.title}</h3>
           {/* First paragraph summarizing problem/intro */}
           <hr className="border-orange-secondary max-w-8 border-2" />
           <p className="text-md text-light-primary max-w-3xl">
