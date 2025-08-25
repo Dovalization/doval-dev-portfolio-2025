@@ -31,9 +31,9 @@ export default function AboutSection() {
           My Master&rsquo;s research on interface design and user psychology
           revealed something crucial: interfaces don&rsquo;t just provide
           functionality—they create meaning and emotional connection. I studied
-          how game could increase player immersion, even when they were
-          technically &lsquo;harder to use.&rsquo; This taught me that the
-          psychological experience of using a system matters as much as its
+          how game user interfaces could increase player immersion, even when
+          they were technically &rsquo;harder to use&rsquo;. This taught me that
+          the psychological experience of using a system matters as much as its
           efficiency.
         </p>
         <p className="text-light-primary leading-6">
@@ -60,8 +60,8 @@ export default function AboutSection() {
         </p>
       </div>
       <blockquote className="text-orange-secondary text-xl font-semibold">
-        “Make the important visible, reduce friction, and build systems people
-        can rely on.”
+        “Make the important visible, reduce friction, and build reliable
+        systems.”
       </blockquote>
     </section>
   );

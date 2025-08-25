@@ -5,10 +5,10 @@ export default function ContactSection() {
     <section id="contact" className="px-4 py-16 sm:px-6">
       <div className="container mx-auto flex flex-col items-center gap-8 text-center">
         <h2 className="font-bold">Let&rsquo;s work together</h2>
-        <p className="max-w-prose text-lg leading-relaxed">
-          Currently open to full-time product engineering roles where I can
-          shape both user experience and technical architecture. Available for
-          immediate start.
+        <p className="max-w-prose text-left text-lg leading-relaxed">
+          {
+            "I help teams build technology that people rely on by understanding how users actually think and work. If you're tackling complex interface challenges or want to improve how stakeholders and developers collaborate, let's talk."
+          }
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 font-mono font-bold">
@@ -55,27 +55,29 @@ export default function ContactSection() {
           <ul className="list-disc space-y-3 pl-5">
             <li>
               <strong className="text-light-primary mr-1 inline-block">
-                Product Engineering roles
+                Organizations building complex interfaces
               </strong>
-              where I can shape both UX and technical architecture
+              that need both technical performance and intuitive user experience
             </li>
             <li>
               <strong className="text-light-primary mr-1 inline-block">
-                Teams that value systems thinking
+                Companies tackling ambitious product visions
               </strong>
-              and user-centered design principles
+              that require balancing user psychology with technical constraints
             </li>
             <li>
               <strong className="text-light-primary mr-1 inline-block">
-                Complex technical challenges
+                Growing companies
               </strong>
-              that require balancing performance, usability, and scale
+              where technical decisions need to serve both business goals and
+              user needs
             </li>
             <li>
               <strong className="text-light-primary mr-1 inline-block">
-                Collaborative environments
+                Teams building tools
               </strong>
-              with opportunities to mentor and learn from cross-functional teams
+              where user adoption depends on understanding usability best
+              practices
             </li>
           </ul>
         </article>
