@@ -98,7 +98,13 @@ const skills = {
 export default function SkillsSection() {
   return (
     <section className="container mx-auto flex flex-col gap-8 px-4 py-16 sm:px-6">
-      <h2 className="mb-8 text-center font-bold">Skills & Tools</h2>
+      <h2 className="text-center font-bold">Skills & Tools</h2>
+      <p className="mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
+        My unique skill set and approach comes from pairing design sensibility
+        with solid engineering principles — I can prototype ideas quickly, then
+        build them to scale. Each skill connects to the others in service of
+        creating software that is effective and user-friendly.
+      </p>
       <div className="columns-1 gap-6 space-y-8 md:columns-2 lg:columns-3">
         {skills.sections.map(({ key, title, icon, items }) => {
           const Icon = icon;
