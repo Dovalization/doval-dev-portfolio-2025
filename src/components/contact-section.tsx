@@ -5,7 +5,7 @@ export default function ContactSection() {
     <section id="contact" className="px-4 py-16 sm:px-6">
       <div className="container mx-auto flex flex-col items-center gap-8 text-center">
         <h2 className="font-bold">Let&rsquo;s work together</h2>
-        <p className="max-w-prose text-left text-lg leading-relaxed">
+        <p className="max-w-prose text-left text-xl leading-relaxed">
           {
             "I help teams build technology that people rely on by understanding how users actually think and work. If you're tackling complex interface challenges or want to improve how stakeholders and developers collaborate, let's talk."
           }
