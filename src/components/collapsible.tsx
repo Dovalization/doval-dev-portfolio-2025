@@ -13,7 +13,7 @@ interface CollapsibleProps {
     description: string;
     sections: ProjectSection[];
     banner: { url: string; alt: string };
-    logo: { url: string; alt: string };
+    logo: { url: string; alt: string; size?: "small" | "medium" | "large" };
     stack: string[];
     liveUrl?: string;
   };
@@ -65,8 +65,8 @@ export default function Collapsible({ project }: CollapsibleProps) {
           <Image
             src={project.logo.url}
             alt={project.logo.alt}
-            width={250}
-            height={250}
+            width={project.logo.size === "small" ? 150 : 250}
+            height={project.logo.size === "small" ? 150 : 250}
           />
         </div>
       </figure>
@@ -88,15 +88,17 @@ export default function Collapsible({ project }: CollapsibleProps) {
           {/* First paragraph from first section as intro */}
           <hr className="border-orange-secondary max-w-8 border-2" />
           <p className="text-light-primary text-md max-w-3xl font-semibold">
-            {project.sections[0]?.body.split(".")[0]}.
+            {project.description}
           </p>
         </div>
-        <div className={cn("grid gap-8", {
-          "md:grid-cols-2": project.sections.length === 2,
-          "md:grid-cols-3": project.sections.length === 3,
-          "md:grid-cols-2 lg:grid-cols-4": project.sections.length === 4,
-          "md:grid-cols-2 lg:grid-cols-3": project.sections.length > 4,
-        })}>
+        <div
+          className={cn("grid gap-8", {
+            "md:grid-cols-2": project.sections.length === 2,
+            "md:grid-cols-3": project.sections.length === 3,
+            "md:grid-cols-2 lg:grid-cols-4": project.sections.length === 4,
+            "md:grid-cols-2 lg:grid-cols-3": project.sections.length > 4,
+          })}
+        >
           {project.sections.map((section, index) => (
             <div key={index}>
               <strong className="text-light-primary flex items-center gap-2 text-lg font-bold">
