@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="container mx-auto flex flex-col items-center gap-8 px-4 py-16 text-center sm:px-6"
+      className="container mx-auto flex scroll-mt-12 flex-col items-center gap-8 px-4 py-16 text-center sm:px-6"
     >
       <h2 className="font-bold">About me</h2>
       <Image

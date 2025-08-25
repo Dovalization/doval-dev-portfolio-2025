@@ -2,7 +2,7 @@ import { Linkedin, Mail, GitHub } from "react-feather";
 import Link from "next/link";
 export default function ContactSection() {
   return (
-    <section id="contact" className="px-4 py-16 sm:px-6">
+    <section id="contact" className="scroll-mt-12 px-4 py-16 sm:px-6">
       <div className="container mx-auto flex flex-col items-center gap-8 text-center">
         <h2 className="font-bold">Let&rsquo;s work together</h2>
         <p className="max-w-prose text-left text-xl leading-relaxed">
