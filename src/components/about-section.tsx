@@ -20,12 +20,12 @@ export default function AboutSection() {
           people can rely on.
         </p>
         <p className="text-light-primary leading-6">
-          Eight years ago, I was building game worlds where every interface
-          decision shaped how players experienced the story. Today, I build web
-          applications where every interface decision shapes how teams get work
-          done. What connects them? Understanding that technology isn&rsquo;t
-          just about functionality—it&rsquo;s about creating experiences that
-          feel intuitive to the people using them.
+          Eight years ago, I was building game worlds where every design
+          decision shaped how players experienced the gameplay. Today, I build
+          web applications where every decision shapes how teams get work done.
+          What connects them? Understanding that technology isn&rsquo;t just
+          about functionality—it&rsquo;s about creating experiences that feel
+          intuitive to the people using them.
         </p>
         <p className="text-light-primary leading-6">
           My Master&rsquo;s research on interface design and user psychology
