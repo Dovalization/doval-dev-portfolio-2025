@@ -6,7 +6,7 @@ import ButtonLink from "@/components/button-link";
 const hero = {
   image: { src: "/images/about.png", alt: "About Me" },
   headingTop: "Full-stack Developer",
-  headingAccent: "Building human-centered systems",
+  headingAccent: "Turning ambitious visions into reliable technology",
   subheading:
     "I create fast, intuitive tools that reduce friction and help teams focus on what matters. 8+ years building scalable solutions from concept to production.",
   ctas: [
@@ -35,7 +35,7 @@ export default function HeroSection() {
         <h1 className="text-5xl leading-tight font-black text-shadow-black text-shadow-sm sm:text-6xl lg:text-7xl">
           {hero.headingTop}
           <br />
-          <span className="text-orange-secondary lg:text-6xl">
+          <span className="text-orange-secondary inline-block max-w-4/5 leading-tight lg:text-6xl">
             {hero.headingAccent}
           </span>
         </h1>

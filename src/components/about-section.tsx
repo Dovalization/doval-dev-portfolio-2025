@@ -16,33 +16,52 @@ export default function AboutSection() {
       />
       <div className="flex max-w-prose flex-col gap-6 text-left text-lg">
         <p className="text-light-primary leading-6 font-bold">
-          Hi! I&#39;m Guilherme Doval—I turn messy stakeholder requests into
-          systems that actually work.
+          Hi! I&rsquo;m Guilherme Doval—I turn ambitious visions into technology
+          people can rely on.
         </p>
         <p className="text-light-primary leading-6">
-          Eight years ago, I was building game worlds. Today, I build web
-          applications. What connects them? Both require translating abstract
-          visions into concrete, interactive experiences that people can
-          navigate intuitively.
+          Eight years ago, I was building game worlds where every interface
+          decision shaped how players experienced the story. Today, I build web
+          applications where every interface decision shapes how teams get work
+          done. What connects them? Understanding that technology isn&rsquo;t
+          just about functionality—it&rsquo;s about creating experiences that
+          feel intuitive to the people using them.
         </p>
         <p className="text-light-primary leading-6">
-          My Master&#39;s in Design and Visual Culture taught me to read between
-          the lines of what people say they want versus what they actually need.
-          My game development background taught me to balance creativity with
-          technical constraints. My web development experience taught me that
-          the best solutions are the ones teams can understand, maintain, and
-          evolve.
+          My Master&rsquo;s research on interface design and user psychology
+          revealed something crucial: interfaces don&rsquo;t just provide
+          functionality—they create meaning and emotional connection. I studied
+          how game could increase player immersion, even when they were
+          technically &lsquo;harder to use.&rsquo; This taught me that the
+          psychological experience of using a system matters as much as its
+          efficiency.
         </p>
         <p className="text-light-primary leading-6">
-          I handle the full spectrum: stakeholder interviews, UX flows, system
-          architecture, implementation, and deployment. But what makes me
-          different is how I connect these pieces—seeing how a database design
-          decision impacts user experience, or how a stakeholder&#39;s business
-          constraint actually points toward a cleaner technical solution.
+          This research background changes how I approach every project. While
+          most developers optimize for usability metrics, I understand when to
+          balance efficiency with engagement. I can see when a technical
+          decision will affect how users relate to the system, or when a
+          stakeholder&rsquo;s vision actually aligns with creating better user
+          experiences.
+        </p>
+        <p className="text-light-primary leading-6">
+          I handle the complete process: stakeholder interviews, user research,
+          system architecture, implementation, and deployment. But what sets me
+          apart is connecting these pieces through an understanding of how
+          people actually process and relate to technology. I don&rsquo;t just
+          build what stakeholders ask for—I research what users actually need,
+          then build systems that work for both the business and the people
+          using them.
+        </p>
+        <p className="text-light-primary leading-6">
+          The result? Technology that teams don&rsquo;t just use, but rely on.
+          Systems that feel intuitive because they&rsquo;re built around how
+          people naturally think and work.
         </p>
       </div>
       <blockquote className="text-orange-secondary text-xl font-semibold">
-        “Make the important visible, reduce friction, and keep teams moving.”
+        “Make the important visible, reduce friction, and build systems people
+        can rely on.”
       </blockquote>
     </section>
   );
