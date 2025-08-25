@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
+import { ArrowDownCircle } from "react-feather";
 const hero = {
   image: { src: "/images/about.png", alt: "About Me" },
   headingTop: "Full-stack Developer",
@@ -26,7 +27,7 @@ export default function HeroSection() {
   return (
     <div
       className={cn(
-        "after:from-dark-primary relative ease-in-out after:pointer-events-none after:absolute after:right-0 after:bottom-0 after:left-0 after:h-40 after:bg-gradient-to-t after:to-transparent",
+        "after:from-primary relative ease-in-out after:pointer-events-none after:absolute after:right-0 after:bottom-0 after:left-0 after:h-40 after:bg-gradient-to-t after:to-transparent",
       )}
       ref={heroRef}
     >
@@ -56,6 +57,10 @@ export default function HeroSection() {
           ))}
         </div>
       </section>
+      <ArrowDownCircle
+        className="text-light-primary absolute bottom-12 left-1/2 z-10 -translate-x-1/2 transform animate-bounce"
+        size={32}
+      />
     </div>
   );
 }
