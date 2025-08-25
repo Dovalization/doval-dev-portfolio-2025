@@ -27,7 +27,7 @@ export default function HeroSection() {
   return (
     <div
       className={cn(
-        "after:from-primary relative ease-in-out after:pointer-events-none after:absolute after:right-0 after:bottom-0 after:left-0 after:h-40 after:bg-gradient-to-t after:to-transparent",
+        "after:from-dark-primary relative ease-in-out after:pointer-events-none after:absolute after:right-0 after:bottom-0 after:left-0 after:h-40 after:bg-gradient-to-t after:to-transparent",
       )}
       ref={heroRef}
     >
