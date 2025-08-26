@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { GitHub, Linkedin } from "react-feather";
+import { useActiveSection } from "@/lib/useActiveSection";
 const navItems = [
   { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 export function Header() {
-  const pathname = usePathname();
+  const activeSection = useActiveSection();
 
   return (
     <nav className="bg-dark-primary/95 border-dark-secondary/50 sticky top-0 z-50 border-b backdrop-blur-md">
@@ -36,10 +36,10 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "hover:text-orange-secondary py-2 text-sm font-medium transition-colors",
-                    pathname === item.href
-                      ? "text-orange-secondary border-orange-secondary border-b-2"
-                      : "text-gray-light",
+                    "hover:text-orange-secondary border-b-2 py-2 text-sm font-medium transition-all duration-200 ease-in-out",
+                    activeSection === item.href.slice(1)
+                      ? "text-orange-secondary border-orange-secondary font-bold"
+                      : "text-gray-light border-transparent",
                   )}
                 >
                   {item.label}
@@ -56,7 +56,7 @@ export function Header() {
               >
                 <GitHub
                   size={26}
-                  className="text-gray-light hover:text-orange-secondary transition-colors duration-500"
+                  className="text-gray-light hover:text-orange-secondary transition-colors duration-200"
                 />
               </a>
               <a
@@ -66,7 +66,7 @@ export function Header() {
               >
                 <Linkedin
                   size={26}
-                  className="text-gray-light hover:text-orange-secondary transition-colors duration-500"
+                  className="text-gray-light hover:text-orange-secondary transition-colors duration-200"
                 />
               </a>
             </div>

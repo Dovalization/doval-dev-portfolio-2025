@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
-import { ArrowDownCircle } from "react-feather";
+import { ChevronsDown } from "react-feather";
 const hero = {
   image: { src: "/images/about.png", alt: "About Me" },
   headingTop: "Full-stack Developer",
@@ -57,7 +57,7 @@ export default function HeroSection() {
           ))}
         </div>
       </section>
-      <ArrowDownCircle
+      <ChevronsDown
         className="text-light-primary absolute bottom-12 left-1/2 z-10 -translate-x-1/2 transform animate-bounce"
         size={32}
       />
