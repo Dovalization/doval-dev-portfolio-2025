@@ -7,10 +7,9 @@ import ContactSection from "@/components/contact-section";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="flex flex-col gap-16 md:gap-24 lg:gap-32">
       <HeroSection />
       <AboutSection />
-
       <CoreValuesSection />
       <WorkSection />
       <SkillsSection />

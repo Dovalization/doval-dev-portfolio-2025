@@ -40,7 +40,7 @@ export default function CoreValuesSection() {
   });
 
   return (
-    <section className="container mx-auto flex flex-col gap-8 px-4 py-16 sm:px-6">
+    <section className="container mx-auto flex flex-col gap-8 px-4 sm:px-6">
       <div
         ref={ref}
         className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"

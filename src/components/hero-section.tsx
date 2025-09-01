@@ -31,16 +31,16 @@ export default function HeroSection() {
       )}
       ref={heroRef}
     >
-      <section className="container mx-auto flex h-[calc(100vh-5rem)] flex-col items-center justify-center gap-8 overflow-hidden px-4 text-center sm:px-6">
+      <section className="container mx-auto flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center gap-6 sm:gap-8 overflow-hidden px-4 py-8 text-center sm:px-6">
         <ParticleBackground isVisible={isHeroVisible} />
-        <h1 className="text-5xl leading-tight font-black text-shadow-black text-shadow-sm sm:text-6xl lg:text-7xl">
+        <h1 className="text-3xl leading-tight font-black text-shadow-black text-shadow-sm sm:text-5xl md:text-6xl lg:text-7xl">
           {hero.headingTop}
           <br />
-          <span className="text-orange-secondary inline-block max-w-4/5 leading-tight lg:text-6xl">
+          <span className="text-orange-secondary inline-block max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
             {hero.headingAccent}
           </span>
         </h1>
-        <p className="text-light-primary mx-auto max-w-prose text-lg leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-xl">
+        <p className="text-light-primary mx-auto max-w-full sm:max-w-prose text-base leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-lg md:text-xl px-4 sm:px-0">
           {hero.subheading}
         </p>
 

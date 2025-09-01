@@ -39,7 +39,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
       {/* Banner Section */}
       <figure
         className={cn(
-          "group relative min-h-96 cursor-pointer after:absolute after:inset-0 after:bg-transparent after:transition-colors after:duration-300 hover:after:bg-black/50",
+          "group relative min-h-64 cursor-pointer touch-manipulation after:absolute after:inset-0 after:bg-transparent after:transition-colors after:duration-300 hover:after:bg-black/50 sm:min-h-80 md:min-h-96",
           {
             "after:bg-black/50": isOpen,
           },
@@ -76,7 +76,7 @@ export default function Collapsible({ project }: CollapsibleProps) {
         className={cn(
           "to-gray-medium from-dark-secondary flex flex-col gap-8 bg-gradient-to-br shadow-2xl transition-normal duration-200 ease-in-out",
           {
-            "max-h-screen p-8": isOpen,
+            "max-h-[300vh] p-8": isOpen,
             "max-h-0 p-0 px-8": !isOpen,
           },
         )}
