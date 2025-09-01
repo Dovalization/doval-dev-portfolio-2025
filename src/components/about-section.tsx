@@ -14,7 +14,7 @@ export default function AboutSection() {
         height={175}
         className="rounded-full shadow-2xl"
       />
-      <div className="flex max-w-prose flex-col gap-6 text-left text-lg">
+      <div className="flex max-w-prose flex-col gap-6 text-left sm:text-left text-lg">
         <p className="text-light-primary leading-6 font-bold">
           Hi! I&rsquo;m Guilherme Doval—I turn ambitious visions into technology
           people can rely on.
