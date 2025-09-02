@@ -50,7 +50,7 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
     <Select value={currentLocale} onValueChange={handleLanguageChange}>
       <SelectTrigger 
         className={cn(
-          "w-20 sm:w-24 !bg-dark-primary dark:!bg-dark-primary border-gray-700 text-gray-light hover:!bg-gray-800 dark:hover:!bg-gray-800 hover:text-orange-secondary focus:ring-orange-secondary focus:ring-offset-dark-primary focus:border-orange-secondary transition-colors duration-200", 
+          "w-20 sm:w-24 bg-background border-border text-muted-foreground hover:bg-muted hover:text-accent-foreground focus:ring-primary focus:border-primary transition-colors duration-200", 
           className
         )} 
         size="sm"
@@ -64,14 +64,14 @@ export default function LanguageSelector({ className }: LanguageSelectorProps) {
           </div>
         </SelectValue>
       </SelectTrigger>
-      <SelectContent className="bg-dark-primary border-gray-700 shadow-xl">
+      <SelectContent className="bg-popover border-border shadow-xl">
         {languages.map((language) => (
           <SelectItem 
             key={language.code} 
             value={language.code}
             className={cn(
-              "text-gray-light hover:bg-gray-800 hover:text-orange-secondary focus:bg-gray-800 focus:text-orange-secondary cursor-pointer transition-colors duration-200",
-              currentLocale === language.code && "text-orange-secondary bg-gray-800"
+              "text-muted-foreground hover:bg-muted hover:text-accent-foreground focus:bg-muted focus:text-accent-foreground cursor-pointer transition-colors duration-200",
+              currentLocale === language.code && "text-accent-foreground bg-muted"
             )}
           >
             <div className="flex items-center gap-3">
