@@ -43,7 +43,7 @@ export function Header({ data: navigationData }: HeaderProps) {
                 rel="noopener noreferrer"
               >
                 <GitHub
-                  size={26}
+                  size={24}
                   className="text-gray-light hover:text-orange-secondary transition-colors duration-200"
                 />
               </a>
@@ -53,7 +53,7 @@ export function Header({ data: navigationData }: HeaderProps) {
                 rel="noopener noreferrer"
               >
                 <Linkedin
-                  size={26}
+                  size={24}
                   className="text-gray-light hover:text-orange-secondary transition-colors duration-200"
                 />
               </a>
