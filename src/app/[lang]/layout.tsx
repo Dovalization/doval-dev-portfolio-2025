@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { Header } from "@/components/header";
 import { getDictionary } from "./dictionaries";
+import { notFound } from "next/navigation";
 
 const metadataMap = {
   en: {
@@ -24,11 +25,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: "en" | "pt" }>;
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
 
-  const metadata = metadataMap[lang];
+  const metadata = metadataMap[lang as keyof typeof metadataMap];
+  if (!metadata) {
+    notFound();
+  }
+  
   return {
     title: metadata.title,
     description: metadata.description,
@@ -41,14 +46,20 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: "en" | "pt" }>;
+  params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  
+  // Check if the language is supported
+  if (!['en', 'pt'].includes(lang)) {
+    notFound();
+  }
+  
+  const dict = await getDictionary(lang as 'en' | 'pt');
 
   return (
     <>
-      <Header data={dict.navigation} currentLocale={lang} />
+      <Header data={dict.navigation} currentLocale={lang as 'en' | 'pt'} />
       <main>{children}</main>
     </>
   );
