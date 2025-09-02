@@ -5,8 +5,8 @@
       "alt": "Sobre Mim"
     },
     "headingTop": "Desenvolvedor Full-stack",
-    "headingAccent": "Transformando visões ambiciosas em tecnologia confiável",
-    "subheading": "Crio ferramentas rápidas e intuitivas que reduzem o atrito e ajudam equipes a focar no que realmente importa. 8+ anos construindo soluções escaláveis do conceito à produção.",
+    "headingAccent": "Transformando grandes ideias em tecnologia confiável",
+    "subheading": "Desenvolvo ferramentas rápidas e intuitivas que eliminam barreiras e ajudam equipes a focar no que importa. Mais de 8 anos criando soluções escaláveis, do conceito à produção.",
     "ctas": [
       {
         "label": "Ver meu trabalho",
@@ -32,49 +32,49 @@
       "height": 175
     },
     "paragraphs": [
-      "Olá! Sou Guilherme Doval—transformo visões ambiciosas em tecnologia na qual as pessoas podem confiar.",
-      "Há oito anos, eu criava mundos de jogos onde cada decisão de design moldava como os jogadores vivenciavam a experiência. Hoje, construo aplicações web onde cada decisão molda como as equipes realizam seu trabalho. O que os conecta? Entender que tecnologia não é apenas sobre funcionalidade—é sobre criar experiências que sejam intuitivas para quem as usa.",
-      "Minha pesquisa de Mestrado sobre design de interface e psicologia do usuário revelou algo crucial: interfaces não apenas fornecem funcionalidade—elas criam significado e conexão emocional. Estudei como interfaces de jogos podem aumentar a imersão do jogador, mesmo quando são tecnicamente 'mais difíceis de usar'. Isso me ensinou que a experiência psicológica de usar um sistema importa tanto quanto sua eficiência.",
-      "Essa base de pesquisa muda como abordo cada projeto. Enquanto a maioria dos desenvolvedores otimiza para métricas de usabilidade, eu entendo quando equilibrar eficiência com engajamento. Posso ver quando uma decisão técnica afetará como os usuários se relacionam com o sistema, ou quando a visão de um stakeholder realmente se alinha com a criação de melhores experiências do usuário.",
-      "Gerencio o processo completo: entrevistas com stakeholders, pesquisa do usuário, arquitetura do sistema, implementação e deploy. Mas o que me diferencia é conectar essas peças através de uma compreensão de como as pessoas realmente processam e se relacionam com a tecnologia. Não construo apenas o que os stakeholders pedem—pesquiso o que os usuários realmente precisam, depois construo sistemas que funcionam tanto para o negócio quanto para as pessoas que os usam.",
-      "O resultado? Tecnologia que as equipes não apenas usam, mas na qual confiam. Sistemas que parecem intuitivos porque são construídos em torno de como as pessoas naturalmente pensam e trabalham."
+      "Olá! Sou Guilherme Doval e transformo grandes ideias em tecnologia na qual as pessoas podem confiar.",
+      "Comecei minha carreira criando mundos de jogos, onde cada decisão de design moldava a experiência dos jogadores. Hoje, aplico essa mesma lógica no desenvolvimento de aplicações web, onde cada escolha molda como as equipes realizam seu trabalho. O que conecta esses dois mundos? Entender que tecnologia não é apenas funcionalidade — é sobre criar experiências que pareçam naturais para quem as usa.",
+      "Minha pesquisa de Mestrado sobre design de interface e psicologia do usuário revelou algo crucial: interfaces não apenas entregam funcionalidades — elas também criam significado e conexão emocional. Estudei como interfaces de jogos podiam aumentar a imersão, mesmo quando eram tecnicamente mais complexas. Isso me ensinou que a experiência psicológica de usar um sistema importa tanto quanto sua eficiência.",
+      "Essa base de pesquisa orienta como abordo cada projeto. Enquanto muitos desenvolvedores focam em métricas de usabilidade, eu sei quando equilibrar eficiência com engajamento. Consigo identificar quando uma decisão técnica vai impactar a forma como os usuários se relacionam com o sistema, ou quando a visão de um stakeholder realmente se alinha à criação de uma melhor experiência.",
+      "Gerencio o processo completo: entrevistas com stakeholders, pesquisa com usuários, arquitetura de sistemas, implementação e deploy. O que me diferencia é a capacidade de conectar essas etapas com base em como as pessoas realmente pensam e interagem com a tecnologia. Não construo apenas o que os stakeholders pedem — pesquiso o que os usuários de fato precisam e crio soluções que funcionam tanto para o negócio quanto para quem as utiliza.",
+      "O resultado? Tecnologia que as equipes não apenas usam, mas confiam. Sistemas que parecem intuitivos porque são construídos em torno de como as pessoas realmente pensam e trabalham."
     ],
-    "quote": "Torne o importante visível, reduza o atrito e construa sistemas confiáveis."
+    "quote": "Torne o importante visível, elimine barreiras e construa sistemas confiáveis."
   },
   "coreValues": [
     {
       "title": "Resolver problemas reais",
-      "text": "Fundamentar decisões em necessidades observadas do usuário. Reduzir complexidade para que as pessoas foquem no que importa.",
+      "text": "Basear decisões em necessidades reais observadas. Reduzir a complexidade para que as pessoas foquem no que importa.",
       "icon": "Target"
     },
     {
       "title": "Defender o usuário",
-      "text": "Cada escolha serve a pessoa que usa o produto, não o sistema. A empatia guia o trabalho.",
+      "text": "Cada decisão deve servir à pessoa que usa o produto, não ao sistema. A empatia guia o trabalho.",
       "icon": "User"
     },
     {
-      "title": "Construir para experiência",
+      "title": "Construir para a experiência",
       "text": "Como algo se sente importa tanto quanto o que faz. A experiência gera confiança e adoção.",
       "icon": "Layout"
     },
     {
       "title": "Reduzir carga cognitiva",
-      "text": "Fluxos previsíveis apoiam momentum. Remover distrações e fadiga de decisão.",
+      "text": "Fluxos previsíveis sustentam o ritmo. Remover distrações e fadiga de decisão.",
       "icon": "Minimize2"
     },
     {
       "title": "Permitir autonomia",
-      "text": "A tecnologia deve empoderar, não controlar. Dar às pessoas liberdade para agir independentemente.",
+      "text": "A tecnologia deve empoderar, não controlar. Dar às pessoas liberdade para agir de forma independente.",
       "icon": "Unlock"
     }
   ],
   "work": {
     "title": "Meu trabalho",
-    "description": "Cada projeto me ensinou algo diferente sobre traduzir a visão de stakeholders em sistemas funcionais. Alguns exigiram otimização técnica profunda, outros precisaram de pesquisa UX cuidadosa, e alguns demandaram ambos. Veja como abordei os desafios:",
+    "description": "Cada projeto me ensinou algo diferente sobre traduzir a visão de stakeholders em sistemas funcionais. Alguns exigiram otimização técnica profunda, outros pediram pesquisa de UX cuidadosa, e alguns demandaram ambos. Veja como abordei esses desafios:",
     "projects": [
       {
         "title": "Epic Games - Plataforma de Ferramentas Internas",
-        "description": "Desenvolvimento full-stack da plataforma centralizada de ferramentas internas da Epic, substituindo processos fragmentados por soluções coerentes e escaláveis.",
+        "description": "Desenvolvimento full-stack da plataforma centralizada de ferramentas internas da Epic, substituindo processos fragmentados por soluções escaláveis e consistentes.",
         "banner": {
           "url": "/images/projects/epic-bg.webp",
           "alt": "Banner Epic Games"
@@ -87,15 +87,15 @@
         "sections": [
           {
             "title": "Desafio",
-            "body": "As operações de negócio da Epic eram prejudicadas por processos fragmentados e painéis administrativos espalhados construídos em stacks e arquiteturas desatualizadas. Essas ferramentas legadas eram difíceis de manter e adicionar novos recursos, atrasando o trabalho de desenvolvimento. As equipes precisavam de acesso mais rápido a informações e ferramentas, mas os sistemas existentes eram pouco confiáveis e exigiam fluxos de trabalho manuais extensivos."
+            "body": "As operações da Epic eram prejudicadas por processos fragmentados e painéis administrativos espalhados, construídos em tecnologias desatualizadas. Essas ferramentas legadas eram difíceis de manter e de evoluir, atrasando o trabalho de desenvolvimento. As equipes precisavam de acesso rápido a informações e ferramentas, mas os sistemas existentes eram pouco confiáveis e exigiam fluxos de trabalho manuais extensos."
           },
           {
-            "title": "Minha Abordagem",
-            "body": "Como engenheiro full-stack em uma equipe ágil, trabalhei diretamente com stakeholders para entender seus fluxos de trabalho, depois colaborei estreitamente com designers para implementar e refinar fluxos. Graças ao meu background em design, consegui me comunicar mais efetivamente e fazer a ponte entre visão de design e implementação técnica. Focado na entrega rápida de recursos para desbloquear capacidades cedo e coletar feedback dos stakeholders, com testes extensivos e revisões de código para garantir confiabilidade da equipe."
+            "title": "Minha abordagem",
+            "body": "Como engenheiro full-stack em uma equipe ágil, trabalhei diretamente com stakeholders para entender seus fluxos de trabalho e colaborei de perto com designers para implementar e refinar soluções. Meu background em design ajudou a comunicar melhor e a fazer a ponte entre visão de design e implementação técnica. Mantive foco na entrega rápida de recursos para habilitar capacidades cedo e coletar feedback, apoiado por testes e revisões de código para garantir confiabilidade."
           },
           {
             "title": "Impacto",
-            "body": "Entreguei com sucesso múltiplas ferramentas críticas incluindo gerenciamento de cosméticos e gerenciamento organizacional como parte da plataforma de ferramentas centralizadas da Epic. Meu background em design permitiu handoffs mais suaves design-para-desenvolvimento e ciclos de iteração mais rápidos. A abordagem de desenvolvimento rápido permitiu que stakeholders validassem funcionalidades cedo, reduzindo retrabalho e acelerando rollouts de recursos pela plataforma."
+            "body": "Entreguei ferramentas críticas, incluindo módulos de gerenciamento de cosméticos e organizacional, como parte da plataforma centralizada da Epic. Minha experiência em design resultou em transições mais fluidas entre design e desenvolvimento e ciclos de iteração mais curtos. A estratégia de desenvolvimento rápido permitiu validar funcionalidades cedo, reduzindo retrabalho e acelerando lançamentos."
           }
         ],
         "stack": [
@@ -112,7 +112,7 @@
       },
       {
         "title": "Horizon Chase 2 - Site de Marketing",
-        "description": "Um site de marketing multilíngue de alta performance construído para iteração rápida por editores de conteúdo não-técnicos.",
+        "description": "Um site multilíngue de alta performance, criado para que editores de conteúdo não técnicos pudessem lançar campanhas rapidamente.",
         "banner": {
           "url": "/images/projects/hc2-bg.webp",
           "alt": "Banner Horizon Chase 2"
@@ -125,15 +125,15 @@
         "sections": [
           {
             "title": "Desafio",
-            "body": "A equipe de marketing estava limitada por dependências de desenvolvedores—não conseguiam lançar campanhas rapidamente ou testar diferentes abordagens de mensagem. Enquanto isso, a performance ruim do site existente estava prejudicando SEO e engajamento do usuário."
+            "body": "A equipe de marketing dependia de desenvolvedores para atualizar o site, o que atrasava campanhas e testes de mensagem. Além disso, a baixa performance prejudicava SEO e engajamento."
           },
           {
-            "title": "Minha Abordagem",
-            "body": "Passei tempo acompanhando o fluxo de trabalho de marketing para entender seu processo real de criação de conteúdo. Isso revelou que precisavam de capacidades de preview visual e queriam experimentar com arranjos de componentes, não apenas mudanças de texto. Projetei um sistema de componentes no Prismic que correspondia ao modelo mental deles, depois construí a arquitetura técnica em torno desses padrões de conteúdo."
+            "title": "Minha abordagem",
+            "body": "Acompanhei o fluxo de trabalho da equipe de marketing e percebi a necessidade de pré-visualização e flexibilidade na composição de layouts. Criei um sistema de componentes no Prismic alinhado ao modelo mental deles e construí a arquitetura técnica em torno desses padrões."
           },
           {
             "title": "Impacto",
-            "body": "A equipe de marketing agora entrega campanhas 3x mais rápido sem envolvimento de desenvolvedores. As melhorias de performance (LCP < 2.0s) contribuíram para 38% de crescimento em tráfego orgânico, mas mais importante, a equipe agora pode iterar mensagens e testar ideias em tempo real."
+            "body": "A equipe passou a lançar campanhas 3x mais rápido, sem precisar envolver desenvolvedores. A performance otimizada (LCP < 2s) impulsionou um crescimento de 38% no tráfego orgânico, além de permitir testes e ajustes em tempo real."
           }
         ],
         "stack": [
@@ -148,7 +148,7 @@
       },
       {
         "title": "Aquiris Game Studio - Site Institucional",
-        "description": "Um site moderno de estúdio refletindo um portfólio global de jogos, construído para escalabilidade e suporte multilíngue.",
+        "description": "Um site moderno para apresentar o portfólio global de jogos do estúdio, com escalabilidade e suporte multilíngue.",
         "banner": {
           "url": "/images/projects/aquiris-bg.webp",
           "alt": "Banner Aquiris Game Studio"
@@ -161,15 +161,15 @@
         "sections": [
           {
             "title": "Desafio",
-            "body": "Um estúdio de jogos em crescimento com um portfólio impressionante, mas sua presença web parecia visualmente datada e o conteúdo era difícil de atualizar. A desconexão estava prejudicando conversas de desenvolvimento de negócios e aquisição de talentos."
+            "body": "O estúdio tinha um portfólio forte, mas seu site parecia desatualizado e era difícil de manter. Isso prejudicava negociações com publishers e dificultava a atração de talentos."
           },
           {
-            "title": "Minha Abordagem",
-            "body": "Trabalhei estreitamente com a liderança para entender como queriam posicionar o estúdio globalmente. Projetei uma arquitetura de informação que mostrava tanto expertise técnica quanto alcance criativo. Construí uma estrutura CMS que permitia diferentes membros da equipe contribuir conteúdo mantendo consistência de marca."
+            "title": "Minha abordagem",
+            "body": "Trabalhei com a liderança para alinhar a estratégia de posicionamento global. Estruturei a arquitetura da informação para destacar expertise técnica e criatividade, criando também uma base CMS que permitia contribuições de diferentes áreas sem perder consistência de marca."
           },
           {
             "title": "Impacto",
-            "body": "A presença profissional abriu portas para parcerias maiores com editoras e ajudou a atrair talentos seniores de grandes estúdios. Mais importante, a equipe agora pode manter seu portfólio sem gargalo em uma única pessoa."
+            "body": "A nova presença digital fortaleceu negociações com publishers internacionais e ajudou na atração de talentos seniores. Além disso, a equipe passou a atualizar o portfólio de forma independente."
           }
         ],
         "stack": [
@@ -184,7 +184,7 @@
       },
       {
         "title": "Wonderbox - Site de Marketing",
-        "description": "Um site de jogo action-adventure destacando criatividade do jogador, gameplay de diorama e recursos de compartilhamento comunitário.",
+        "description": "Site de lançamento para jogo action-adventure, destacando criatividade, gameplay em diorama e recursos de comunidade.",
         "banner": {
           "url": "/images/projects/box-bg.webp",
           "alt": "Banner Wonderbox"
@@ -197,15 +197,15 @@
         "sections": [
           {
             "title": "Desafio",
-            "body": "Precisava de um site para capturar o espírito criativo e compartilhável do jogo mantendo performance e acessibilidade em todos os dispositivos. O gameplay único baseado em diorama do jogo exigia uma abordagem visual diferente dos sites típicos de marketing de jogos."
+            "body": "Era necessário capturar a proposta criativa do jogo em um site responsivo, acessível e de alta performance — algo que diferenciasse de sites tradicionais de marketing de games."
           },
           {
-            "title": "Minha Abordagem",
-            "body": "Construí com HTML semântico, CSS e JavaScript para destacar recursos de mídia e garantir layouts responsivos. Criei uma estrutura de componentes flexível para mostrar conteúdo dirigido pela comunidade mantendo tempos de carregamento rápidos através de otimização cuidadosa de imagens e aprimoramento progressivo."
+            "title": "Minha abordagem",
+            "body": "Utilizei HTML semântico, CSS e JavaScript para destacar mídias e garantir responsividade. Estruturei componentes flexíveis para exibir conteúdo da comunidade, mantendo carregamento rápido com otimização de imagens e melhorias progressivas."
           },
           {
             "title": "Impacto",
-            "body": "Entreguei um site visualmente envolvente e de carregamento rápido que aumentou a visibilidade do jogo e apoiou o engajamento da comunidade. O site alcançou scores 95+ no Lighthouse em todas as métricas e se tornou o modelo para futuros sites de marketing de jogos no estúdio."
+            "body": "O site alcançou notas acima de 95 no Lighthouse em todas as métricas, aumentou a visibilidade do jogo e se tornou referência para futuros lançamentos do estúdio."
           }
         ],
         "stack": [
@@ -218,7 +218,7 @@
       },
       {
         "title": "Projetos de Consultoria Independente (2017-2023)",
-        "description": "Construí soluções de presença digital para clientes nas indústrias de saúde, jurídica, hospitalidade e esportes.",
+        "description": "Construí soluções digitais para clientes de setores como saúde, advocacia, esportes e hospitalidade.",
         "banner": {
           "url": "/images/projects/consulting-bg.png",
           "alt": "Banner projetos consultoria independente"
@@ -231,15 +231,15 @@
         "sections": [
           {
             "title": "Desafio",
-            "body": "Clientes de diferentes indústrias precisavam estabelecer credibilidade e conectar com suas audiências online, mas cada domínio exigia abordagens completamente diferentes. Um escritório de advocacia precisa projetar autoridade, enquanto uma academia de artes marciais precisa transmitir filosofia e comunidade."
+            "body": "Cada cliente exigia uma abordagem diferente: um escritório de advocacia precisava transmitir autoridade, enquanto uma academia de artes marciais queria expressar filosofia e comunidade."
           },
           {
-            "title": "Minha Abordagem",
-            "body": "Desenvolvi um framework para entrevistas com stakeholders que descobre não apenas o que as pessoas querem que seu site faça, mas como querem que sua audiência se sinta. Depois traduzo esses objetivos emocionais e de negócio em decisões técnicas e de design. Cada projeto se tornou um estudo de caso em adaptar as mesmas ferramentas técnicas para diferentes estratégias de conteúdo e experiências do usuário."
+            "title": "Minha abordagem",
+            "body": "Criei um processo de entrevistas para identificar não só o que o cliente queria que o site fizesse, mas como queria que seu público se sentisse. Traduzi esses objetivos em decisões técnicas e de design, adaptando as mesmas ferramentas a contextos variados."
           },
           {
             "title": "Impacto",
-            "body": "Lancei com sucesso 10+ sites em diversas indústrias, cada um adaptado às necessidades específicas de audiência e objetivos de negócio. Essa experiência me ensinou como rapidamente entender diferentes contextos de domínio e traduzir requisitos abstratos de negócio em soluções técnicas concretas."
+            "body": "Lancei mais de 10 sites em diferentes indústrias, cada um moldado às necessidades específicas do público e às metas de negócio. Essa experiência me ensinou a entender rapidamente diferentes domínios e converter requisitos abstratos em soluções concretas."
           }
         ],
         "stack": [
@@ -247,7 +247,7 @@
           "HTML",
           "CSS",
           "JavaScript",
-          "Otimização SEO",
+          "SEO",
           "Google Analytics",
           "Lighthouse",
           "Figma",
@@ -258,7 +258,7 @@
   },
   "skills": {
     "title": "Habilidades & Ferramentas",
-    "description": "Meu conjunto único de habilidades e abordagem vem de combinar sensibilidade de design com princípios sólidos de engenharia — posso prototipar ideias rapidamente, depois construí-las para escalar. Cada habilidade se conecta às outras no serviço de criar software efetivo e amigável ao usuário.",
+    "description": "Minha combinação de sensibilidade em design e fundamentos sólidos de engenharia permite prototipar ideias rapidamente e escalá-las com eficiência. Cada habilidade se conecta às demais para criar software eficiente e amigável.",
     "sections": [
       {
         "key": "languages",
@@ -271,11 +271,11 @@
           },
           {
             "name": "SQL",
-            "desc": "Consultas e otimização de banco de dados"
+            "desc": "Consultas e otimização de bancos de dados"
           },
           {
             "name": "Python",
-            "desc": "Scripts, web scraping e automação"
+            "desc": "Automação, scripts e web scraping"
           }
         ]
       },
@@ -286,7 +286,7 @@
         "items": [
           {
             "name": "React",
-            "desc": "Biblioteca de desenvolvimento UI baseada em componentes"
+            "desc": "Biblioteca de UI baseada em componentes"
           },
           {
             "name": "Next.js",
@@ -294,23 +294,23 @@
           },
           {
             "name": "Tailwind CSS",
-            "desc": "Estilização utility-first"
+            "desc": "Estilização baseada em utilitários (utility-first)"
           },
           {
             "name": "Three.js",
-            "desc": "Gráficos 3D & WebGL"
+            "desc": "Gráficos 3D com WebGL"
           },
           {
             "name": "Framer Motion",
-            "desc": "Biblioteca de animação para React"
+            "desc": "Animações para React"
           },
           {
             "name": "SWR",
-            "desc": "Biblioteca de busca de dados para React"
+            "desc": "Busca e cache de dados em React"
           },
           {
             "name": "React Hook Form",
-            "desc": "Manuseio e validação de formulários"
+            "desc": "Gerenciamento e validação de formulários"
           },
           {
             "name": "Zod",
@@ -325,15 +325,15 @@
         "items": [
           {
             "name": "Node.js",
-            "desc": "JavaScript server-side"
+            "desc": "JavaScript no servidor"
           },
           {
             "name": "Express/Fastify",
-            "desc": "Frameworks de desenvolvimento de API"
+            "desc": "Frameworks de APIs"
           },
           {
             "name": "NestJS",
-            "desc": "Framework Node.js progressivo"
+            "desc": "Framework Node.js escalável"
           },
           {
             "name": "PostgreSQL",
@@ -341,15 +341,15 @@
           },
           {
             "name": "Prisma",
-            "desc": "ORM de próxima geração para Node.js"
+            "desc": "ORM moderno para Node.js"
           },
           {
             "name": "Headless CMS",
-            "desc": "Gerenciamento de conteúdo headless"
+            "desc": "Gerenciamento de conteúdo desacoplado"
           },
           {
             "name": "WordPress",
-            "desc": "Desenvolvimento WordPress"
+            "desc": "Desenvolvimento em WordPress"
           },
           {
             "name": "Supabase",
@@ -368,7 +368,7 @@
           },
           {
             "name": "Design de API",
-            "desc": "RESTful & GraphQL"
+            "desc": "REST e GraphQL"
           },
           {
             "name": "Otimização de Performance",
@@ -387,7 +387,7 @@
         "items": [
           {
             "name": "Docker",
-            "desc": "Orquestração de containers"
+            "desc": "Containers e orquestração"
           },
           {
             "name": "Vercel/Netlify",
@@ -395,7 +395,7 @@
           },
           {
             "name": "GitHub Actions",
-            "desc": "Automação CI/CD"
+            "desc": "Automação de CI/CD"
           },
           {
             "name": "Vitest",
@@ -422,7 +422,7 @@
           },
           {
             "name": "Design Tokens",
-            "desc": "Valores de design sistemáticos"
+            "desc": "Valores de design sistematizados"
           },
           {
             "name": "Storybook",
@@ -441,7 +441,7 @@
           },
           {
             "name": "Google Analytics",
-            "desc": "Insights de comportamento do usuário"
+            "desc": "Análise de comportamento do usuário"
           },
           {
             "name": "Lighthouse",
@@ -453,7 +453,7 @@
   },
   "contact": {
     "title": "Vamos trabalhar juntos",
-    "description": "Ajudo equipes a construir tecnologia na qual as pessoas confiam entendendo como os usuários realmente pensam e trabalham. Se você está enfrentando desafios complexos de interface ou quer melhorar como stakeholders e desenvolvedores colaboram, vamos conversar.",
+    "description": "Ajudo equipes a criar tecnologia confiável, entendendo como os usuários realmente pensam e trabalham. Se sua empresa enfrenta desafios complexos de interface ou precisa melhorar a colaboração entre stakeholders e desenvolvedores, vamos conversar.",
     "email": "doval.guilherme94@gmail.com",
     "social": {
       "linkedin": "https://linkedin.com/in/dovalization",
@@ -464,19 +464,19 @@
       "items": [
         {
           "title": "Organizações construindo interfaces complexas",
-          "description": "que precisam tanto de performance técnica quanto experiência do usuário intuitiva"
+          "description": "que exigem alto desempenho técnico sem abrir mão de uma experiência intuitiva"
         },
         {
-          "title": "Empresas enfrentando visões de produto ambiciosas",
-          "description": "que requerem equilibrar psicologia do usuário com restrições técnicas"
+          "title": "Empresas com visões de produto ambiciosas",
+          "description": "que precisam equilibrar a psicologia do usuário com restrições técnicas"
         },
         {
           "title": "Empresas em crescimento",
-          "description": "onde decisões técnicas precisam servir tanto objetivos de negócio quanto necessidades do usuário"
+          "description": "onde decisões técnicas devem atender tanto às metas de negócio quanto às necessidades do usuário"
         },
         {
           "title": "Equipes construindo ferramentas",
-          "description": "onde adoção do usuário depende de entender melhores práticas de usabilidade"
+          "description": "onde a adoção do usuário depende da aplicação de boas práticas de usabilidade"
         }
       ]
     }
@@ -485,11 +485,11 @@
     "navItems": [
       {
         "href": "#about",
-        "label": "Sobre"
+        "label": "Sobre mim"
       },
       {
         "href": "#work",
-        "label": "Trabalho"
+        "label": "Meu trabalho"
       },
       {
         "href": "#contact",
