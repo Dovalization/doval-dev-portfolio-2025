@@ -206,16 +206,14 @@ class Haze {
   }
 }
 
-interface GalaxyParticlesProps {
-  isVisible?: boolean; // Controls whether animations should run (for performance optimization)
-}
-
 /**
  * Main component that generates and manages the entire galaxy particle system
  * Handles star generation, materials, textures, and real-time animations
  * @param isVisible - Whether the component is currently visible (pauses animations when false)
  */
-function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
+function GalaxyParticles({ isVisible = true }: {
+  isVisible?: boolean; // Controls whether animations should run (for performance optimization)
+}) {
   const groupRef = useRef<THREE.Group>(null); // Reference to the main Three.js group
   const cameraRef = useRef<THREE.Camera | null>(null); // Camera reference for distance calculations
 
@@ -428,10 +426,6 @@ function GalaxyParticles({ isVisible = true }: GalaxyParticlesProps) {
   );
 }
 
-interface ParticleBackgroundProps {
-  isVisible?: boolean; // Performance optimization prop
-}
-
 /**
  * Main particle background component - creates a full-screen 3D galaxy simulation
  * Features realistic stellar populations, spiral arm structure, and nebula effects
@@ -441,7 +435,9 @@ interface ParticleBackgroundProps {
  */
 export default function ParticleBackground({
   isVisible = true,
-}: ParticleBackgroundProps) {
+}: {
+  isVisible?: boolean; // Performance optimization prop
+}) {
   return (
     <div className="animate-fade-in absolute inset-0 -z-10">
       <Canvas

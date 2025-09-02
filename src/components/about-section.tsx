@@ -1,11 +1,9 @@
 import Image from "next/image";
 import { AboutData } from "@/data/schemas";
 
-interface AboutSectionProps {
+export default function AboutSection({ data: aboutData }: {
   data: AboutData;
-}
-
-export default function AboutSection({ data: aboutData }: AboutSectionProps) {
+}) {
   return (
     <section
       id="about"

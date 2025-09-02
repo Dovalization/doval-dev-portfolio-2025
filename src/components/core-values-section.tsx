@@ -14,11 +14,9 @@ const iconMap = {
   Unlock,
 };
 
-interface CoreValuesSectionProps {
+export default function CoreValuesSection({ data: coreValues }: {
   data: CoreValue[];
-}
-
-export default function CoreValuesSection({ data: coreValues }: CoreValuesSectionProps) {
+}) {
   
   const { ref, isInView } = useInViewAnimation({
     threshold: 0.2,

@@ -8,11 +8,9 @@ import { useActiveSection } from "@/lib/useActiveSection";
 import LanguageSelector from "./language-selector";
 import { NavigationData } from "@/data/schemas";
 
-interface MobileMenuToggleProps {
+export default function MobileMenuToggle({ navigationData }: {
   navigationData: NavigationData;
-}
-
-export default function MobileMenuToggle({ navigationData }: MobileMenuToggleProps) {
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 

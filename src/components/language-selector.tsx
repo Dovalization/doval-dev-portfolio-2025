@@ -10,11 +10,9 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
-interface LanguageSelectorProps {
+export default function LanguageSelector({ className }: {
   className?: string;
-}
-
-export default function LanguageSelector({ className }: LanguageSelectorProps) {
+}) {
   const router = useRouter();
   const pathname = usePathname();
 

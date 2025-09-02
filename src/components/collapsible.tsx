@@ -2,24 +2,20 @@
 import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-interface ProjectSection {
-  title: string;
-  body: string;
-}
-
-interface CollapsibleProps {
+export default function Collapsible({ project }: {
   project: {
     title: string;
     description: string;
-    sections: ProjectSection[];
+    sections: {
+      title: string;
+      body: string;
+    }[];
     banner: { url: string; alt: string };
     logo: { url: string; alt: string; size?: "small" | "medium" | "large" };
     stack: string[];
     liveUrl?: string;
   };
-}
-
-export default function Collapsible({ project }: CollapsibleProps) {
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapsible = () => {

@@ -6,11 +6,9 @@ import ButtonLink from "@/components/button-link";
 import { ChevronsDown } from "react-feather";
 import { HeroData } from "@/data/schemas";
 
-interface HeroSectionProps {
+export default function HeroSection({ data: hero }: {
   data: HeroData;
-}
-
-export default function HeroSection({ data: hero }: HeroSectionProps) {
+}) {
   
   const { ref: heroRef, isInView: isHeroVisible } = useInViewAnimation({
     threshold: 0.1, // Trigger when 10% of hero section is visible

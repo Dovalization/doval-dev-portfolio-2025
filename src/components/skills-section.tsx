@@ -19,11 +19,9 @@ const iconMap = {
   Activity,
 };
 
-interface SkillsSectionProps {
+export default function SkillsSection({ data: skillsData }: {
   data: SkillsData;
-}
-
-export default function SkillsSection({ data: skillsData }: SkillsSectionProps) {
+}) {
   return (
     <section className="container mx-auto flex flex-col gap-8 px-4 sm:px-6">
       <h2 className="text-center font-bold">{skillsData.title}</h2>

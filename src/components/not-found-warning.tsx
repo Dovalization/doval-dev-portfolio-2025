@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface NotFoundWarningProps {
-  homeHref?: string;
-  className?: string;
-}
-
 export default function NotFoundWarning({
   homeHref = "/en",
   className,
-}: NotFoundWarningProps) {
+}: {
+  homeHref?: string;
+  className?: string;
+}) {
   return (
     <div
       className={cn(

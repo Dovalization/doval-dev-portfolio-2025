@@ -6,12 +6,10 @@ import LanguageSelector from "./language-selector";
 import DesktopNavigation from "./desktop-navigation";
 import MobileMenuToggle from "./mobile-menu-toggle";
 
-interface HeaderProps {
+export function Header({ data: navigationData }: {
   data: NavigationData;
   currentLocale: "en" | "pt";
-}
-
-export function Header({ data: navigationData }: HeaderProps) {
+}) {
   // Fallback data if navigationData is undefined
 
   return (

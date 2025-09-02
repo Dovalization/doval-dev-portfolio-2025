@@ -5,11 +5,9 @@ import { cn } from "@/lib/utils";
 import { useActiveSection } from "@/lib/useActiveSection";
 import { NavigationData } from "@/data/schemas";
 
-interface DesktopNavigationProps {
+export default function DesktopNavigation({ navItems }: {
   navItems: NavigationData["navItems"];
-}
-
-export default function DesktopNavigation({ navItems }: DesktopNavigationProps) {
+}) {
   const activeSection = useActiveSection();
 
   return (
