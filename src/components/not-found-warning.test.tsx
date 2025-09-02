@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import NotFoundWarning from "../not-found-warning";
+import NotFoundWarning from "./not-found-warning";
 
 // Mock Next.js Link component
 vi.mock("next/link", () => ({
