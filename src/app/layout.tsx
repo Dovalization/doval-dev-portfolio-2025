@@ -2,7 +2,6 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Open_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -35,8 +34,7 @@ export default function RootLayout({
     >
       {/* Fixed CSS class spacing - added spaces between classes */}
       <body className="bg-dark-primary text-light-primary min-h-screen font-sans">
-        <Header />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );

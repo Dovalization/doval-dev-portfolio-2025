@@ -1,0 +1,504 @@
+{
+  "hero": {
+    "image": {
+      "src": "/images/about.png",
+      "alt": "About Me"
+    },
+    "headingTop": "Full-stack Developer",
+    "headingAccent": "Turning ambitious visions into reliable technology",
+    "subheading": "I create fast, intuitive tools that reduce friction and help teams focus on what matters. 8+ years building scalable solutions from concept to production.",
+    "ctas": [
+      {
+        "label": "See my work",
+        "href": "#work",
+        "primary": true
+      },
+      {
+        "label": "About me",
+        "href": "#about"
+      },
+      {
+        "label": "Get in touch",
+        "href": "#contact"
+      }
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "image": {
+      "src": "/images/about.png",
+      "alt": "About Me",
+      "width": 175,
+      "height": 175
+    },
+    "paragraphs": [
+      "Hi! I'm Guilherme Doval—I turn ambitious visions into technology people can rely on.",
+      "Eight years ago, I was building game worlds where every design decision shaped how players experienced the gameplay. Today, I build web applications where every decision shapes how teams get work done. What connects them? Understanding that technology isn't just about functionality—it's about creating experiences that feel intuitive to the people using them.",
+      "My Master's research on interface design and user psychology revealed something crucial: interfaces don't just provide functionality—they create meaning and emotional connection. I studied how game user interfaces could increase player immersion, even when they were technically 'harder to use'. This taught me that the psychological experience of using a system matters as much as its efficiency.",
+      "This research background changes how I approach every project. While most developers optimize for usability metrics, I understand when to balance efficiency with engagement. I can see when a technical decision will affect how users relate to the system, or when a stakeholder's vision actually aligns with creating better user experiences.",
+      "I handle the complete process: stakeholder interviews, user research, system architecture, implementation, and deployment. But what sets me apart is connecting these pieces through an understanding of how people actually process and relate to technology. I don't just build what stakeholders ask for—I research what users actually need, then build systems that work for both the business and the people using them.",
+      "The result? Technology that teams don't just use, but rely on. Systems that feel intuitive because they're built around how people naturally think and work."
+    ],
+    "quote": "Make the important visible, reduce friction, and build reliable systems."
+  },
+  "coreValues": [
+    {
+      "title": "Solve real problems",
+      "text": "Ground decisions in observed user needs. Reduce complexity so people focus on what matters.",
+      "icon": "Target"
+    },
+    {
+      "title": "Champion the user",
+      "text": "Every choice serves the person using the product, not the system. Empathy guides the work.",
+      "icon": "User"
+    },
+    {
+      "title": "Build for experience",
+      "text": "How it feels matters as much as what it does. Experience drives trust and adoption.",
+      "icon": "Layout"
+    },
+    {
+      "title": "Lower cognitive load",
+      "text": "Predictable flows support momentum. Remove distractions and decision fatigue.",
+      "icon": "Minimize2"
+    },
+    {
+      "title": "Enable autonomy",
+      "text": "Technology should empower, not control. Give people freedom to act independently.",
+      "icon": "Unlock"
+    }
+  ],
+  "work": {
+    "title": "My work",
+    "description": "Each project taught me something different about translating stakeholder vision into working systems. Some required deep technical optimization, others needed careful UX research, and a few demanded both. Here's how I approached the challenges:",
+    "projects": [
+      {
+        "title": "Epic Games - Internal Business Tooling Platform",
+        "description": "Full-stack development of Epic's centralized internal business tooling platform, replacing fragmented processes with coherent, scalable solutions.",
+        "banner": {
+          "url": "/images/projects/epic-bg.webp",
+          "alt": "Epic Games banner"
+        },
+        "logo": {
+          "url": "/images/projects/epic-logo.svg",
+          "alt": "Epic Games logo",
+          "size": "small"
+        },
+        "sections": [
+          {
+            "title": "Challenge",
+            "body": "Epic's business operations were hampered by fragmented processes and scattered admin panels built on older, outdated stacks and architecture. These legacy tools were difficult to maintain and add new features to, slowing development work. Teams needed faster access to information and tools, but existing systems were unreliable and required extensive manual workflows."
+          },
+          {
+            "title": "My Approach",
+            "body": "As full-stack engineer on an agile team, I worked directly with stakeholders to understand their workflows, then collaborated closely with designers to implement and refine flows. Thanks to my design background, I was able to communicate more effectively and bridge the gap between design vision and technical implementation. Focused on rapid feature delivery to unlock capabilities early and gather stakeholder feedback, with extensive testing and code reviews to ensure team reliability."
+          },
+          {
+            "title": "Impact",
+            "body": "Successfully delivered multiple mission-critical tools including cosmetics management and organization management as part of Epic's centralized tooling platform. My design background enabled smoother design-to-development handoffs and faster iteration cycles. The rapid development approach allowed stakeholders to validate functionality early, reducing rework and accelerating feature rollouts across the platform."
+          }
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "PostgreSQL",
+          "Zod",
+          "Vitest",
+          "Playwright",
+          "OpenTelemetry",
+          "Grafana"
+        ]
+      },
+      {
+        "title": "Horizon Chase 2 - Marketing Website",
+        "description": "A high-performance, multilingual marketing site built for fast iteration by non-dev content editors.",
+        "banner": {
+          "url": "/images/projects/hc2-bg.webp",
+          "alt": "Horizon Chase 2 banner"
+        },
+        "logo": {
+          "url": "/images/projects/hc2-logo.webp",
+          "alt": "Horizon Chase 2 logo",
+          "size": "medium"
+        },
+        "sections": [
+          {
+            "title": "Challenge",
+            "body": "The marketing team was bottlenecked by developer dependencies—they couldn't launch campaigns quickly or test different messaging approaches. Meanwhile, the existing site's poor performance was hurting SEO and user engagement."
+          },
+          {
+            "title": "My Approach",
+            "body": "I spent time shadowing the marketing workflow to understand their actual content creation process. This revealed they needed visual preview capabilities and wanted to experiment with component arrangements, not just text changes. I designed a component system in Prismic that matched their mental model, then built the technical architecture around those content patterns."
+          },
+          {
+            "title": "Impact",
+            "body": "Marketing team now ships campaigns 3x faster without developer involvement. The performance improvements (LCP < 2.0s) contributed to 38% organic traffic growth, but more importantly, the team can now iterate on messaging and test ideas in real-time."
+          }
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Prismic CMS",
+          "Tailwind CSS",
+          "Image Optimization",
+          "i18n"
+        ]
+      },
+      {
+        "title": "Aquiris Game Studio - Institutional Website",
+        "description": "A modern studio site reflecting a global game portfolio, built for scalability and multilingual support.",
+        "banner": {
+          "url": "/images/projects/aquiris-bg.webp",
+          "alt": "Aquiris Game Studio banner"
+        },
+        "logo": {
+          "url": "/images/projects/aquiris-logo.svg",
+          "alt": "Aquiris logo",
+          "size": "medium"
+        },
+        "sections": [
+          {
+            "title": "Challenge",
+            "body": "A growing games studio with an impressive portfolio, but their web presence looked visually dated and content was difficult to update. The disconnect was hurting business development conversations and talent acquisition."
+          },
+          {
+            "title": "My Approach",
+            "body": "Worked closely with leadership to understand how they wanted to position the studio globally. Designed an information architecture that showcased both technical expertise and creative range. Built a CMS structure that let different team members contribute content while maintaining brand consistency."
+          },
+          {
+            "title": "Impact",
+            "body": "The professional presence opened doors to larger publishing partnerships and helped attract senior talent from major studios. More importantly, the team can now maintain their portfolio without bottlenecking on a single person."
+          }
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Prismic CMS",
+          "Tailwind CSS",
+          "Image Optimization",
+          "i18n"
+        ]
+      },
+      {
+        "title": "Wonderbox - Marketing Website",
+        "description": "An action-adventure game site highlighting player creativity, diorama gameplay, and community sharing features.",
+        "banner": {
+          "url": "/images/projects/box-bg.webp",
+          "alt": "Wonderbox banner"
+        },
+        "logo": {
+          "url": "/images/projects/box-logo.webp",
+          "alt": "Wonderbox logo",
+          "size": "medium"
+        },
+        "sections": [
+          {
+            "title": "Challenge",
+            "body": "Needed a site to capture the creative, shareable spirit of the game while remaining performant and accessible across devices. The game's unique diorama-based gameplay required a different visual approach than typical game marketing sites."
+          },
+          {
+            "title": "My Approach",
+            "body": "Built with semantic HTML, CSS, and JavaScript to highlight media assets and ensure responsive layouts. Created a flexible component structure for showcasing community-driven content while maintaining fast load times through careful image optimization and progressive enhancement."
+          },
+          {
+            "title": "Impact",
+            "body": "Delivered a fast-loading, visually engaging site that increased game visibility and supported community engagement. Site achieved 95+ Lighthouse scores across all metrics and became the template for future game marketing sites at the studio."
+          }
+        ],
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vite",
+          "Image Optimization"
+        ]
+      },
+      {
+        "title": "Independent Consulting Projects (2017-2023)",
+        "description": "Built digital presence solutions for clients across healthcare, legal, hospitality, and sports industries.",
+        "banner": {
+          "url": "/images/projects/consulting-bg.png",
+          "alt": "Independent consulting projects banner"
+        },
+        "logo": {
+          "url": "/images/doval-dev-logo.svg",
+          "alt": "Independent consultant logo",
+          "size": "medium"
+        },
+        "sections": [
+          {
+            "title": "Challenge",
+            "body": "Clients across different industries all needed to establish credibility and connect with their audiences online, but each domain required completely different approaches. A law firm needs to project authority, while a martial arts academy needs to convey philosophy and community."
+          },
+          {
+            "title": "My Approach",
+            "body": "Developed a framework for stakeholder interviews that uncovers not just what people want their site to do, but how they want their audience to feel. Then I translate those emotional and business goals into technical and design decisions. Each project became a case study in adapting the same technical tools to different content strategies and user experiences."
+          },
+          {
+            "title": "Impact",
+            "body": "Successfully launched 10+ sites across diverse industries, each tailored to their specific audience needs and business goals. This experience taught me how to rapidly understand different domain contexts and translate abstract business requirements into concrete technical solutions."
+          }
+        ],
+        "stack": [
+          "WordPress",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "SEO Optimization",
+          "Google Analytics",
+          "Lighthouse",
+          "Figma",
+          "i18n"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Tools",
+    "description": "My unique skill set and approach comes from pairing design sensibility with solid engineering principles — I can prototype ideas quickly, then build them to scale. Each skill connects to the others in service of creating software that is effective and user-friendly.",
+    "sections": [
+      {
+        "key": "languages",
+        "title": "Languages",
+        "icon": "Code",
+        "items": [
+          {
+            "name": "JavaScript/TypeScript",
+            "desc": "The programming language of the web"
+          },
+          {
+            "name": "SQL",
+            "desc": "Database queries & optimization"
+          },
+          {
+            "name": "Python",
+            "desc": "Scripting, web scraping & automation"
+          }
+        ]
+      },
+      {
+        "key": "frontend",
+        "title": "Frontend",
+        "icon": "Monitor",
+        "items": [
+          {
+            "name": "React",
+            "desc": "A Component-based UI development library"
+          },
+          {
+            "name": "Next.js",
+            "desc": "A React framework for production"
+          },
+          {
+            "name": "Tailwind CSS",
+            "desc": "Utility-first styling"
+          },
+          {
+            "name": "Three.js",
+            "desc": "3D graphics & WebGL"
+          },
+          {
+            "name": "Framer Motion",
+            "desc": "Animation library for React"
+          },
+          {
+            "name": "SWR",
+            "desc": "Data fetching library for React"
+          },
+          {
+            "name": "React Hook Form",
+            "desc": "Form handling & validation"
+          },
+          {
+            "name": "Zod",
+            "desc": "Schema validation"
+          }
+        ]
+      },
+      {
+        "key": "backend",
+        "title": "Backend & CMS",
+        "icon": "Server",
+        "items": [
+          {
+            "name": "Node.js",
+            "desc": "Server-side JavaScript"
+          },
+          {
+            "name": "Express/Fastify",
+            "desc": "API development frameworks"
+          },
+          {
+            "name": "NestJS",
+            "desc": "Progressive Node.js framework"
+          },
+          {
+            "name": "PostgreSQL",
+            "desc": "Relational database"
+          },
+          {
+            "name": "Prisma",
+            "desc": "Next-generation ORM for Node.js"
+          },
+          {
+            "name": "Headless CMS",
+            "desc": "Headless content management"
+          },
+          {
+            "name": "WordPress",
+            "desc": "WordPress development"
+          },
+          {
+            "name": "Supabase",
+            "desc": "Real-time database"
+          }
+        ]
+      },
+      {
+        "key": "architecture",
+        "title": "Architecture",
+        "icon": "Layers",
+        "items": [
+          {
+            "name": "Component Libraries",
+            "desc": "Reusable UI systems"
+          },
+          {
+            "name": "API Design",
+            "desc": "RESTful & GraphQL"
+          },
+          {
+            "name": "Performance Optimization",
+            "desc": "Core Web Vitals"
+          },
+          {
+            "name": "Responsive Design",
+            "desc": "Mobile-first approach"
+          }
+        ]
+      },
+      {
+        "key": "devops",
+        "title": "DevOps & Testing",
+        "icon": "Settings",
+        "items": [
+          {
+            "name": "Docker",
+            "desc": "Container orchestration"
+          },
+          {
+            "name": "Vercel/Netlify",
+            "desc": "Serverless deployment"
+          },
+          {
+            "name": "GitHub Actions",
+            "desc": "CI/CD automation"
+          },
+          {
+            "name": "Vitest",
+            "desc": "Unit testing"
+          },
+          {
+            "name": "Playwright",
+            "desc": "End-to-end testing"
+          }
+        ]
+      },
+      {
+        "key": "design",
+        "title": "Design Systems",
+        "icon": "Feather",
+        "items": [
+          {
+            "name": "Figma",
+            "desc": "Design & prototyping"
+          },
+          {
+            "name": "Adobe Creative Suite",
+            "desc": "Visual asset creation"
+          },
+          {
+            "name": "Design Tokens",
+            "desc": "Systematic design values"
+          },
+          {
+            "name": "Storybook",
+            "desc": "Component documentation"
+          }
+        ]
+      },
+      {
+        "key": "monitoring",
+        "title": "Monitoring",
+        "icon": "Activity",
+        "items": [
+          {
+            "name": "Grafana",
+            "desc": "Monitoring & observability"
+          },
+          {
+            "name": "Google Analytics",
+            "desc": "User behavior insights"
+          },
+          {
+            "name": "Lighthouse",
+            "desc": "Performance auditing"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's work together",
+    "description": "I help teams build technology that people rely on by understanding how users actually think and work. If you're tackling complex interface challenges or want to improve how stakeholders and developers collaborate, let's talk.",
+    "email": "doval.guilherme94@gmail.com",
+    "social": {
+      "linkedin": "https://linkedin.com/in/dovalization",
+      "github": "https://github.com/dovalization"
+    },
+    "lookingFor": {
+      "title": "What I'm looking for",
+      "items": [
+        {
+          "title": "Organizations building complex interfaces",
+          "description": "that need both technical performance and intuitive user experience"
+        },
+        {
+          "title": "Companies tackling ambitious product visions",
+          "description": "that require balancing user psychology with technical constraints"
+        },
+        {
+          "title": "Growing companies",
+          "description": "where technical decisions need to serve both business goals and user needs"
+        },
+        {
+          "title": "Teams building tools",
+          "description": "where user adoption depends on understanding usability best practices"
+        }
+      ]
+    }
+  },
+  "navigation": {
+    "navItems": [
+      {
+        "href": "#about",
+        "label": "About"
+      },
+      {
+        "href": "#work",
+        "label": "Work"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ],
+    "social": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com"
+    }
+  }
+}

@@ -103,10 +103,6 @@ export const ContactSchema = z.object({
 
 // Navigation Schema
 export const NavigationSchema = z.object({
-  logo: z.object({
-    src: z.string(),
-    alt: z.string(),
-  }),
   navItems: z.array(z.object({
     href: z.string(),
     label: z.string(),
