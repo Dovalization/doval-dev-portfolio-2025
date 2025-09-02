@@ -7,112 +7,28 @@ import {
   Feather,
   Activity,
 } from "react-feather";
+import { skills as skillsData } from "@/data/loader";
 
-const skills = {
-  sections: [
-    {
-      key: "languages",
-      title: "Languages",
-      icon: Code,
-      items: [
-        {
-          name: "JavaScript/TypeScript",
-          desc: "The programming language of the web",
-        },
-        { name: "SQL", desc: "Database queries & optimization" },
-        { name: "Python", desc: "Scripting, web scraping & automation" },
-      ],
-    },
-    {
-      key: "frontend",
-      title: "Frontend",
-      icon: Monitor,
-      items: [
-        { name: "React", desc: "A Component-based UI development library" },
-        { name: "Next.js", desc: "A React framework for production" },
-        { name: "Tailwind CSS", desc: "Utility-first styling" },
-        { name: "Three.js", desc: "3D graphics & WebGL" },
-        { name: "Framer Motion", desc: "Animation library for React" },
-        { name: "SWR", desc: "Data fetching library for React" },
-        { name: "React Hook Form", desc: "Form handling & validation" },
-        { name: "Zod", desc: "Schema validation" },
-      ],
-    },
-    {
-      key: "backend",
-      title: "Backend & CMS",
-      icon: Server,
-      items: [
-        { name: "Node.js", desc: "Server-side JavaScript" },
-        { name: "Express/Fastify", desc: "API development frameworks" },
-        { name: "NestJS", desc: "Progressive Node.js framework" },
-        { name: "PostgreSQL", desc: "Relational database" },
-        { name: "Prisma", desc: "Next-generation ORM for Node.js" },
-        { name: "Headless CMS", desc: "Headless content management" },
-        { name: "WordPress", desc: "WordPress development" },
-        { name: "Supabase", desc: "Real-time database" },
-      ],
-    },
-    {
-      key: "architecture",
-      title: "Architecture",
-      icon: Layers,
-      items: [
-        { name: "Component Libraries", desc: "Reusable UI systems" },
-        { name: "API Design", desc: "RESTful & GraphQL" },
-        { name: "Performance Optimization", desc: "Core Web Vitals" },
-        { name: "Responsive Design", desc: "Mobile-first approach" },
-      ],
-    },
-    {
-      key: "devops",
-      title: "DevOps & Testing",
-      icon: Settings,
-      items: [
-        { name: "Docker", desc: "Container orchestration" },
-        { name: "Vercel/Netlify", desc: "Serverless deployment" },
-        { name: "GitHub Actions", desc: "CI/CD automation" },
-        { name: "Vitest", desc: "Unit testing" },
-        { name: "Playwright", desc: "End-to-end testing" },
-      ],
-    },
-    {
-      key: "design",
-      title: "Design Systems",
-      icon: Feather,
-      items: [
-        { name: "Figma", desc: "Design & prototyping" },
-        { name: "Adobe Creative Suite", desc: "Visual asset creation" },
-        { name: "Design Tokens", desc: "Systematic design values" },
-        { name: "Storybook", desc: "Component documentation" },
-      ],
-    },
-    {
-      key: "monitoring",
-      title: "Monitoring",
-      icon: Activity,
-      items: [
-        { name: "Grafana", desc: "Monitoring & observability" },
-        { name: "Google Analytics", desc: "User behavior insights" },
-        { name: "Lighthouse", desc: "Performance auditing" },
-      ],
-    },
-  ],
+const iconMap = {
+  Code,
+  Monitor,
+  Server,
+  Settings,
+  Layers,
+  Feather,
+  Activity,
 };
 
 export default function SkillsSection() {
   return (
     <section className="container mx-auto flex flex-col gap-8 px-4 sm:px-6">
-      <h2 className="text-center font-bold">Skills & Tools</h2>
+      <h2 className="text-center font-bold">{skillsData.title}</h2>
       <p className="mx-auto max-w-prose text-lg leading-relaxed sm:text-xl">
-        My unique skill set and approach comes from pairing design sensibility
-        with solid engineering principles — I can prototype ideas quickly, then
-        build them to scale. Each skill connects to the others in service of
-        creating software that is effective and user-friendly.
+        {skillsData.description}
       </p>
       <div className="columns-1 gap-6 space-y-8 md:columns-2 lg:columns-3">
-        {skills.sections.map(({ key, title, icon, items }) => {
-          const Icon = icon;
+        {skillsData.sections.map(({ key, title, icon, items }) => {
+          const Icon = iconMap[icon as keyof typeof iconMap];
           return (
             <div
               key={key}

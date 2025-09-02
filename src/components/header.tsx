@@ -6,12 +6,7 @@ import Image from "next/image";
 import { GitHub, Linkedin, X } from "react-feather";
 import { useActiveSection } from "@/lib/useActiveSection";
 import { useState } from "react";
-
-const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#contact", label: "Contact" },
-];
+import { navigation as navigationData } from "@/data/loader";
 
 export function Header() {
   const activeSection = useActiveSection();
@@ -32,8 +27,8 @@ export function Header() {
           <Link href="/">
             <span className="relative flex aspect-video min-w-40">
               <Image
-                src="images/doval-dev-logo.svg"
-                alt="Logo"
+                src={navigationData.logo.src}
+                alt={navigationData.logo.alt}
                 fill
                 style={{ objectFit: "contain" }}
               />
@@ -42,7 +37,7 @@ export function Header() {
 
           <div className="flex items-center gap-8">
             <div className="hidden space-x-8 md:flex">
-              {navItems.map((item) => (
+              {navigationData.navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -61,7 +56,7 @@ export function Header() {
             {/* Social Icons */}
             <div className="hidden items-center space-x-4 md:flex">
               <a
-                href="https://github.com"
+                href={navigationData.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +66,7 @@ export function Header() {
                 />
               </a>
               <a
-                href="https://linkedin.com"
+                href={navigationData.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -126,7 +121,7 @@ export function Header() {
           <div className="bg-dark-primary border-dark-secondary/50 fixed inset-x-0 top-20 z-50 border-b md:hidden">
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col space-y-4">
-                {navItems.map((item) => (
+                {navigationData.navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -145,7 +140,7 @@ export function Header() {
                 {/* Mobile social links */}
                 <div className="border-dark-secondary/30 mt-4 flex items-center justify-center space-x-6 border-t pt-4">
                   <a
-                    href="https://github.com"
+                    href={navigationData.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="touch-manipulation p-2"
@@ -156,7 +151,7 @@ export function Header() {
                     />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href={navigationData.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="touch-manipulation p-2"

@@ -4,34 +4,15 @@ import React from "react";
 import { User, Minimize2, Unlock, Layout, Target } from "react-feather";
 import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import { cn } from "@/lib/utils";
+import { coreValues } from "@/data/loader";
 
-const coreValues = [
-  {
-    title: "Solve real problems",
-    text: "Ground decisions in observed user needs. Reduce complexity so people focus on what matters.",
-    icon: Target,
-  },
-  {
-    title: "Champion the user",
-    text: "Every choice serves the person using the product, not the system. Empathy guides the work.",
-    icon: User,
-  },
-  {
-    title: "Build for experience",
-    text: "How it feels matters as much as what it does. Experience drives trust and adoption.",
-    icon: Layout,
-  },
-  {
-    title: "Lower cognitive load",
-    text: "Predictable flows support momentum. Remove distractions and decision fatigue.",
-    icon: Minimize2,
-  },
-  {
-    title: "Enable autonomy",
-    text: "Technology should empower, not control. Give people freedom to act independently.",
-    icon: Unlock,
-  },
-];
+const iconMap = {
+  Target,
+  User,
+  Layout,
+  Minimize2,
+  Unlock,
+};
 
 export default function CoreValuesSection() {
   const { ref, isInView } = useInViewAnimation({
@@ -46,7 +27,7 @@ export default function CoreValuesSection() {
         className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
       >
         {coreValues.map((valueEntry, index) => {
-          const Icon = valueEntry.icon;
+          const Icon = iconMap[valueEntry.icon as keyof typeof iconMap];
           return (
             <div
               key={index}

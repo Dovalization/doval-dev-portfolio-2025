@@ -4,18 +4,7 @@ import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
 import { ChevronsDown } from "react-feather";
-const hero = {
-  image: { src: "/images/about.png", alt: "About Me" },
-  headingTop: "Full-stack Developer",
-  headingAccent: "Turning ambitious visions into reliable technology",
-  subheading:
-    "I create fast, intuitive tools that reduce friction and help teams focus on what matters. 8+ years building scalable solutions from concept to production.",
-  ctas: [
-    { label: "See my work", href: "#work", primary: true },
-    { label: "About me", href: "#about" },
-    { label: "Get in touch", href: "#contact" },
-  ],
-};
+import { hero } from "@/data/loader";
 
 export default function HeroSection() {
   const { ref: heroRef, isInView: isHeroVisible } = useInViewAnimation({
