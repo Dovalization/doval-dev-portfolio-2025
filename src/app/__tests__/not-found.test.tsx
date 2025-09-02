@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
 import NotFound from '../not-found'
 
-// Mock the NotFoundContent component
-vi.mock('@/components/not-found-content', () => ({
+// Mock the NotFoundWarning component
+vi.mock('@/components/not-found-warning', () => ({
   default: ({ homeHref }: { homeHref?: string }) => (
     <div data-testid="not-found-content" data-home-href={homeHref}>
       <h1>404</h1>
@@ -16,21 +16,21 @@ vi.mock('@/components/not-found-content', () => ({
 }))
 
 describe('Root NotFound', () => {
-  it('renders NotFoundContent component', () => {
+  it('renders NotFoundWarning component', () => {
     render(<NotFound />)
     
     const content = screen.getByTestId('not-found-content')
     expect(content).toBeInTheDocument()
   })
 
-  it('passes correct homeHref to NotFoundContent', () => {
+  it('passes correct homeHref to NotFoundWarning', () => {
     render(<NotFound />)
     
     const content = screen.getByTestId('not-found-content')
     expect(content).toHaveAttribute('data-home-href', '/en')
   })
 
-  it('renders basic 404 content through NotFoundContent', () => {
+  it('renders basic 404 content through NotFoundWarning', () => {
     render(<NotFound />)
     
     expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument()

@@ -19,7 +19,7 @@ vi.mock("next/link", () => ({
   ),
 }));
 
-describe("NotFoundContent", () => {
+describe("NotFoundWarning", () => {
   it("renders 404 heading with correct styling", () => {
     render(<NotFoundWarning />);
 
