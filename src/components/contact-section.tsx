@@ -1,8 +1,12 @@
 import { Linkedin, Mail, GitHub } from "react-feather";
 import Link from "next/link";
-import { contact as contactData } from "@/data/loader";
+import { ContactData } from "@/data/schemas";
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  data: ContactData;
+}
+
+export default function ContactSection({ data: contactData }: ContactSectionProps) {
   return (
     <section id="contact" className="scroll-mt-12 pb-16 sm:px-6">
       <div className="container mx-auto flex flex-col items-center gap-8 px-4 text-center sm:px-6">

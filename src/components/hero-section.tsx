@@ -4,9 +4,14 @@ import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
 import { ChevronsDown } from "react-feather";
-import { hero } from "@/data/loader";
+import { HeroData } from "@/data/schemas";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  data: HeroData;
+}
+
+export default function HeroSection({ data: hero }: HeroSectionProps) {
+  
   const { ref: heroRef, isInView: isHeroVisible } = useInViewAnimation({
     threshold: 0.1, // Trigger when 10% of hero section is visible
     rootMargin: "-50px 0px", // Add small buffer to avoid flickering
