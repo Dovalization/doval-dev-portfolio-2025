@@ -1,5 +1,5 @@
 import "server-only";
-import { DataSchema, type AppData } from "@/data/schemas";
+import { DataSchema, type AppData } from "@/app/types";
 
 const dictionaries = {
   en: () =>

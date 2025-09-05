@@ -49,7 +49,7 @@ describe("Dictionary Loading", () => {
   });
 
   it("should validate data with schema", async () => {
-    const { DataSchema } = await import("@/data/schemas");
+    const { DataSchema } = await import("@/app/types");
     const { getDictionary } = await import("./dictionaries");
 
     await getDictionary("en");

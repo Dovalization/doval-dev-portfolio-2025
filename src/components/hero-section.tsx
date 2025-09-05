@@ -4,12 +4,9 @@ import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
 import { ChevronsDown } from "react-feather";
-import { HeroData } from "@/data/schemas";
+import { HeroData } from "@/app/types";
 
-export default function HeroSection({ data: hero }: {
-  data: HeroData;
-}) {
-  
+export default function HeroSection({ data: hero }: { data: HeroData }) {
   const { ref: heroRef, isInView: isHeroVisible } = useInViewAnimation({
     threshold: 0.1, // Trigger when 10% of hero section is visible
     rootMargin: "-50px 0px", // Add small buffer to avoid flickering
@@ -23,16 +20,16 @@ export default function HeroSection({ data: hero }: {
       )}
       ref={heroRef}
     >
-      <section className="container mx-auto flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center gap-6 sm:gap-8 overflow-hidden px-4 py-8 text-center sm:px-6">
+      <section className="container mx-auto flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center gap-6 overflow-hidden px-4 py-8 text-center sm:gap-8 sm:px-6">
         <ParticleBackground isVisible={isHeroVisible} />
         <h1 className="text-3xl leading-tight font-black text-shadow-black text-shadow-sm sm:text-5xl md:text-6xl lg:text-7xl">
           {hero.headingTop}
           <br />
-          <span className="text-orange-secondary inline-block max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <span className="text-orange-secondary inline-block max-w-full text-2xl leading-tight sm:max-w-[90%] sm:text-4xl md:max-w-[85%] md:text-5xl lg:max-w-[80%] lg:text-6xl">
             {hero.headingAccent}
           </span>
         </h1>
-        <p className="text-light-primary mx-auto max-w-full sm:max-w-prose text-base leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:text-lg md:text-xl px-4 sm:px-0">
+        <p className="text-light-primary mx-auto max-w-full px-4 text-base leading-relaxed font-semibold text-shadow-black text-shadow-sm sm:max-w-prose sm:px-0 sm:text-lg md:text-xl">
           {hero.subheading}
         </p>
 

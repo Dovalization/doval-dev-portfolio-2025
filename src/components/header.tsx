@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { GitHub, Linkedin } from "react-feather";
-import { NavigationData } from "@/data/schemas";
+import { NavigationData } from "@/app/types";
 import LanguageSelector from "./language-selector";
 import DesktopNavigation from "./desktop-navigation";
 import MobileMenuToggle from "./mobile-menu-toggle";
 
-export function Header({ data: navigationData }: {
+export function Header({
+  data: navigationData,
+}: {
   data: NavigationData;
   currentLocale: "en" | "pt";
 }) {

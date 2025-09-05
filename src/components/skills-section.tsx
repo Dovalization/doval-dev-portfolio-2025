@@ -7,7 +7,7 @@ import {
   Feather,
   Activity,
 } from "react-feather";
-import { SkillsData } from "@/data/schemas";
+import { SkillsData } from "@/app/types";
 
 const iconMap = {
   Code,
@@ -19,7 +19,9 @@ const iconMap = {
   Activity,
 };
 
-export default function SkillsSection({ data: skillsData }: {
+export default function SkillsSection({
+  data: skillsData,
+}: {
   data: SkillsData;
 }) {
   return (

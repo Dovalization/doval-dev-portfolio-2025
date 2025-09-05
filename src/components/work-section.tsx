@@ -1,9 +1,7 @@
 import Collapsible from "@/components/collapsible";
-import { WorkData } from "@/data/schemas";
+import { WorkData } from "@/app/types";
 
-export default function WorkSection({ data: workData }: {
-  data: WorkData;
-}) {
+export default function WorkSection({ data: workData }: { data: WorkData }) {
   return (
     <section
       id="work"

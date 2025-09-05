@@ -1,6 +1,6 @@
 import { Linkedin, Mail, GitHub, Download } from "react-feather";
 import Link from "next/link";
-import { ContactData } from "@/data/schemas";
+import { ContactData } from "@/app/types";
 
 export default function ContactSection({
   data: contactData,

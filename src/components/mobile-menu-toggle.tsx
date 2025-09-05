@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils";
 import { X, GitHub, Linkedin } from "react-feather";
 import { useActiveSection } from "@/lib/useActiveSection";
 import LanguageSelector from "./language-selector";
-import { NavigationData } from "@/data/schemas";
+import { NavigationData } from "@/app/types";
 
-export default function MobileMenuToggle({ navigationData }: {
+export default function MobileMenuToggle({
+  navigationData,
+}: {
   navigationData: NavigationData;
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -83,7 +85,7 @@ export default function MobileMenuToggle({ navigationData }: {
 
                 {/* Mobile language selector and social links */}
                 <div className="border-dark-secondary/30 mt-4 border-t pt-4">
-                  <div className="flex items-center justify-center mb-4">
+                  <div className="mb-4 flex items-center justify-center">
                     <LanguageSelector />
                   </div>
                   <div className="flex items-center justify-center space-x-6">

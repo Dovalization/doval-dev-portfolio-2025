@@ -4,7 +4,7 @@ import React from "react";
 import { User, Minimize2, Unlock, Layout, Target } from "react-feather";
 import { useInViewAnimation } from "@/lib/useInViewAnimation";
 import { cn } from "@/lib/utils";
-import { CoreValue } from "@/data/schemas";
+import { CoreValue } from "@/app/types";
 
 const iconMap = {
   Target,
@@ -14,10 +14,11 @@ const iconMap = {
   Unlock,
 };
 
-export default function CoreValuesSection({ data: coreValues }: {
+export default function CoreValuesSection({
+  data: coreValues,
+}: {
   data: CoreValue[];
 }) {
-  
   const { ref, isInView } = useInViewAnimation({
     threshold: 0.2,
     rootMargin: "-50px",

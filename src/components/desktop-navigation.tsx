@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useActiveSection } from "@/lib/useActiveSection";
-import { NavigationData } from "@/data/schemas";
+import { NavigationData } from "@/app/types";
 
-export default function DesktopNavigation({ navItems }: {
+export default function DesktopNavigation({
+  navItems,
+}: {
   navItems: NavigationData["navItems"];
 }) {
   const activeSection = useActiveSection();

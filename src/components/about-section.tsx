@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { AboutData } from "@/data/schemas";
+import { AboutData } from "@/app/types";
 
-export default function AboutSection({ data: aboutData }: {
-  data: AboutData;
-}) {
+export default function AboutSection({ data: aboutData }: { data: AboutData }) {
   return (
     <section
       id="about"
@@ -17,7 +15,7 @@ export default function AboutSection({ data: aboutData }: {
         height={aboutData.image.height}
         className="rounded-full shadow-2xl"
       />
-      <div className="flex max-w-prose flex-col gap-6 text-left sm:text-left text-lg">
+      <div className="flex max-w-prose flex-col gap-6 text-left text-lg sm:text-left">
         {aboutData.paragraphs.map((paragraph, index) => (
           <p
             key={index}
