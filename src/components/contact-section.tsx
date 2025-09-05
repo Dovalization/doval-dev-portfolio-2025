@@ -1,8 +1,10 @@
-import { Linkedin, Mail, GitHub } from "react-feather";
+import { Linkedin, Mail, GitHub, Download } from "react-feather";
 import Link from "next/link";
 import { ContactData } from "@/data/schemas";
 
-export default function ContactSection({ data: contactData }: {
+export default function ContactSection({
+  data: contactData,
+}: {
   data: ContactData;
 }) {
   return (
@@ -23,6 +25,19 @@ export default function ContactSection({ data: contactData }: {
               className="transition-transform duration-200 group-hover:scale-110"
             />
             Email me
+          </Link>
+          <Link
+            href="/guilherme-doval-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="text-orange-secondary hover:text-orange-primary group flex items-center gap-2 underline transition-colors duration-200"
+          >
+            <Download
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110"
+            />
+            Download CV
           </Link>
           <Link
             href={contactData.social.linkedin}
