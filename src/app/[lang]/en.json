@@ -95,7 +95,7 @@
           },
           {
             "title": "Impact",
-            "body": "Successfully delivered multiple mission-critical tools including cosmetics management and organization management as part of Epic's centralized tooling platform. My design background enabled smoother design-to-development handoffs and faster iteration cycles. The rapid development approach allowed stakeholders to validate functionality early, reducing rework and accelerating feature rollouts across the platform."
+            "body": "Successfully delivered multiple mission-critical tools including Fortnite cosmetics management, player admin systems, and Epic Online Services infrastructure (user, organization, and license management) as part of Epic's centralized tooling platform. My design background enabled smoother design-to-development handoffs and faster iteration cycles. The rapid development approach allowed stakeholders to validate functionality early, reducing rework and accelerating feature rollouts across the platform."
           }
         ],
         "stack": [
@@ -112,7 +112,7 @@
       },
       {
         "title": "Horizon Chase 2 - Marketing Website",
-        "description": "A high-performance, multilingual marketing site built for fast iteration by non-dev content editors.",
+        "description": "A high-performance, multilingual marketing site for the sequel to the beloved Horizon Chase racing series, built for fast iteration by non-dev content editors.",
         "banner": {
           "url": "/images/projects/hc2-bg.webp",
           "alt": "Horizon Chase 2 banner"
