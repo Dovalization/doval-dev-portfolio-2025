@@ -67,21 +67,25 @@ export default function MobileMenuToggle({
           <div className="bg-dark-primary border-dark-secondary/50 fixed inset-x-0 top-20 z-50 border-b md:hidden">
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col space-y-4">
-                {navigationData.navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={closeMobileMenu}
-                    className={cn(
-                      "block touch-manipulation rounded-lg px-4 py-3 text-lg font-medium transition-colors duration-200",
-                      activeSection === item.href.slice(1)
-                        ? "text-orange-secondary bg-dark-secondary/50 font-bold"
-                        : "text-gray-light hover:text-orange-secondary hover:bg-dark-secondary/30",
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navigationData.navItems.map((item) => {
+                  const isExternal = item.href.startsWith("http");
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+                      className={cn(
+                        "block touch-manipulation rounded-lg px-4 py-3 text-lg font-medium transition-colors duration-200",
+                        activeSection === item.href.slice(1)
+                          ? "text-orange-secondary bg-dark-secondary/50 font-bold"
+                          : "text-gray-light hover:text-orange-secondary hover:bg-dark-secondary/30",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
 
                 {/* Mobile language selector and social links */}
                 <div className="border-dark-secondary/30 mt-4 border-t pt-4">

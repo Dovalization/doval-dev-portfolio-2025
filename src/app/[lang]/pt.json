@@ -494,6 +494,10 @@
       {
         "href": "#contact",
         "label": "Contato"
+      },
+      {
+        "href": "https://blog.doval.dev",
+        "label": "Blog"
       }
     ],
     "social": {
