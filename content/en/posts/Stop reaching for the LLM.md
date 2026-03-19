@@ -27,7 +27,7 @@ The senior engineer's value is knowing which tool is right for which problem. Th
 
 ---
 
-## The fracture that changes everything
+## The fracture
 
 The most important distinction in AI tooling is not between models or frameworks. It is between deterministic and probabilistic systems.
 

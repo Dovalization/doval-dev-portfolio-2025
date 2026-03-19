@@ -27,7 +27,7 @@ A vantagem do engenheiro sênior é saber qual ferramenta é certa para qual pro
 
 ---
 
-## A fratura que muda tudo
+## A fratura
 
 A distinção mais importante no ferramental de IA não é entre modelos ou frameworks. É entre sistemas determinísticos e probabilísticos.
 
