@@ -2,6 +2,10 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import NotFoundWarning from "./not-found-warning";
 
+vi.mock("next/navigation", () => ({
+  useRouter: () => ({ back: vi.fn() }),
+}));
+
 // Mock Next.js Link component
 vi.mock("next/link", () => ({
   default: ({
@@ -47,7 +51,7 @@ describe("NotFoundWarning", () => {
       /The page you're looking for doesn't exist or has been moved/,
     );
     expect(description).toBeInTheDocument();
-    expect(description).toHaveClass("text-light-secondary");
+    expect(description).toHaveClass("text-gray-light");
   });
 
   it('renders "Go Home" link with default href', () => {
@@ -69,7 +73,7 @@ describe("NotFoundWarning", () => {
   it('renders "Go Back" link', () => {
     render(<NotFoundWarning />);
 
-    const backLink = screen.getByRole("link", { name: "Go Back" });
+    const backLink = screen.getByRole("button", { name: "Go Back" });
     expect(backLink).toBeInTheDocument();
     // React blocks javascript: URLs in tests for security, so we just check it exists
     expect(backLink).toHaveClass("border-orange-secondary", "bg-transparent");
@@ -110,7 +114,7 @@ describe("NotFoundWarning", () => {
     render(<NotFoundWarning />);
 
     const homeLink = screen.getByRole("link", { name: "Go Home" });
-    const backLink = screen.getByRole("link", { name: "Go Back" });
+    const backLink = screen.getByRole("button", { name: "Go Back" });
 
     expect(homeLink).toHaveClass("min-h-[44px]", "min-w-[44px]");
     expect(backLink).toHaveClass("min-h-[44px]", "min-w-[44px]");

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export default function NotFoundWarning({
@@ -8,6 +11,8 @@ export default function NotFoundWarning({
   homeHref?: string;
   className?: string;
 }) {
+  const router = useRouter();
+
   return (
     <div
       className={cn(
@@ -23,7 +28,7 @@ export default function NotFoundWarning({
           <h2 className="mb-2 text-2xl font-bold md:text-3xl">
             Page Not Found
           </h2>
-          <p className="text-light-secondary text-lg md:text-xl">
+          <p className="text-gray-light text-lg md:text-xl">
             The page you&apos;re looking for doesn&apos;t exist or has been
             moved.
           </p>
@@ -39,15 +44,15 @@ export default function NotFoundWarning({
           >
             Go Home
           </Link>
-          <Link
-            href="javascript:history.back()"
+          <button
+            onClick={() => router.back()}
             className={cn(
               "flex min-h-[44px] min-w-[44px] transform touch-manipulation items-center justify-center rounded-lg px-6 py-3 text-base font-bold shadow-lg transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl sm:px-8 sm:py-3 sm:text-lg",
               "text-orange-secondary border-orange-secondary hover:bg-orange-secondary hover:text-dark-primary border-2 bg-transparent",
             )}
           >
             Go Back
-          </Link>
+          </button>
         </div>
       </div>
     </div>
