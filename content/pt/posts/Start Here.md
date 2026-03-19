@@ -85,7 +85,7 @@ Em vez de estilizar prosa com um plugin de tipografia, cada elemento markdown ma
 
 Quando um post está pronto:
 
-1. Escrever no Obsidian vault (rascunhos ficam em `24.01 Blog/`)
+1. Escrever o post
 2. Copiar para `content/en/posts/` no repositório do portfólio — ou editar diretamente pelo Keystatic
 3. Mudar `status: draft` para `status: published`
 4. Traduzir para PT-BR e salvar em `content/pt/posts/`

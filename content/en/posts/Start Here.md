@@ -85,7 +85,7 @@ Instead of a typography plugin, every markdown element maps to an explicit React
 
 When a post is ready:
 
-1. Write in Obsidian vault (drafts live in `24.01 Blog/`)
+1. Write the post
 2. Copy to `content/en/posts/` in the portfolio repo — or edit directly via Keystatic
 3. Change `status: draft` to `status: published`
 4. Translate to PT-BR and save to `content/pt/posts/`
