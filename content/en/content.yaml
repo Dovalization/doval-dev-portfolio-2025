@@ -5,7 +5,7 @@ hero:
   headingTop: Full-stack Engineer
   headingAccent: Turning ambitious visions into reliable technology
   subheading: I create fast, intuitive tools that reduce friction and help teams
-    focus on what matters. 8+ years building scalable solutions from concept to
+    focus on what matters. 8 years building scalable solutions from concept to
     production.
   ctas:
     - label: See my work
@@ -44,12 +44,12 @@ about:
       efficiency with engagement. I can see when a technical decision will
       affect how users relate to the system, or when a stakeholder's vision
       actually aligns with creating better user experiences.
-    - "I handle the complete process: stakeholder interviews, user research,
-      system architecture, implementation, and deployment. But what sets me
-      apart is connecting these pieces through an understanding of how people
-      actually process and relate to technology. I don't just build what
-      stakeholders ask for—I research what users actually need, then build
-      systems that work for both the business and the people using them."
+    - "I handle the complete process: stakeholder interviews, system architecture,
+      implementation, and deployment — including AI systems in production. I've
+      shipped LLM integrations, multi-agent workflows, RAG architectures, and
+      automation pipelines alongside the user-facing applications they power.
+      What sets me apart is that I can do both without switching teams: the
+      frontend craft and the AI systems underneath."
     - The result? Technology that teams don't just use, but rely on. Systems
       that feel intuitive because they're built around how people naturally
       think and work.
@@ -114,11 +114,11 @@ work:
           body: Successfully delivered multiple mission-critical tools including Fortnite
             cosmetics management, player admin systems, and Epic Online Services
             infrastructure (user, organization, and license management) as part
-            of Epic's centralized tooling platform. My design background enabled
-            smoother design-to-development handoffs and faster iteration cycles.
-            The rapid development approach allowed stakeholders to validate
-            functionality early, reducing rework and accelerating feature
-            rollouts across the platform.
+            of Epic's centralized tooling platform. A migration to Next.js with
+            Server Components reduced loading times by 50%, directly improving
+            daily workflows for thousands of internal users. My design
+            background enabled smoother design-to-development handoffs and
+            faster iteration cycles.
       stack:
         - React
         - TypeScript
@@ -369,6 +369,20 @@ skills:
           desc: Systematic design values
         - name: Storybook
           desc: Component documentation
+    - key: ai
+      title: AI & automation
+      icon: Bot
+      items:
+        - name: LLM integrations
+          desc: OpenAI, Anthropic, Gemini APIs
+        - name: Multi-agent workflows
+          desc: Orchestrated AI pipelines
+        - name: RAG architectures
+          desc: Retrieval-augmented generation
+        - name: Automation pipelines
+          desc: Data processing & workflow automation
+        - name: Context engineering
+          desc: Production context design & optimization
     - key: monitoring
       title: Monitoring
       icon: Activity
@@ -401,9 +415,9 @@ contact:
         description: that need both technical performance and intuitive user experience
       - title: Companies tackling ambitious product visions
         description: that require balancing user psychology with technical constraints
-      - title: Growing companies
-        description: where technical decisions need to serve both business goals and
-          user needs
+      - title: Teams building AI-powered products
+        description: that need engineers who can ship both the AI systems and the
+          interfaces that make them usable
       - title: Teams building tools
         description: where user adoption depends on understanding usability best practices
 navigation:

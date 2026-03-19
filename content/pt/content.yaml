@@ -5,8 +5,8 @@ hero:
   headingTop: Desenvolvedor Full-stack
   headingAccent: Transformando grandes ideias em tecnologia confiável
   subheading: Desenvolvo ferramentas rápidas e intuitivas que eliminam barreiras e
-    ajudam equipes a focar no que importa. Mais de 8 anos criando soluções
-    escaláveis, do conceito à produção.
+    ajudam equipes a focar no que importa. 8 anos criando soluções escaláveis,
+    do conceito à produção.
   ctas:
     - label: Ver meu trabalho
       href: "#work"
@@ -45,13 +45,12 @@ about:
       vai impactar a forma como os usuários se relacionam com o sistema, ou
       quando a visão de um stakeholder realmente se alinha à criação de uma
       melhor experiência.
-    - "Gerencio o processo completo: entrevistas com stakeholders, pesquisa com
-      usuários, arquitetura de sistemas, implementação e deploy. O que me
-      diferencia é a capacidade de conectar essas etapas com base em como as
-      pessoas realmente pensam e interagem com a tecnologia. Não construo apenas
-      o que os stakeholders pedem — pesquiso o que os usuários de fato precisam
-      e crio soluções que funcionam tanto para o negócio quanto para quem as
-      utiliza."
+    - "Gerencio o processo completo: arquitetura de sistemas, implementação e
+      deploy — incluindo sistemas de IA em produção. Já entreguei integrações
+      com LLMs, workflows multi-agente, arquiteturas RAG e pipelines de
+      automação junto com as aplicações que os utilizam. O que me diferencia é
+      que consigo fazer os dois sem trocar de equipe: o trabalho de frontend e
+      os sistemas de IA por baixo."
     - O resultado? Tecnologia que as equipes não apenas usam, mas confiam.
       Sistemas que parecem intuitivos porque são construídos em torno de como as
       pessoas realmente pensam e trabalham.
@@ -117,11 +116,12 @@ work:
           body: Entreguei ferramentas críticas, incluindo gerenciamento de cosméticos do
             Fortnite, painéis de administração de jogadores e infraestrutura do
             Epic Online Services (gerenciamento de usuários, organizações e
-            licenças), como parte da plataforma centralizada da Epic. Minha
-            experiência em design resultou em transições mais fluidas entre
-            design e desenvolvimento e ciclos de iteração mais curtos. A
-            estratégia de desenvolvimento rápido permitiu validar
-            funcionalidades cedo, reduzindo retrabalho e acelerando lançamentos.
+            licenças), como parte da plataforma centralizada da Epic. A
+            migração para Next.js com Server Components reduziu os tempos de
+            carregamento em 50%, melhorando diretamente o fluxo de trabalho
+            diário de milhares de usuários internos. Minha experiência em
+            design resultou em transições mais fluidas entre design e
+            desenvolvimento e ciclos de iteração mais curtos.
       stack:
         - React
         - TypeScript
@@ -360,6 +360,20 @@ skills:
           desc: Valores de design sistematizados
         - name: Storybook
           desc: Documentação de componentes
+    - key: ai
+      title: IA & automação
+      icon: Bot
+      items:
+        - name: Integrações com LLMs
+          desc: APIs da OpenAI, Anthropic, Gemini
+        - name: Workflows multi-agente
+          desc: Pipelines de IA orquestrados
+        - name: Arquiteturas RAG
+          desc: Geração com recuperação de contexto
+        - name: Pipelines de automação
+          desc: Processamento de dados e automação de fluxos
+        - name: Context engineering
+          desc: Design e otimização de contexto em produção
     - key: monitoring
       title: Monitoramento
       icon: Activity
@@ -393,9 +407,9 @@ contact:
           intuitiva
       - title: Empresas com visões de produto ambiciosas
         description: que precisam equilibrar a psicologia do usuário com restrições técnicas
-      - title: Empresas em crescimento
-        description: onde decisões técnicas devem atender tanto às metas de negócio
-          quanto às necessidades do usuário
+      - title: Equipes construindo produtos com IA
+        description: que precisam de engenheiros capazes de entregar tanto os sistemas
+          de IA quanto as interfaces que os tornam utilizáveis
       - title: Equipes construindo ferramentas
         description: onde a adoção do usuário depende da aplicação de boas práticas de
           usabilidade
