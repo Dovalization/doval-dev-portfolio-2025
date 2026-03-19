@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useEffect, useState } from 'react';
 
 const sections = ['about', 'work', 'contact'] as const;

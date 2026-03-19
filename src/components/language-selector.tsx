@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useParams } from "next/navigation";
 import {
   Select,
   SelectContent,
@@ -9,15 +9,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
+import { LocaleSchema } from "@/app/types";
 
 export default function LanguageSelector({ className }: {
   className?: string;
 }) {
   const router = useRouter();
   const pathname = usePathname();
-
-  // Extract current locale from pathname
-  const currentLocale = pathname.startsWith("/pt") ? "pt" : "en";
+  const { lang: currentLocale } = useParams<{ lang: string }>();
 
   const languages = [
     {
@@ -38,17 +37,15 @@ export default function LanguageSelector({ className }: {
     languages.find((lang) => lang.code === currentLocale) || languages[0];
 
   const handleLanguageChange = (value: string) => {
-    const localeCode = value as "en" | "pt";
-    // Navigate to the same page but with different locale
-    const newPath = `/${localeCode}`;
-    router.push(newPath);
+    const localeCode = LocaleSchema.parse(value);
+    router.push(pathname.replace(`/${currentLocale}`, `/${localeCode}`));
   };
 
   return (
     <Select value={currentLocale} onValueChange={handleLanguageChange}>
       <SelectTrigger 
         className={cn(
-          "w-20 sm:w-24 bg-background border-border text-muted-foreground hover:bg-muted hover:text-accent-foreground focus:ring-primary focus:border-primary transition-colors duration-200", 
+          "w-20 sm:w-24 bg-background border-border text-muted-foreground hover:bg-muted hover:text-accent-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200",
           className
         )} 
         size="sm"

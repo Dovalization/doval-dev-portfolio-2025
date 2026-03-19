@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { X, GitHub, Linkedin } from "react-feather";
-import { useActiveSection } from "@/lib/useActiveSection";
+import { useActiveSection } from "@/lib/hooks/useActiveSection";
 import LanguageSelector from "./language-selector";
 import { NavigationData } from "@/app/types";
 
@@ -15,6 +16,12 @@ export default function MobileMenuToggle({
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection();
+  const pathname = usePathname();
+  const { lang } = useParams<{ lang: string }>();
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -32,6 +39,7 @@ export default function MobileMenuToggle({
           onClick={toggleMobileMenu}
           className="text-gray-light hover:text-orange-secondary touch-manipulation p-2"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? (
             <X className="h-6 w-6" strokeWidth={2} />
@@ -68,16 +76,18 @@ export default function MobileMenuToggle({
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col space-y-4">
                 {navigationData.navItems.map((item) => {
-                  const isExternal = item.href.startsWith("http");
+                  const resolvedHref = item.href.startsWith("#") ? `/${lang}${item.href}` : item.href;
+                  const isActive = item.href.startsWith("/")
+                    ? pathname.includes(item.href)
+                    : activeSection === item.href.slice(1);
                   return (
                     <Link
                       key={item.href}
-                      href={item.href}
+                      href={resolvedHref}
                       onClick={closeMobileMenu}
-                      {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
                       className={cn(
                         "block touch-manipulation rounded-lg px-4 py-3 text-lg font-medium transition-colors duration-200",
-                        activeSection === item.href.slice(1)
+                        isActive
                           ? "text-orange-secondary bg-dark-secondary/50 font-bold"
                           : "text-gray-light hover:text-orange-secondary hover:bg-dark-secondary/30",
                       )}

@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useEffect, useState } from 'react';
 
 interface UseInViewAnimationOptions {
@@ -21,7 +19,7 @@ export function useInViewAnimation<T extends HTMLElement = HTMLDivElement>(optio
     const observer = new IntersectionObserver(
       ([entry]) => {
         const inView = entry.isIntersecting;
-        
+
         if (inView && !hasTriggered) {
           setIsInView(true);
           if (triggerOnce) {
