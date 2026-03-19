@@ -33,9 +33,9 @@ The most important distinction in AI tooling is not between models or frameworks
 
 A traditional automation workflow — RPA, n8n, Zapier — is deterministic. Same input produces the same output every time, with a complete audit trail. An LLM is probabilistic. The same prompt can produce different outputs across runs. This difference is irrelevant in a demo. In production, it determines your entire reliability posture.
 
-A September 2025 study (Průcha et al.) compared UiPath RPA directly against Anthropic's Computer Use Agent across three enterprise workflows. RPA won on execution speed and reliability. The LLM agent reduced development time significantly and adapted better to dynamic interfaces — but it also exhibited what the researchers called "occasional unpredictability": opening unnecessary applications, declaring success prematurely. Their conclusion: current implementations are not production-ready, but show clear value for rapid prototyping.
+A September 2025 study (Průcha et al.) compared **UiPath** RPA directly against Anthropic's Computer Use Agent across three enterprise workflows. RPA won on execution speed and reliability. The LLM agent reduced development time significantly and adapted better to dynamic interfaces — but it also exhibited what the researchers called "occasional unpredictability": opening unnecessary applications, declaring success prematurely. Their conclusion: current implementations are not production-ready, but show clear value for rapid prototyping.
 
-The cost asymmetry is brutal at scale. RPA has near-zero marginal cost per execution once deployed. LLMs charge per token: GPT-5.2 costs $1.75/$14 per million tokens (input/output); Claude Sonnet 4.5, $3/$15; DeepSeek V3.2, $0.14/$0.28. A simple health check via LLM every five minutes costs orders of magnitude more than a direct HTTP request. On latency, RPA operates in milliseconds for API integrations; LLMs operate in hundreds of milliseconds to seconds, with reasoning models reaching 10–30 seconds.
+The cost asymmetry is brutal at scale. RPA has near-zero marginal cost per execution once deployed. LLMs charge per token: **GPT-5.2** costs $1.75/$14 per million tokens (input/output); **Claude Sonnet 4.5**, $3/$15; **DeepSeek V3.2**, $0.14/$0.28. A simple health check via LLM every five minutes costs orders of magnitude more than a direct HTTP request. On latency, RPA operates in milliseconds for API integrations; LLMs operate in hundreds of milliseconds to seconds, with reasoning models reaching 10–30 seconds.
 
 Martin Fowler articulated this moment as clearly as anyone: "We're not just moving up levels of abstraction — we're moving sideways into non-determinism at the same time." His metaphor for working with AI: treat each delivery like "a pull request from a doubtful collaborator who is very productive in terms of lines of code, but who you cannot trust."
 
@@ -51,7 +51,7 @@ Language models have genuine advantages in specific domains. Outside these domai
 
 **Unstructured text processing.** Sentiment analysis, entity extraction, classification, summarization — any task where the input is variable, ambiguous natural language. This is LLMs' native territory. No alternative matches them here at reasonable cost.
 
-**Few-shot generalization.** LLMs can learn a new task from a handful of examples in the prompt, without retraining. A study by INWT Statistics found that a fine-tuned LLM matched XGBoost's accuracy with 600 training observations versus the 6,000 XGBoost needed — and outperformed it by 1.5 percentage points of MAPE when unstructured descriptions were included alongside structured data. When labeled data is scarce, this matters significantly.
+**Few-shot generalization.** LLMs can learn a new task from a handful of examples in the prompt, without retraining. A study by INWT Statistics found that a fine-tuned LLM matched **XGBoost**'s accuracy with 600 training observations versus the 6,000 **XGBoost** needed — and outperformed it by 1.5 percentage points of MAPE when unstructured descriptions were included alongside structured data. When labeled data is scarce, this matters significantly.
 
 **Code generation and debugging.** The impact here has been measurable and real. Willison called coding agents "the most impactful event of 2025." The caveat: useful for producing code, not for owning its correctness. Verification remains human work.
 
@@ -63,11 +63,11 @@ Language models have genuine advantages in specific domains. Outside these domai
 
 For structured tabular data, the performance gap is not marginal — it is dramatic.
 
-A 2025 benchmark on COVID-19 mortality prediction (Nature Scientific Reports) produced numbers that should be in every engineering team's decision vocabulary: **XGBoost achieved F1 of 0.87. GPT-4 zero-shot achieved F1 of 0.43.** Less than half. Even a fine-tuned Mistral-7b reached only 0.74. A meta-study across 68 OpenML datasets confirmed the pattern: gradient boosted trees consistently outperform foundation models on tabular data.
+A 2025 benchmark on COVID-19 mortality prediction (Nature Scientific Reports) produced numbers that should be in every engineering team's decision vocabulary: **XGBoost achieved F1 of 0.87. GPT-4 zero-shot achieved F1 of 0.43.** Less than half. Even a fine-tuned **Mistral-7b** reached only 0.74. A meta-study across 68 OpenML datasets confirmed the pattern: gradient boosted trees consistently outperform foundation models on tabular data.
 
 The structural reasons are not incidental. Decision trees process each feature numerically, branching directly on thresholds. LLMs serialize everything into text tokens, losing quantitative relationships — "80,000" and "30,000" become arbitrary token sequences. Trees handle missing values natively. Trees process each row independently without information bleeding between rows.
 
-For fraud detection, credit scoring, recommendation systems, anomaly detection, and time series forecasting: use XGBoost, LightGBM, or CatBoost. You will get better accuracy, millisecond latency, and SHAP explainability for compliance — at a fraction of the cost.
+For fraud detection, credit scoring, recommendation systems, anomaly detection, and time series forecasting: use **XGBoost**, **LightGBM**, or **CatBoost**. You will get better accuracy, millisecond latency, and **SHAP** explainability for compliance — at a fraction of the cost.
 
 ### Rule engines: the non-negotiable cases
 
@@ -91,9 +91,9 @@ The compliance side is entirely deterministic. The LLM extracts structure from l
 
 Three other patterns that work in production:
 
-**LLM as orchestrator.** The LLM decides what to do; deterministic tools execute. Claude Code works exactly this way — the model reasons about code changes, then runs deterministic compilation and test cycles to verify. The LLM provides judgment; the tools provide reliability.
+**LLM as orchestrator.** The LLM decides what to do; deterministic tools execute. **Claude Code** works exactly this way — the model reasons about code changes, then runs deterministic compilation and test cycles to verify. The LLM provides judgment; the tools provide reliability.
 
-**ML + LLM.** XGBoost handles structured predictive features; the LLM extracts text features. Financial market analysis: the model processes price and volume data, the LLM processes news sentiment. Neither alone covers the full signal space.
+**ML + LLM.** **XGBoost** handles structured predictive features; the LLM extracts text features. Financial market analysis: the model processes price and volume data, the LLM processes news sentiment. Neither alone covers the full signal space.
 
 **LLM generates rules.** LLMs translate unstructured policy documents — building codes, insurance policies, compliance frameworks — into explicit rules that are then applied deterministically in production. The LLM does the translation once; the rule engine runs at scale. Nature published in November 2025 that when AAAI members were asked whether neural networks alone could achieve human-level AI, the vast majority said no — most pointed to integration with symbolic AI as the necessary path.
 
@@ -107,7 +107,7 @@ In October 2025, Andrej Karpathy made the clearest correction: "It's the decade 
 
 The data confirms this sobriety. The Cleanlab 2025 report on agents in production surveyed 1,837 organizations. Of those, **95 had live agents in production**. Deloitte found that while 30% of organizations are exploring agentic AI, only 11% are using agents in production. Forrester predicted that 75% of companies attempting to build aspirational agentic architectures on their own will fail.
 
-Where agents already work, the results are concrete and instructive. Klarna's AI assistant handled 2.3 million conversations in its first month, cutting resolution time from ~11 minutes to under 2 minutes — equivalent to ~700 FTEs. The pattern is consistent: agents with **limited scope**, **well-defined tools**, **human-in-the-loop**, and **domains where verification is easy**. Klarna does customer service. Claude Code does software development. Both are domains where the feedback loop is fast and failure modes are contained.
+Where agents already work, the results are concrete and instructive. Klarna's AI assistant handled 2.3 million conversations in its first month, cutting resolution time from ~11 minutes to under 2 minutes — equivalent to ~700 FTEs. The pattern is consistent: agents with **limited scope**, **well-defined tools**, **human-in-the-loop**, and **domains where verification is easy**. Klarna does customer service. **Claude Code** does software development. Both are domains where the feedback loop is fast and failure modes are contained.
 
 General-purpose autonomous agents operating in domains where errors have real-world consequences — healthcare, legal, financial — are not there yet. For those domains, the hybrid architecture described above is the current production ceiling. It is a high ceiling. It is not the same as autonomous agency.
 
@@ -118,7 +118,7 @@ General-purpose autonomous agents operating in domains where errors have real-wo
 Before writing any code, answer these questions in order:
 
 1. **Can I write explicit rules for this problem?** → Use a rule engine or RPA. Faster, cheaper, deterministic, auditable.
-2. **Is the data primarily structured and tabular?** → Use ML classic. XGBoost will outperform an LLM and cost a fraction.
+2. **Is the data primarily structured and tabular?** → Use ML classic. **XGBoost** will outperform an LLM and cost a fraction.
 3. **Do I need deterministic, auditable outputs, but the input is unstructured?** → LLM + rule engine hybrid. LLM for extraction, rule engine for reasoning.
 4. **Is this primarily a language understanding or generation task?** → Use an LLM.
 5. **None of the above?** → Reconsider whether you need AI at all.
@@ -131,7 +131,7 @@ Most problems that feel like they need AI fall under question 1 or 2.
 
 The framing that dominates AI discourse right now is capability — what can this model do? The more useful engineering question is fitness — is this the right approach for this specific problem, at this cost, with these reliability requirements?
 
-Gradient boosted trees beating GPT-4 by 44 percentage points on a classification task is not an argument against AI. It is an argument for knowing your problem. A rule engine correctly computing a deterministic compliance deadline that an LLM gets wrong is not a failure of AI. When that failure happens in a regulated industry, it is an enforcement action.
+Gradient boosted trees beating **GPT-4** by 44 percentage points on a classification task is not an argument against AI. It is an argument for knowing your problem. A rule engine correctly computing a deterministic compliance deadline that an LLM gets wrong is not a failure of AI. When that failure happens in a regulated industry, it is an enforcement action.
 
 The ThoughtWorks Technology Radar gave its highest "Adopt" rating to exactly one AI technology in 2025: GenAI for understanding legacy codebases. Not for generating new code. Not for autonomous agents. For reading and making sense of complex existing systems — a task that requires judgment, context, and the ability to hold contradictory constraints simultaneously. The Radar also identified the central practice shift of the year: from "prompt engineering" to **context engineering** — not just writing prompts, but systematically managing what the model can see: which files, which tools, which constraints, which history.
 
