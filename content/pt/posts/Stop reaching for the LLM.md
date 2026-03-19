@@ -23,7 +23,6 @@ A Stack Overflow Developer Survey 2025 — com 49.000 respondentes — captura a
 
 A definição operacional de Simon Willison é útil aqui: LLMs são "um assistente de pair programming excessivamente confiante que é incrivelmente rápido em pesquisar coisas, consegue produzir exemplos relevantes a qualquer momento e executa tarefas tediosas sem reclamar." A palavra operativa é *excessivamente confiante*. A ferramenta não é o problema. Recorrer a ela quando ela é a ferramenta errada é.
 
-A vantagem do engenheiro sênior é saber qual ferramenta é certa para qual problema. Este post é um mapa desse território.
 
 ---
 
@@ -77,7 +76,9 @@ O caso mais claro que já construí: um pipeline de processamento de documentos 
 
 Toda essa camada de conformidade roda em um motor de regras. Contadores regressivos de violação que iniciam no momento em que o controlador toma conhecimento do incidente. Filas de resposta a DSARs que impõem o prazo de 15 dias corridos do Artigo 19. Árvores de decisão para exclusão onde as obrigações de retenção de prontuários do CFM sobrepõem legalmente os pedidos de exclusão dos titulares sob o Artigo 18 — não uma decisão subjetiva, uma colisão estatutária com resolução determinística. Templates pré-preenchidos de notificação à ANPD com todos os 12 campos obrigatórios.
 
-Uma alucinação nessa camada é uma multa potencial de R$50 milhões por infração. A Meta descobriu da pior forma: a ANPD aplicou R$50.000 por dia ao constatar que ela utilizava uma base legal que a LGPD categoricamente proíbe para dados de saúde ao treinar seus modelos de IA. A ANPD listou a IA como sua quarta prioridade de fiscalização para 2026–2027, com 20 inspeções planejadas. O Ministério da Saúde foi sancionado duas vezes só em novembro de 2024 — uma por deixar de notificar tempestivamente sob o Artigo 48, outra por medidas de segurança inadequadas em sistemas contendo dados de saúde de milhões de brasileiros.
+> Uma alucinação nessa camada é uma multa potencial de R$50 milhões por infração.
+
+A Meta descobriu da pior forma: a ANPD aplicou R$50.000 por dia ao constatar que ela utilizava uma base legal que a LGPD categoricamente proíbe para dados de saúde ao treinar seus modelos de IA. A ANPD listou a IA como sua quarta prioridade de fiscalização para 2026–2027, com 20 inspeções planejadas. O Ministério da Saúde foi sancionado duas vezes só em novembro de 2024 — uma por deixar de notificar tempestivamente sob o Artigo 48, outra por medidas de segurança inadequadas em sistemas contendo dados de saúde de milhões de brasileiros.
 
 A EU AI Act faz o mesmo ponto estrutural por outro ângulo: uma seguradora em Berlim foi multada em €2 milhões por implantar um modelo de avaliação de risco que não conseguia explicar suas saídas. A lei prevê penalidades de até €35 milhões ou 7% da receita global. Em domínios regulados, o motor de regras não é a opção legada. É a única arquitetura conforme para as partes determinísticas do sistema.
 

@@ -23,7 +23,6 @@ The Stack Overflow Developer Survey 2025 — 49,000 respondents — captures the
 
 Simon Willison's working definition is useful here: LLMs are "an overconfident pair programming assistant that is incredibly fast at researching things, can produce relevant examples at any moment, and performs tedious tasks without complaining." The operative word is *overconfident*. The tool is not the problem. Reaching for it when it is the wrong tool is.
 
-The senior engineer's value is knowing which tool is right for which problem. This post is a map of that territory.
 
 ---
 
@@ -77,7 +76,9 @@ The clearest case I've built: a LGPD-compliant document processing pipeline for 
 
 That entire compliance layer runs on a rule engine. Breach countdown timers that start from the moment the controller gains knowledge of the incident. DSAR response queues enforcing the 15-calendar-day window mandated by Article 19. Deletion decision trees where CFM medical record retention obligations legally override patient deletion requests under Article 18 — not a judgment call, a statutory collision with a deterministic resolution. Pre-populated ANPD notification templates with all 12 required fields.
 
-One hallucination in that layer is a potential R$50 million fine per infraction. Meta found out the hard way: the ANPD hit them with R$50,000 per day after finding they had used a legal basis that LGPD categorically prohibits for health data when training their AI models. The ANPD listed AI as its fourth enforcement priority for 2026–2027, with 20 planned inspections. The Ministry of Health was sanctioned twice in November 2024 alone — once for failing to timely notify under Article 48, once for inadequate security measures across systems containing health data for millions of Brazilians.
+> One hallucination in that layer is a potential R$50 million fine per infraction.
+
+Meta found out the hard way: the ANPD hit them with R$50,000 per day after finding they had used a legal basis that LGPD categorically prohibits for health data when training their AI models. The ANPD listed AI as its fourth enforcement priority for 2026–2027, with 20 planned inspections. The Ministry of Health was sanctioned twice in November 2024 alone — once for failing to timely notify under Article 48, once for inadequate security measures across systems containing health data for millions of Brazilians.
 
 The EU AI Act makes the same structural point from a different angle: a Berlin insurer was fined €2 million for deploying a risk assessment model that couldn't explain its outputs. The Act carries penalties up to €35 million or 7% of global revenue. In regulated domains, the rule engine is not the legacy option. It is the only compliant architecture for the deterministic parts of the system.
 
