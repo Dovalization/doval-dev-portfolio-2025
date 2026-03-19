@@ -44,7 +44,7 @@ A primeira pergunta ao avaliar qualquer integração de IA: **eu realmente preci
 
 ## Onde cada abordagem vence
 
-### LLMs: os cinco territórios
+### Onde os LLMs brilham
 
 Modelos de linguagem têm vantagens genuínas em domínios específicos. Fora desses domínios, você está pagando um prêmio por resultados piores.
 
@@ -58,7 +58,7 @@ Modelos de linguagem têm vantagens genuínas em domínios específicos. Fora de
 
 **Interfaces em linguagem natural para sistemas.** Usuários descrevem objetivos em linguagem simples; o LLM traduz para chamadas de API, queries SQL ou comandos estruturados. Isso desbloqueia automação para usuários não técnicos.
 
-### ML clássico: onde ainda domina
+### Onde o ML clássico ainda domina
 
 Para dados tabulares estruturados, a lacuna de desempenho não é marginal — é dramática.
 
@@ -68,7 +68,7 @@ As razões estruturais não são acidentais. Árvores de decisão processam cada
 
 Para detecção de fraude, scoring de crédito, sistemas de recomendação, detecção de anomalias e previsão de séries temporais: use XGBoost, LightGBM ou CatBoost. Você terá melhor precisão, latência em milissegundos e explicabilidade via SHAP para conformidade — a uma fração do custo.
 
-### Motores de regras: os casos inegociáveis
+### Motores de regras para casos inegociáveis
 
 Quando um sistema requer garantias formais, auditabilidade completa e saídas determinísticas, nem LLMs nem modelos de ML são a ferramenta certa. Isso não é uma limitação da tecnologia atual — é uma propriedade estrutural de sistemas probabilísticos.
 
@@ -82,7 +82,7 @@ A Meta descobriu da pior forma: a ANPD aplicou R$50.000 por dia ao constatar que
 
 A EU AI Act faz o mesmo ponto estrutural por outro ângulo: uma seguradora em Berlim foi multada em €2 milhões por implantar um modelo de avaliação de risco que não conseguia explicar suas saídas. A lei prevê penalidades de até €35 milhões ou 7% da receita global. Em domínios regulados, o motor de regras não é a opção legada. É a única arquitetura conforme para as partes determinísticas do sistema.
 
-### Híbridos: onde está o trabalho de verdade
+### Entram os híbridos
 
 O padrão arquitetural mais produtivo em 2025–2026 é combinar LLMs com sistemas determinísticos. Nenhum dos dois isoladamente é suficiente para a maioria dos problemas complexos de produção.
 

@@ -44,7 +44,7 @@ The first question when evaluating any AI integration: **do I actually need prob
 
 ## Where each approach wins
 
-### LLMs: the five territories
+### Where LLMs shine
 
 Language models have genuine advantages in specific domains. Outside these domains, you are paying a premium for worse results.
 
@@ -58,7 +58,7 @@ Language models have genuine advantages in specific domains. Outside these domai
 
 **Natural language interfaces to systems.** Users describe goals in plain language; the LLM translates to API calls, SQL queries, or structured commands. This unlocks automation for non-technical users.
 
-### ML classic: where it still dominates
+### Where classic ML still dominates
 
 For structured tabular data, the performance gap is not marginal — it is dramatic.
 
@@ -68,7 +68,7 @@ The structural reasons are not incidental. Decision trees process each feature n
 
 For fraud detection, credit scoring, recommendation systems, anomaly detection, and time series forecasting: use **XGBoost**, **LightGBM**, or **CatBoost**. You will get better accuracy, millisecond latency, and **SHAP** explainability for compliance — at a fraction of the cost.
 
-### Rule engines: the non-negotiable cases
+### Rule engines for non-negotiable cases
 
 When a system requires formal guarantees, complete auditability, and deterministic outputs, neither LLMs nor ML models are appropriate. This is not a limitation of current technology — it is a structural property of probabilistic systems.
 
@@ -82,7 +82,7 @@ Meta found out the hard way: the ANPD hit them with R$50,000 per day after findi
 
 The EU AI Act makes the same structural point from a different angle: a Berlin insurer was fined €2 million for deploying a risk assessment model that couldn't explain its outputs. The Act carries penalties up to €35 million or 7% of global revenue. In regulated domains, the rule engine is not the legacy option. It is the only compliant architecture for the deterministic parts of the system.
 
-### Hybrids: where the real work is
+### Enter the hybrids
 
 The most productive architectural pattern in 2025–2026 is combining LLMs with deterministic systems. Neither alone is sufficient for most complex production problems.
 
