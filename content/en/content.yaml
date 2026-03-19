@@ -371,7 +371,7 @@ skills:
           desc: Component documentation
     - key: ai
       title: AI & automation
-      icon: Bot
+      icon: Cpu
       items:
         - name: LLM integrations
           desc: OpenAI, Anthropic, Gemini APIs

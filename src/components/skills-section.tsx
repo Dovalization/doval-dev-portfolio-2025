@@ -6,6 +6,7 @@ import {
   Layers,
   Feather,
   Activity,
+  Cpu,
 } from "react-feather";
 import { SkillsData } from "@/app/types";
 
@@ -17,6 +18,7 @@ const iconMap = {
   Layers,
   Feather,
   Activity,
+  Cpu,
 };
 
 export default function SkillsSection({
