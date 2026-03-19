@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   description:
     "Full-Stack Developer focused on Frontend — building fast, human-centered systems.",
   generator: "Next.js",
+  metadataBase: new URL("https://doval.dev"),
 };
 
 export default function RootLayout({
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${openSans.variable} ${jetbrainsMono.variable} antialiased`}
+      data-scroll-behavior="smooth"
     >
       {/* Fixed CSS class spacing - added spaces between classes */}
       <body className="bg-dark-primary text-light-primary min-h-screen font-sans">

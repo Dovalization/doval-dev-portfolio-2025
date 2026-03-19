@@ -5,7 +5,7 @@ export default function AboutSection({ data: aboutData }: { data: AboutData }) {
   return (
     <section
       id="about"
-      className="container mx-auto flex scroll-mt-12 flex-col items-center gap-8 px-4 text-center sm:px-6"
+      className="container mx-auto flex scroll-mt-20 flex-col items-center gap-8 px-4 text-center sm:px-6"
     >
       <h2 className="font-bold">{aboutData.title}</h2>
       <Image

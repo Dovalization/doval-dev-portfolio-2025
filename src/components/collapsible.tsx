@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import SectionDivider from "@/components/section-divider";
+import Pill from "@/components/pill";
 export default function Collapsible({ project }: {
   project: {
     title: string;
@@ -13,7 +15,6 @@ export default function Collapsible({ project }: {
     banner: { url: string; alt: string };
     logo: { url: string; alt: string; size?: "small" | "medium" | "large" };
     stack: string[];
-    liveUrl?: string;
   };
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Collapsible({ project }: {
   return (
     <article
       className={cn(
-        "bg-dark-secondary overflow-hidden rounded-lg outline-4 outline-transparent transition-all duration-300",
+        "bg-dark-secondary overflow-hidden rounded-lg outline-4 outline-solid outline-transparent transition-all duration-300",
         {
           "shadow-xl outline-transparent": isOpen,
           "hover:outline-orange-secondary shadow-md": !isOpen,
@@ -41,6 +42,9 @@ export default function Collapsible({ project }: {
           },
         )}
         onClick={toggleCollapsible}
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggleCollapsible()}
+        role="button"
+        tabIndex={0}
       >
         <Image
           src={project.banner.url}
@@ -70,7 +74,7 @@ export default function Collapsible({ project }: {
       {/* Content Section */}
       <div
         className={cn(
-          "to-gray-medium from-dark-secondary flex flex-col gap-8 bg-gradient-to-br shadow-2xl transition-normal duration-200 ease-in-out",
+          "to-gray-medium from-dark-secondary flex flex-col gap-8 bg-gradient-to-br shadow-2xl transition-all duration-200 ease-in-out",
           {
             "max-h-[300vh] p-8": isOpen,
             "max-h-0 p-0 px-8": !isOpen,
@@ -82,8 +86,8 @@ export default function Collapsible({ project }: {
             {project.title}
           </h3>
           {/* First paragraph from first section as intro */}
-          <hr className="border-orange-secondary max-w-8 border-2" />
-          <p className="text-light-primary text-md max-w-3xl font-semibold">
+          <SectionDivider />
+          <p className="text-light-primary text-base max-w-3xl font-semibold">
             {project.description}
           </p>
         </div>
@@ -106,13 +110,8 @@ export default function Collapsible({ project }: {
         </div>
         <div>
           <div className="flex flex-wrap gap-2">
-            {project.stack.map((t) => (
-              <span
-                key={t}
-                className="text-orange-secondary border-orange-secondary/30 rounded-full border-2 px-3 py-1 font-mono text-sm font-medium"
-              >
-                {t}
-              </span>
+            {project.stack.map((tech) => (
+              <Pill key={tech} label={tech} variant="outline" />
             ))}
           </div>
         </div>

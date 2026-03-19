@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
 import { User, Minimize2, Unlock, Layout, Target } from "react-feather";
-import { useInViewAnimation } from "@/lib/useInViewAnimation";
+import { useInViewAnimation } from "@/lib/hooks/useInViewAnimation";
 import { cn } from "@/lib/utils";
 import { CoreValue } from "@/app/types";
 
@@ -36,7 +35,7 @@ export default function CoreValuesSection({
             <div
               key={index}
               className={cn(
-                "from-dark-secondary to-gray-medium border-gray-medium/20 group relative flex flex-col items-center gap-2 rounded-lg border bg-gradient-to-br px-4 py-6 pt-14 text-center shadow-2xl transition-all duration-250 ease-in-out text-shadow-sm hover:scale-105 hover:shadow-2xl",
+                "from-dark-secondary to-gray-medium border-gray-medium/20 group relative flex flex-col items-center gap-2 rounded-lg border bg-gradient-to-br px-4 py-6 pt-14 text-center shadow-2xl transition-all duration-300 ease-in-out text-shadow-sm hover:scale-105 hover:shadow-2xl",
                 {
                   "animate-in fade-in-0 slide-in-from-bottom-4": isInView,
                   "translate-y-4 opacity-0": !isInView,
@@ -47,9 +46,9 @@ export default function CoreValuesSection({
                 animationFillMode: "both",
               }}
             >
-              <div className="bg-orange-secondary group-hover:bg-orange-primary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full transition-all duration-250 ease-in-out group-hover:scale-110">
+              <div className="bg-orange-secondary group-hover:bg-orange-primary absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full transition-all duration-300 ease-in-out group-hover:scale-110">
                 <Icon
-                  className="text-dark-primary h-8 w-8 transition-transform duration-250 ease-in-out group-hover:scale-110"
+                  className="text-dark-primary h-8 w-8 transition-transform duration-300 ease-in-out group-hover:scale-110"
                   strokeWidth={2.5}
                 />
               </div>

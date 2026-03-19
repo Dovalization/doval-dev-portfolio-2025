@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useInViewAnimation } from "@/lib/useInViewAnimation";
+import { useInViewAnimation } from "@/lib/hooks/useInViewAnimation";
 import ParticleBackground from "@/components/particle-background";
 import ButtonLink from "@/components/button-link";
 import { ChevronsDown } from "react-feather";

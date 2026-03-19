@@ -149,6 +149,14 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-anchor: none;
+  }
+
   /* Typography hierarchy from design system - fixed spacing in @apply directives */
   h1 {
     @apply text-4xl leading-tight font-bold md:text-5xl;
@@ -199,15 +207,45 @@
   background: #a0aec0;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
 
 /* Selection styling with orange accent */
 ::selection {
   background: #dd6b20;
   color: #f7fafc;
+}
+
+/* Text shadow utilities */
+.text-shadow-sm {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.text-shadow-black {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+/* Blog post prose layout — grid for full-bleed images */
+.prose-blog {
+  display: grid;
+  grid-template-columns: 1fr min(56rem, 100%) 1fr;
+}
+
+.prose-blog > * {
+  grid-column: 2;
+}
+
+/* highlight.js: reset code color inside pre so theme takes over */
+.prose-blog pre code {
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @utility container {

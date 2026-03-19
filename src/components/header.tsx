@@ -10,10 +10,7 @@ export function Header({
   data: navigationData,
 }: {
   data: NavigationData;
-  currentLocale: "en" | "pt";
 }) {
-  // Fallback data if navigationData is undefined
-
   return (
     <nav className="bg-dark-primary/95 border-dark-secondary/50 sticky top-0 z-50 border-b backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

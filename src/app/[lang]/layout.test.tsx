@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-// Mock next/navigation
 const mockNotFound = vi.fn();
 vi.mock("next/navigation", () => ({
   notFound: mockNotFound,
@@ -13,12 +12,6 @@ vi.mock("@/components/header", () => ({
       Header
     </header>
   ),
-}));
-
-vi.mock("./dictionaries", () => ({
-  getDictionary: vi.fn().mockResolvedValue({
-    navigation: { home: "Home", about: "About" },
-  }),
 }));
 
 vi.mock("../globals.css", () => ({}));
@@ -59,32 +52,18 @@ describe("Language Layout Validation", () => {
       expect(mockNotFound).not.toHaveBeenCalled();
     });
 
-    it("should call notFound for unsupported language", async () => {
+    it("should throw for unsupported language", async () => {
       const { generateMetadata } = await import("./layout");
 
       const params = Promise.resolve({ lang: "fr" });
-
-      try {
-        await generateMetadata({ params });
-      } catch {
-        // notFound throws, which is expected
-      }
-
-      expect(mockNotFound).toHaveBeenCalledOnce();
+      await expect(generateMetadata({ params })).rejects.toThrow();
     });
 
-    it("should call notFound for invalid language", async () => {
+    it("should throw for invalid language", async () => {
       const { generateMetadata } = await import("./layout");
 
       const params = Promise.resolve({ lang: "invalid-lang" });
-
-      try {
-        await generateMetadata({ params });
-      } catch {
-        // notFound throws, which is expected
-      }
-
-      expect(mockNotFound).toHaveBeenCalledOnce();
+      await expect(generateMetadata({ params })).rejects.toThrow();
     });
   });
 
