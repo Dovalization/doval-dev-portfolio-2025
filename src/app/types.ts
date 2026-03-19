@@ -1,5 +1,9 @@
 import { z } from "zod";
 
+// Locale Schema
+export const LocaleSchema = z.enum(["en", "pt"]);
+export type Locale = z.infer<typeof LocaleSchema>;
+
 // Hero Section Schema
 export const HeroSchema = z.object({
   image: z.object({
@@ -92,6 +96,12 @@ export const ContactSchema = z.object({
     linkedin: z.string().url(),
     github: z.string().url(),
   }),
+  links: z.object({
+    email: z.string(),
+    downloadCv: z.string(),
+    linkedin: z.string(),
+    github: z.string(),
+  }),
   lookingFor: z.object({
     title: z.string(),
     items: z.array(z.object({
@@ -113,6 +123,50 @@ export const NavigationSchema = z.object({
   }),
 });
 
+// Blog Dictionary Schema
+export const BlogDictionarySchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  allPosts: z.string(),
+  readingTime: z.string(),
+  publishedOn: z.string(),
+  backToBlog: z.string(),
+  typeLabels: z.object({
+    post: z.string(),
+    devlog: z.string(),
+  }),
+  emptyState: z.string(),
+  featured: z.string(),
+  readMore: z.string(),
+  filterAll: z.string(),
+  filters: z.string(),
+  clearFilters: z.string(),
+  newerPost: z.string(),
+  olderPost: z.string(),
+});
+
+// Post Schemas
+export const PostMetaSchema = z.object({
+  title: z.string(),
+  created_at: z.coerce.date(),
+  updated_at: z.coerce.date(),
+  type: z.enum(["post", "devlog"]),
+  status: z.enum(["draft", "published"]),
+  tags: z.array(z.string()).default([]),
+  tier: z.number().int().min(1).max(3).optional(),
+  pillar: z.string().optional(),
+  source: z.string().optional(),
+  cover_image: z.string().optional(),
+  excerpt: z.string(),
+  lang: z.enum(["en", "pt"]).default("en"),
+});
+
+export const PostSchema = PostMetaSchema.extend({
+  slug: z.string(),
+  rawContent: z.string(),
+  readingTimeMinutes: z.number(),
+});
+
 // Main Data Schema
 export const DataSchema = z.object({
   hero: HeroSchema,
@@ -122,6 +176,7 @@ export const DataSchema = z.object({
   skills: SkillsSchema,
   contact: ContactSchema,
   navigation: NavigationSchema,
+  blog: BlogDictionarySchema,
 });
 
 // Export types
@@ -134,3 +189,6 @@ export type SkillsData = z.infer<typeof SkillsSchema>;
 export type ContactData = z.infer<typeof ContactSchema>;
 export type NavigationData = z.infer<typeof NavigationSchema>;
 export type AppData = z.infer<typeof DataSchema>;
+export type BlogDictionary = z.infer<typeof BlogDictionarySchema>;
+export type PostMeta = z.infer<typeof PostMetaSchema>;
+export type Post = z.infer<typeof PostSchema>;
