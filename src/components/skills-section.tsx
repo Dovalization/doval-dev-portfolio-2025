@@ -8,9 +8,11 @@ import {
   Activity,
   Cpu,
 } from "react-feather";
+import { Bot } from "lucide-react";
 import { SkillsData } from "@/app/types";
 
 const iconMap = {
+  // react-feather
   Code,
   Monitor,
   Server,
@@ -19,6 +21,8 @@ const iconMap = {
   Feather,
   Activity,
   Cpu,
+  // lucide-react
+  Bot,
 };
 
 export default function SkillsSection({
