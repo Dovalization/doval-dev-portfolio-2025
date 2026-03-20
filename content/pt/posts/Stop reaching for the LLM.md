@@ -76,6 +76,8 @@ O caso mais claro que já construí: um pipeline de processamento de documentos 
 
 Toda essa camada de conformidade roda em um motor de regras. Contadores regressivos de violação que iniciam no momento em que o controlador toma conhecimento do incidente. Filas de resposta a DSARs que impõem o prazo de 15 dias corridos do Artigo 19. Árvores de decisão para exclusão onde as obrigações de retenção de prontuários do CFM sobrepõem legalmente os pedidos de exclusão dos titulares sob o Artigo 18 — não uma decisão subjetiva, uma colisão estatutária com resolução determinística. Templates pré-preenchidos de notificação à ANPD com todos os 12 campos obrigatórios.
 
+![Arquitetura do sistema: pipeline LLM alimenta um gate de threshold de confiança, que roteia para um motor de regras determinístico tratando conformidade LGPD, notificações e DSARs. Todos os eventos registram em trilha de auditoria obrigatória de 5 anos.](/images/blog/medprivacy-architecture.svg)
+
 > Uma alucinação nessa camada é uma multa potencial de R$50 milhões por infração.
 
 A Meta descobriu da pior forma: a ANPD aplicou R$50.000 por dia ao constatar que ela utilizava uma base legal que a LGPD categoricamente proíbe para dados de saúde ao treinar seus modelos de IA. A ANPD listou a IA como sua quarta prioridade de fiscalização para 2026–2027, com 20 inspeções planejadas. O Ministério da Saúde foi sancionado duas vezes só em novembro de 2024 — uma por deixar de notificar tempestivamente sob o Artigo 48, outra por medidas de segurança inadequadas em sistemas contendo dados de saúde de milhões de brasileiros.
@@ -98,9 +100,11 @@ Três outros padrões que funcionam em produção:
 
 **LLM gera regras.** LLMs traduzem documentos de política não estruturados — códigos de construção, apólices de seguro, frameworks de conformidade — em regras explícitas que são então aplicadas deterministicamente em produção. O LLM faz a tradução uma vez; o motor de regras roda em escala. A Nature publicou em novembro de 2025 que, quando membros da AAAI foram perguntados se redes neurais sozinhas poderiam atingir inteligência de nível humano, a grande maioria disse não — a maioria apontou a integração com IA simbólica como o caminho necessário.
 
+![Fluxograma de decisão: cinco perguntas sequenciais mapeando para Motor de regras/RPA, ML clássico, híbrido LLM + motor de regras, LLM ou sem IA.](/images/blog/decision-flowchart.svg)
+
 ---
 
-## Agentes: a década, não o ano
+## O problema da confiabilidade
 
 Há uma versão deste post que terminaria na seção de híbridos e daria o assunto por encerrado. Mas a afirmação mais barulhenta no campo da IA agora — que agentes autônomos estão chegando à produção — merece uma resposta direta, porque a distância entre o discurso e os dados é grande.
 
@@ -114,21 +118,7 @@ Agentes autônomos de propósito geral operando em domínios onde erros têm con
 
 ---
 
-## O fluxograma de decisão
-
-Antes de escrever qualquer código, responda a estas perguntas em ordem:
-
-1. **Consigo escrever regras explícitas para este problema?** → Use um motor de regras ou RPA. Mais rápido, mais barato, determinístico, auditável.
-2. **Os dados são primariamente estruturados e tabulares?** → Use ML clássico. O XGBoost vai superar um LLM e custar uma fração.
-3. **Preciso de saídas determinísticas e auditáveis, mas a entrada é não estruturada?** → Híbrido LLM + motor de regras. LLM para extração, motor de regras para raciocínio.
-4. **Esta é primariamente uma tarefa de compreensão ou geração de linguagem?** → Use um LLM.
-5. **Nenhuma das alternativas acima?** → Reconsidere se você precisa de IA.
-
-A maioria dos problemas que parecem precisar de IA se encaixa na questão 1 ou 2.
-
----
-
-## O que isso muda
+## O que muda?
 
 O enquadramento que domina o discurso sobre IA agora é o de capacidade — o que este modelo consegue fazer? A pergunta de engenharia mais útil é a de adequação — esta é a abordagem certa para este problema específico, a este custo, com esses requisitos de confiabilidade?
 
