@@ -15,7 +15,7 @@ excerpt: "Um estudo de 2026 mediu a perplexidade de LLMs e as respostas de EEG h
 lang: pt
 ---
 
-Um estudo recente aceito no ICPC 2026 mediu o que acontece quando humanos e LLMs encontram o mesmo trecho de código confuso. Os pesquisadores submeteram snippets de código de alta entropia — construções onde o significado é difícil de prever a partir da forma — a dois instrumentos independentes: registros de EEG de leitores humanos e medições de perplexidade de modelos de linguagem. Os picos coincidiram em localização e amplitude. Não foi um achado isolado — trabalhos anteriores já haviam antecipado que código de maior perplexidade reduz os tempos de resposta e a precisão humana (Casalnuovo et al., 2020), e que a perplexidade de um token prevê linearmente quanto tempo humanos levam para lê-lo (Goodkind & Bicknell, 2018).
+Sabe o que pesquisadores descobriram quando puseram o mesmo trecho de código confuso na frente de humanos conectados a sensores de EEG e de modelos de linguagem medindo perplexidade? Os picos de confusão apareceram no mesmo lugar, na mesma amplitude. Não foi um achado isolado — trabalhos anteriores já mostravam que código de maior perplexidade reduz a precisão humana (Casalnuovo et al., 2020), e que a perplexidade de um token prevê linearmente quanto tempo levamos para lê-lo (Goodkind & Bicknell, 2018).
 
 A máquina se confunde com o mesmo código que confunde você.
 
@@ -28,9 +28,11 @@ Isso não é uma peculiaridade da arquitetura do modelo. É consequência de uma
 > "Vamos mudar nossa atitude tradicional em relação à construção de programas: em vez de imaginar que nossa tarefa principal é instruir um computador sobre o que fazer, vamos nos concentrar em explicar a seres humanos o que queremos que um computador faça."
 > Donald Knuth, 1984.
 
-Abelson e Sussman, no mesmo ano, escreveram: "Programas devem ser escritos para que pessoas os leiam, e apenas incidentalmente para que máquinas os executem."
+Abelson e Sussman chegaram à mesma conclusão no mesmo ano: "Programas devem ser escritos para que pessoas os leiam, e apenas incidentalmente para que máquinas os executem."
 
-Essas eram afirmações sobre a natureza fundamental da prática. Peter Naur, em "Programming as Theory Building" (1985), defende que o programa não é o artefato. O programa é a *teoria* — o entendimento compartilhado que existe nas mentes das pessoas que o construíram. O código-fonte é uma *representação com perdas* dessa teoria. Quando a equipe se dispersa, a teoria morre. Reconstruí-la a partir da documentação é, nas palavras de Naur, **estritamente impossível.**
+Citamos essas frases há quarenta anos. Mas a implicação mais profunda ficou em segundo plano.
+
+Peter Naur foi mais direto. Em "Programming as Theory Building" (1985), disse que o programa não é o artefato. O programa é a *teoria* — o entendimento compartilhado que existe nas mentes das pessoas que o construíram. O código-fonte é uma *representação com perdas* dessa teoria. Quando a equipe se dispersa, a teoria morre. Reconstruí-la a partir da documentação é, nas palavras de Naur, **estritamente impossível.**
 
 Se Naur estiver correto, então cada prática de código limpo é uma estratégia para minimizar essa perda — para manter a teoria do sistema transmissível ao longo do tempo e das equipes. Nomear bem é como você condensa os conceitos da teoria em identificadores, e as revisões de código são como você verifica se a teoria de uma mente foi transferida com sucesso para outra.
 
@@ -66,7 +68,9 @@ Funções bem decompostas têm fluxo de dados mais claro. Tanto humanos quanto L
 
 A hipótese da naturalidade (Hindle et al., ICSE 2012) mediu isso quantitativamente: código é ainda mais repetitivo e previsível do que a linguagem natural. As convenções que tornam o código legível — nomenclatura consistente, padrões familiares, estruturas claras — são exatamente o que torna o código **de baixo ruído**. Código de alta qualidade é estatisticamente mais fácil de prever porque é mais convencional.
 
-A convergência não é total. LLMs leem código da esquerda para a direita enquanto programadores saltam de forma não-linear — escaneando definições, reconhecendo padrões na estrutura. Algumas otimizações que ajudam modelos (docstrings verbosas, anotações de tipo explícitas) adicionam texto que leitores humanos experientes pulam. Mas são casos de borda. As características mais importantes para a compreensão humana — nomes significativos, estrutura clara, convenções consistentes — são as mesmas que mais importam para os modelos. O que humanos e máquinas encontram legível no código se sobrepõe porque LLMs aprenderam esses padrões de nós.
+Aqui fica interessante. LLMs leem esquerda-direita. Nós não — escaneamos, reconhecemos padrões na estrutura, saltamos. Docstrings verbosas e anotações de tipo explícitas ajudam modelos; um leitor experiente pula. As diferenças são reais.
+
+Mas observe o que converge: os sinais que mais importam — nomes significativos, estrutura clara, convenções consistentes — são os mesmos para os dois lados. O que humanos e máquinas encontram legível no código se sobrepõe porque LLMs aprenderam esses padrões de nós.
 
 ---
 
@@ -82,11 +86,11 @@ Isso não é uma nova restrição imposta pelo ferramental de IA. É a confirma�
 
 ### O que isso significa na prática
 
-**Nomear merece mais tempo do que recebe.** Uma função chamada `processData` não comunica quase nada para um revisor humano e fornece quase nada para um modelo de completação. Uma função chamada `normalizeTransactionAmounts` faz trabalho comunicativo real em ambas as direções. Existe uma prática comum de nomear rapidamente e refatorar depois, e isso só agrava o problema, já que a nomenclatura é onde a maior parte do trabalho semântico vive.
+Se legibilidade humana e legibilidade para modelos convergem, então nomear deixa de ser questão de preferência. `processData` não comunica quase nada — para o revisor humano nem para o modelo que vai completar o código depois. `normalizeTransactionAmounts` faz trabalho comunicativo real em ambas as direções. É tentador nomear rápido e refatorar depois. Só que a nomenclatura é onde a maior parte do trabalho semântico vive — e o custo de nomear mal se acumula em cada leitura.
 
-**A revisão de código tem um novo eixo de avaliação.** Historicamente, a revisão de código avaliava correção, segurança e manutenibilidade. Os três permanecem. Mas há agora um quarto eixo que merece atenção explícita: quanto significado está contido nos nomes e estruturas na página. Um comentário de revisão apontando que um nome de variável é ambíguo pode não ser uma questão de preferência subjetiva. É identificar uma deficiência no código que prejudicará cada leitor, humano ou máquina, enquanto ele existir.
+A revisão de código ganha um novo eixo: quanto significado está contido nos nomes? Um comentário apontando um nome ambíguo não é preferência subjetiva. É identificar algo que vai prejudicar cada leitor — humano ou máquina — enquanto aquele código existir.
 
-**O codebase que você mantém é dado de treinamento.** Para equipes que usam ferramentas de IA — completações, revisão, sugestões de refatoração — os modelos espelham os padrões que veem no seu codebase. O achado de propagação de 85% de code smells opera em ambas as direções: código limpo gera sugestões limpas; código ambíguo e mal nomeado gera mais do mesmo. Isso não é razão para entrar em pânico com a dívida técnica. É razão para tratar a padronização e aplicação de convenções de nomenclatura como trabalho essencial com efeitos downstream mensuráveis na qualidade do ferramental de IA, não apenas na manutenibilidade.
+Para quem usa ferramentas de IA, tem mais: o codebase que mantemos é dado de treinamento. Aquele achado dos 85% de code smells opera nas duas direções — código limpo gera sugestões limpas; código ambíguo gera mais do mesmo. Não é razão para entrar em pânico com a dívida técnica. É razão para tratar convenções de nomenclatura como trabalho com efeitos mensuráveis, não só em manutenibilidade, mas na qualidade de tudo que o modelo vai sugerir depois.
 
 Knuth disse que programas são obras literárias destinadas a leitores humanos. O que ele não poderia ter antecipado é que uma nova classe de leitores chegaria para lhe dar razão.
 
