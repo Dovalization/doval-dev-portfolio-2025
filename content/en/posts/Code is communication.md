@@ -15,7 +15,7 @@ excerpt: "A 2026 study measured LLM perplexity and human EEG responses against t
 lang: en
 ---
 
-Put the same confusing code in front of humans wired to EEG sensors and language models measuring perplexity. The confusion spikes appear in the same place, at the same amplitude. Researchers ran this with high-entropy snippets — constructs where meaning is hard to predict from form — and the two instruments agreed. It wasn't an isolated finding — prior work had already shown that higher-perplexity code lowers human accuracy (Casalnuovo et al., 2020), and that a token's perplexity linearly predicts how long we take to read it (Goodkind & Bicknell, 2018).
+Researchers put the same confusing code in front of two very different readers — humans wired to EEG sensors, and language models measuring perplexity. The confusion spikes appeared in the same place, at the same amplitude. They ran this with high-entropy snippets — constructs where meaning is hard to predict from form — and the two instruments agreed. It wasn't an isolated finding — prior work had already shown that higher-perplexity code lowers human accuracy (Casalnuovo et al., 2020), and that a token's perplexity linearly predicts how long we take to read it (Goodkind & Bicknell, 2018).
 
 The machine gets confused by the same code that confuses you.
 
