@@ -11,7 +11,7 @@ tags:
   - language
 tier: 1
 pillar: language and meaning
-excerpt: "A 2026 study measured LLM perplexity and human EEG responses against the same confusing code. The spikes correlated. The machine gets confused by the same code that confuses you — and that tells you something important about what code has always been."
+excerpt: "Researchers put the same confusing code in front of humans wired to EEG sensors and language models measuring perplexity. The confusion spikes appeared in the same place. The machine gets confused by the same code that confuses you — and that says something important about what code has always been."
 lang: en
 ---
 

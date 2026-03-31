@@ -11,7 +11,7 @@ tags:
   - language
 tier: 1
 pillar: language and meaning
-excerpt: "Um estudo de 2026 mediu a perplexidade de LLMs e as respostas de EEG humanas para o mesmo código confuso. Os picos coincidiram. A máquina se confunde com o mesmo código que confunde você — e isso diz algo importante sobre o que o código sempre foi."
+excerpt: "Pesquisadores puseram o mesmo código confuso na frente de humanos conectados a sensores de EEG e de modelos de linguagem medindo perplexidade. Os picos de confusão apareceram no mesmo lugar. A máquina se confunde com o mesmo código que confunde você — e isso diz algo importante sobre o que o código sempre foi."
 lang: pt
 ---
 
