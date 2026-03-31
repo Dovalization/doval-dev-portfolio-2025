@@ -76,7 +76,7 @@ None of this changes what you should be doing. The implication of the convergenc
 
 We already had the human-centered argument: readable code is cheaper to maintain, safer to modify, easier to review. The cost of code is overwhelmingly in reading and comprehension, not in writing it.
 
-Now we have the AI-centered argument: the same properties that make code readable to humans make it more tractable for every LLM tool in your workflow — code completion, review, refactoring, generation. When your codebase has meaningful names and a clean, organized structure, you are not just communicating with the next human reviewer. You are communicating with every AI tool that touches it.
+Now we have the AI-centered argument: the same properties that make code readable to humans make it more tractable for every LLM tool in our workflow — code completion, review, refactoring, generation. When our codebase has meaningful names and a clean, organized structure, we are not just communicating with the next human reviewer. We are communicating with every AI tool that touches it.
 
 This is not a new constraint imposed by AI tooling. It is a confirmation of something good software engineering always knew, now arriving from a direction that makes it measurable.
 
