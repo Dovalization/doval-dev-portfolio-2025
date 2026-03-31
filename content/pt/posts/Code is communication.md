@@ -42,7 +42,7 @@ Essa tem sido a premissa implícita da engenharia de software séria por quarent
 
 ## O que os LLMs revelam
 
-Modelos de linguagem de grande escala são treinados em código escrito por humanos. Eles aprendem prevendo o próximo token a partir dos padrões estatísticos de milhões de codebases. Ao fazer isso, internalizam os mesmos padrões que tornam o código legível para programadores. Isso os torna um instrumento inesperado para testar a tese comunicativa — se legibilidade humana e tratabilidade computacional realmente convergem, o desempenho dos LLMs deve degradar no mesmo código que degrada a compreensão humana.
+Modelos de linguagem de grande escala são treinados em código escrito por humanos. Eles aprendem prevendo o próximo token a partir dos padrões estatísticos de milhões de codebases. Ao fazer isso, internalizam os mesmos padrões que tornam o código legível para programadores. Isso os torna um instrumento inesperado para testar a tese comunicativa — se legibilidade humana e legibilidade para modelos realmente convergem, o desempenho dos LLMs deve degradar no mesmo código que degrada a compreensão humana.
 
 E os dados apontam para uma resposta: isso acontece.
 
@@ -66,7 +66,7 @@ Funções bem decompostas têm fluxo de dados mais claro. Tanto humanos quanto L
 
 A hipótese da naturalidade (Hindle et al., ICSE 2012) mediu isso quantitativamente: código é ainda mais repetitivo e previsível do que a linguagem natural. As convenções que tornam o código legível — nomenclatura consistente, padrões familiares, estruturas claras — são exatamente o que torna o código **de baixo ruído**. Código de alta qualidade é estatisticamente mais fácil de prever porque é mais convencional.
 
-A convergência não é total. LLMs leem código da esquerda para a direita enquanto programadores saltam de forma não-linear — escaneando definições, reconhecendo padrões na estrutura. Algumas otimizações que ajudam modelos (docstrings verbosas, anotações de tipo explícitas) adicionam texto que leitores humanos experientes pulam. Mas são casos de borda. As características mais importantes para a compreensão humana — nomes significativos, estrutura clara, convenções consistentes — são as mesmas que mais importam para os modelos. O que humanos e máquinas encontram tratável no código se sobrepõe porque LLMs aprenderam esses padrões de nós.
+A convergência não é total. LLMs leem código da esquerda para a direita enquanto programadores saltam de forma não-linear — escaneando definições, reconhecendo padrões na estrutura. Algumas otimizações que ajudam modelos (docstrings verbosas, anotações de tipo explícitas) adicionam texto que leitores humanos experientes pulam. Mas são casos de borda. As características mais importantes para a compreensão humana — nomes significativos, estrutura clara, convenções consistentes — são as mesmas que mais importam para os modelos. O que humanos e máquinas encontram legível no código se sobrepõe porque LLMs aprenderam esses padrões de nós.
 
 ---
 
@@ -76,7 +76,7 @@ Nada disso muda o que você deveria estar fazendo. A implicação da convergênc
 
 Já tínhamos o argumento centrado no humano: código legível é mais barato de manter, mais seguro de modificar, mais fácil de revisar. O custo do código está esmagadoramente na leitura e compreensão, não em escrevê-lo.
 
-Agora temos o argumento centrado na IA: as mesmas propriedades que tornam o código legível para humanos o tornam mais tratável para cada ferramenta LLM no seu fluxo de trabalho — completação de código, revisão, refatoração, geração. Quando seu codebase tem nomes significativos e uma estrutura limpa e organizada, você não está apenas se comunicando com o próximo revisor humano. Você está se comunicando com cada ferramenta de IA que toca nele.
+Agora temos o argumento centrado na IA: as mesmas propriedades que tornam o código legível para humanos o tornam mais legível para cada ferramenta LLM no seu fluxo de trabalho — completação de código, revisão, refatoração, geração. Quando seu codebase tem nomes significativos e uma estrutura limpa e organizada, você não está apenas se comunicando com o próximo revisor humano. Você está se comunicando com cada ferramenta de IA que toca nele.
 
 Isso não é uma nova restrição imposta pelo ferramental de IA. É a confirmação de algo que a boa engenharia de software sempre soube, agora chegando de uma direção que o torna mensurável.
 
