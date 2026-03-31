@@ -19,7 +19,7 @@ Um estudo recente aceito no ICPC 2026 mediu o que acontece quando humanos e LLMs
 
 A máquina se confunde com o mesmo código que confunde você.
 
-Isso não é uma quireza da arquitetura do modelo. É consequência de uma afirmação muito mais antiga sobre o que o código é.
+Isso não é uma peculiaridade da arquitetura do modelo. É consequência de uma afirmação muito mais antiga sobre o que o código é.
 
 ---
 
