@@ -1,5 +1,5 @@
 ---
-title: "The Wrong Way to Use an LLM (A Parenting Story)"
+title: "The Wrong Way to Use an LLM"
 created_at: 2026-04-16T00:00:00-03:00
 updated_at: 2026-04-16T00:00:00-03:00
 type: post
